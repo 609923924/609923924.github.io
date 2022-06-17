@@ -3,6 +3,17 @@
   <entry>
     <title>test</title>
     <url>/49/test/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="错误的密码" data-whm="解密的内容无法验证">
+  <script id="hbeData" type="hbeData" data-hmacdigest="25629fe37782525c54e4588eb300071cd7083435536a1388c49099852ec642c5">165d50f05814027fb7fe5e4ae8a088d8cabf1ea2d88ccf0f53dc7b0b289f3333e67b9950e0449942724c82545ad95cf6f951092b2839e05a2c8ec4bffb40835300ce8dd160d7495366f85a96ea1e05331bee628969810725b1564f96c75769af3e0354a0c63ac48ac318180803f71677</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码查看。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>

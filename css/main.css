@@ -1651,6 +1651,11 @@ header.header {
   display: inline-block;
   margin: 0 5px;
 }
+.beian img {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+}
 .busuanzi-count #busuanzi_container_site_uv {
   display: none;
 }
@@ -2769,7 +2774,7 @@ mjx-container[display='true'] + br {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffaaa3;
+  background: #939eff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

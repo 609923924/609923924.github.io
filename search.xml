@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SpringBoot学习笔记-01</title>
+    <url>/springboot-xue-xi-bi-ji-01/</url>
+    <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>
+<li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
+<li>配置类本身也是组件。</li>
+<li>配置类中的组件无论调用多少遍，都是单实例对象。(@Configuration注解中的proxyBeanMethods默认为true，可以保证组件为单实例，为 false则会创建多实例)</li>
+<li>proxyBeanMethods中有full与lite模式，其中lite模式(为false时)会跳过检测实例是否已存在。</li>
+</ol>
+<h2 id="Conditional条件装配"><a href="#Conditional条件装配" class="headerlink" title="@Conditional条件装配"></a>@Conditional条件装配</h2><ol>
+<li>@ConditionalOnBean(name&#x3D;”xxx”)容器中含有xxx组件时,装配该组件。</li>
+<li>@ConditionalOnMissingBean(name&#x3D;”xxx”)容器中不含有xxx组件时,装配该组件。</li>
+<li>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。</li>
+</ol>
+<h2 id="ConfigurationProperties配置绑定"><a href="#ConfigurationProperties配置绑定" class="headerlink" title="@ConfigurationProperties配置绑定"></a>@ConfigurationProperties配置绑定</h2><ol>
+<li>@ConfigurationProperties(prefix&#x3D;”xxx”)获取前缀为xxx的配置，用在pojo。</li>
+<li>@EnableConfigurationProperties(xxx.class)开启组件属性配置，将xxx自动注册到容器，用在配置项中。</li>
+</ol>
+<h2 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h2><p>代表main是一个配置类</p>
+<h2 id="ComponentScan包扫描"><a href="#ComponentScan包扫描" class="headerlink" title="@ComponentScan包扫描"></a>@ComponentScan包扫描</h2><p>可指定位置扫描包的配置</p>
+<h2 id="AutoConfigurationPackge"><a href="#AutoConfigurationPackge" class="headerlink" title="@AutoConfigurationPackge"></a>@AutoConfigurationPackge</h2><ol>
+<li>利用Registrar为容器中导入一系列组件。</li>
+<li>将指定包下的所有组件导入。(MainApplications所在地)</li>
+<li>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>SpringBoot</tag>
+        <tag>学习</tag>
+        <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>javascript学习笔记-01</title>
-    <url>/javascrip01/</url>
+    <url>/javascrip-xue-xi-bi-ji-01/</url>
     <content><![CDATA[<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><ul>
 <li>不确定实参个数时，使用arguments获取所有参数</li>
 </ul>
@@ -97,8 +129,8 @@ num <span class="token operator">=</span> <span class="token number">10</span><s
 </ul>
 <h2 id="new的执行过程"><a href="#new的执行过程" class="headerlink" title="new的执行过程"></a>new的执行过程</h2>]]></content>
       <tags>
-        <tag>javascript</tag>
         <tag>学习</tag>
+        <tag>javascript</tag>
         <tag>前端</tag>
         <tag>笔记</tag>
         <tag>es5</tag>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://itechfans.com/javascrip01/</loc>
+    <loc>https://itechfans.com/javascrip-xue-xi-bi-ji-01/</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/SpringBoot%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01.html</loc>
+    <loc>https://itechfans.com/springboot-xue-xi-bi-ji-01/</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -29,7 +29,7 @@
 
   
   <url>
-    <loc>https://itechfans.com/tags/javascript/</loc>
+    <loc>https://itechfans.com/tags/SpringBoot/</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -37,6 +37,20 @@
   
   <url>
     <loc>https://itechfans.com/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/%E5%90%8E%E7%AB%AF/</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/javascript/</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

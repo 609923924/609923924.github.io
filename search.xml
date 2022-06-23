@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>SpringBoot学习笔记-01</title>
-    <url>/56/springboot-xue-xi-bi-ji-01/</url>
+    <url>/springboot-xue-xi-bi-ji-01/</url>
     <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>
 <li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
 <li>配置类本身也是组件。</li>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <title>javascript学习笔记-01</title>
-    <url>/49/javascript-xue-xi-bi-ji-01/</url>
+    <url>/javascript-xue-xi-bi-ji-01/</url>
     <content><![CDATA[<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><ul>
 <li>不确定实参个数时，使用arguments获取所有参数</li>
 </ul>
@@ -138,7 +138,7 @@ num <span class="token operator">=</span> <span class="token number">10</span><s
   </entry>
   <entry>
     <title>test</title>
-    <url>/49/test/</url>
+    <url>/test/</url>
     <content><![CDATA[<h1 id="这里是测试内容"><a href="#这里是测试内容" class="headerlink" title="这里是测试内容"></a>这里是测试内容</h1>]]></content>
   </entry>
 </search>

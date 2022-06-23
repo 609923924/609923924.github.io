@@ -27,11 +27,7 @@
 <h2 id="js运行步骤"><a href="#js运行步骤" class="headerlink" title="js运行步骤"></a>js运行步骤</h2><ul>
 <li>javascript解析器在运行javascript语句时分两步：预解析和代码执行。</li>
 </ul>
-<h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><ul>
-<li>预解析分为变量<strong>预解析</strong>（变量提升）和<strong>函数预解析</strong>（函数提升）。</li>
-<li>js解析器会将所有的var与function提升到<strong>当前作用域</strong>的最前面。</li>
-</ul>
-<h4 id="变量预解析"><a href="#变量预解析" class="headerlink" title="变量预解析"></a>变量预解析</h4><p>不提升赋值操作</p>
+<h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><h4 id="变量预解析"><a href="#变量预解析" class="headerlink" title="变量预解析"></a>变量预解析</h4><p>不提升赋值操作</p>
 <h4 id="函数预解析"><a href="#函数预解析" class="headerlink" title="函数预解析"></a>函数预解析</h4><h3 id="代码执行"><a href="#代码执行" class="headerlink" title="代码执行"></a>代码执行</h3><ul>
 <li>代码按照书写顺序，由上到下依次执行</li>
 </ul>

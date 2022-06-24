@@ -4,7 +4,7 @@
   <url>
     <loc>https://itechfans.com/javascrip-xue-xi-bi-ji-01/</loc>
     
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,25 @@
   <url>
     <loc>https://itechfans.com/springboot-xue-xi-bi-ji-01/</loc>
     
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/categories/index.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/index.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +40,7 @@
 
   <url>
     <loc>https://itechfans.com/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -30,53 +48,67 @@
   
   <url>
     <loc>https://itechfans.com/tags/SpringBoot/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itechfans.com/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itechfans.com/tags/%E5%90%8E%E7%AB%AF/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itechfans.com/tags/javascript/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itechfans.com/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itechfans.com/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itechfans.com/tags/es5/</loc>
-    <lastmod>2022-06-23</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://itechfans.com/categories/web%E5%90%8E%E7%AB%AF/</loc>
+    <lastmod>2022-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2022-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

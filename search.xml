@@ -26,6 +26,9 @@
 <li>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>web后端</category>
+      </categories>
       <tags>
         <tag>SpringBoot</tag>
         <tag>学习</tag>
@@ -128,6 +131,9 @@ num <span class="token operator">=</span> <span class="token number">10</span><s
 <li>代码按照书写顺序，由上到下依次执行</li>
 </ul>
 <h2 id="new的执行过程"><a href="#new的执行过程" class="headerlink" title="new的执行过程"></a>new的执行过程</h2>]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
       <tags>
         <tag>学习</tag>
         <tag>javascript</tag>

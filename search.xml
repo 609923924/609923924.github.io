@@ -12,7 +12,7 @@
 <h2 id="Conditional条件装配"><a href="#Conditional条件装配" class="headerlink" title="@Conditional条件装配"></a>@Conditional条件装配</h2><ol>
 <li>@ConditionalOnBean(name&#x3D;”xxx”)容器中含有xxx组件时,装配该组件。</li>
 <li>@ConditionalOnMissingBean(name&#x3D;”xxx”)容器中不含有xxx组件时,装配该组件。</li>
-<li>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。</li>
+<li>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。<span id="more"></span></li>
 </ol>
 <h2 id="ConfigurationProperties配置绑定"><a href="#ConfigurationProperties配置绑定" class="headerlink" title="@ConfigurationProperties配置绑定"></a>@ConfigurationProperties配置绑定</h2><ol>
 <li>@ConfigurationProperties(prefix&#x3D;”xxx”)获取前缀为xxx的配置，用在pojo。</li>
@@ -50,7 +50,7 @@
 <ol>
 <li>具有length</li>
 <li>以索引进行存储</li>
-<li>没有pop()与push()等数组方法</li>
+<li>没有pop()与push()等数组方法<span id="more"></span></li>
 </ol>
 <h2 id="javascript作用域"><a href="#javascript作用域" class="headerlink" title="javascript作用域"></a>javascript作用域</h2><ul>
 <li>javascript作用域分为全局作用域与局部作用域</li>

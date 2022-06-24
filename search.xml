@@ -7,12 +7,12 @@
 <li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
 <li>配置类本身也是组件。</li>
 <li>配置类中的组件无论调用多少遍，都是单实例对象。(@Configuration注解中的proxyBeanMethods默认为true，可以保证组件为单实例，为 false则会创建多实例)</li>
-<li>proxyBeanMethods中有full与lite模式，其中lite模式(为false时)会跳过检测实例是否已存在。</li>
+<li>proxyBeanMethods中有full与lite模式，其中lite模式(为false时)会跳过检测实例是否已存在。<span id="more"></span></li>
 </ol>
 <h2 id="Conditional条件装配"><a href="#Conditional条件装配" class="headerlink" title="@Conditional条件装配"></a>@Conditional条件装配</h2><ol>
 <li>@ConditionalOnBean(name&#x3D;”xxx”)容器中含有xxx组件时,装配该组件。</li>
 <li>@ConditionalOnMissingBean(name&#x3D;”xxx”)容器中不含有xxx组件时,装配该组件。</li>
-<li>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。<span id="more"></span></li>
+<li>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。</li>
 </ol>
 <h2 id="ConfigurationProperties配置绑定"><a href="#ConfigurationProperties配置绑定" class="headerlink" title="@ConfigurationProperties配置绑定"></a>@ConfigurationProperties配置绑定</h2><ol>
 <li>@ConfigurationProperties(prefix&#x3D;”xxx”)获取前缀为xxx的配置，用在pojo。</li>
@@ -45,12 +45,12 @@
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+<span id="more"></span>
 <p>arguments并不是真正意义上的数组：</p>
 <ol>
 <li>具有length</li>
 <li>以索引进行存储</li>
-<li>没有pop()与push()等数组方法<span id="more"></span></li>
+<li>没有pop()与push()等数组方法</li>
 </ol>
 <h2 id="javascript作用域"><a href="#javascript作用域" class="headerlink" title="javascript作用域"></a>javascript作用域</h2><ul>
 <li>javascript作用域分为全局作用域与局部作用域</li>

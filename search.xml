@@ -39,6 +39,7 @@
     <title>hexo博客搭建</title>
     <url>/hexo-bo-ke-da-jian/</url>
     <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io/">hexo</a>。</p>
+<span id="more"></span>
 <h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
 <li>生成的是静态网页，对服务器性能要求低，可以部署到例如<a href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
 <li>seo优化好，对于蜘蛛来说，静态网站加载速度快，可在单位时间内抓取更多的内容。</li>

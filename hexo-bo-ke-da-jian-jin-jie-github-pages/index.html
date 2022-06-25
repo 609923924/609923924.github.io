@@ -28,17 +28,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"itechfans.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="上次在博客搭建介绍了hexo的基本安装,再来介绍一下hexo如何部署到Github Pages。  首先要在Github上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。  安装hexo插件 hexo-deployer-git npm install hexo-deployer-git --save  到hexo目录下的_config.yml文件夹内找到de">
+    <meta name="description" content="上次在博客搭建介绍了hexo的基本安装,再来介绍一下hexo如何部署到Github Pages。  首先要在Github上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。  安装hexo插件 hexo-deployer-git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo教程进阶-Github Pages">
 <meta property="og:url" content="https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/index.html">
 <meta property="og:site_name" content="oliverkirk&#96;s blog">
-<meta property="og:description" content="上次在博客搭建介绍了hexo的基本安装,再来介绍一下hexo如何部署到Github Pages。  首先要在Github上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。  安装hexo插件 hexo-deployer-git npm install hexo-deployer-git --save  到hexo目录下的_config.yml文件夹内找到de">
+<meta property="og:description" content="上次在博客搭建介绍了hexo的基本安装,再来介绍一下hexo如何部署到Github Pages。  首先要在Github上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。  安装hexo插件 hexo-deployer-git">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
 <meta property="og:image" content="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
 <meta property="article:published_time" content="2022-06-25T03:51:44.000Z">
-<meta property="article:modified_time" content="2022-06-25T16:14:17.000Z">
+<meta property="article:modified_time" content="2022-06-25T16:18:03.000Z">
 <meta property="article:author" content="oliverkirk">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="教程">
@@ -259,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-26 00:14:17" itemprop="dateModified" datetime="2022-06-26T00:14:17+08:00">2022-06-26</time>
+      <time title="修改时间：2022-06-26 00:18:03" itemprop="dateModified" datetime="2022-06-26T00:18:03+08:00">2022-06-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,6 +293,8 @@
 <li><p>首先要在<a target="_blank" rel="noopener" href="https://github.com/">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
 </li>
 <li><p>安装hexo插件 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
+<span id="more"></span>
+
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>

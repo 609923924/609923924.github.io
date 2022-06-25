@@ -282,6 +282,8 @@ make install<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <li><p>首先要在<a href="https://github.com/">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
 </li>
 <li><p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
+<span id="more"></span>
+
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>

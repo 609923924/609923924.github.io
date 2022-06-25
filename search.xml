@@ -30,9 +30,113 @@
         <category>web后端</category>
       </categories>
       <tags>
+        <tag>后端</tag>
         <tag>SpringBoot</tag>
         <tag>学习</tag>
-        <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客搭建</title>
+    <url>/hexo-bo-ke-da-jian/</url>
+    <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io/">hexo</a>。</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
+<li>生成的是静态网页，对服务器性能要求低，可以部署到例如<a href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
+<li>seo优化好，对于蜘蛛来说，静态网站加载速度快，可在单位时间内抓取更多的内容。</li>
+<li>不易被攻击，静态网页没有后台，黑客几乎无从下手，能让站长更专注于内容，而不是黑客攻防。</li>
+<li>内容方便迁移，内容完全是md文档，可以随时备份到自己电脑上，安全性高。</li>
+<li>好看的主题多，选择较多。（虽然没wordpress多）</li>
+</ol>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ol>
+<li>静态博客不方便后期维护。</li>
+<li>没有集成的评论系统，只能通过第三方插件实现评论，我个人使用的是<a href="https://github.com/posativ/isso">isso</a>。</li>
+<li>没有浏览统计，也是通过第三方插件完成。</li>
+<li>Github Pages国内速度不太行，但可用<a href="https://vercel.com/">vercel</a>来代替，国内速度不错。</li>
+</ol>
+<p>如果你决定使用hexo作为你的博客框架，你可以继续往下看教程。</p>
+<h1 id="搭建教程"><a href="#搭建教程" class="headerlink" title="搭建教程"></a>搭建教程</h1><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol>
+<li><p>在服务器中安装nodejs环境。我使用的环境是centos7</p>
+<p>官网下载 <a href="http://nodejs.org/">nodejs</a></p>
+<p><code>wget https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz</code></p>
+</li>
+<li><p>解压</p>
+<p><code>xz -d node-v16.15.1-linux-x64.tar.xz </code></p>
+<p><code>tar -zxvf node-v16.15.1-linux-x64.tar </code></p>
+</li>
+<li><p>进入文件夹<code>cd node-v16.15.1-linux-x64</code> </p>
+<p>可以看到bin文件夹</p>
+</li>
+<li><p>直接加入环境变量<code>nano /etc/profile</code></p>
+<p>在最后一行加入</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">PATH&#x3D;&quot;$PATH:&#x2F;root&#x2F;node-v16.15.1-linux-x64&#x2F;bin&quot;
+export PATH<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>刷新一下<code>source /etc/profile</code></p>
+</li>
+<li><p>执行一下<code>node -v</code></p>
+<p>输出了node版本即为配置完成</p>
+</li>
+</ol>
+<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><ol>
+<li>安装基础包<br><code>yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel</code></li>
+<li>下载nginx包<br><code>wget http://nginx.org/download/nginx-1.23.0.tar.gz</code></li>
+<li>解压<br><code>tar -zxvf nginx-1.23.0.tar.gz</code></li>
+<li>切换到<code>cd nginx-1.23.0</code><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;configure
+make
+make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>安装完成后就可以到&#x2F;usr&#x2F;local&#x2F;nginx的安装目录</li>
+<li>进入到conf目录可以看到nginx.conf里面为nginx基本配置</li>
+<li>html文件夹下就是访问路径了</li>
+<li>进到sbin文件夹内利用<code>./nginx</code>可以启动nginx服务器</li>
+</ol>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625000735608.png" alt="image-20220625000735608"></p>
+<p>访问<a href="http://ip/%E7%9C%8B%E5%88%B0%E8%BF%99%E4%B8%AA%E5%B0%B1%E8%AF%B4%E6%98%8E%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90">http://ip/看到这个就说明配置完成</a></p>
+<h2 id="安装hexo-cli"><a href="#安装hexo-cli" class="headerlink" title="安装hexo-cli"></a>安装hexo-cli</h2><ol>
+<li>进入html文件夹内删除默认文件<code>rm -rf *</code></li>
+<li>执行<code>npm install hexo-cli -g</code></li>
+<li>初始化hexo目录<code>hexo init FILENAME</code>，FILENAME为任意名称</li>
+<li>进入FILENAME</li>
+<li>这时候的_config.yml可以根据<a href="https://hexo.bootcss.com/docs/configuration.html">hexo官网配置</a>进行修改</li>
+</ol>
+<h2 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h2><p>在FILENAME文件夹下</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone https:&#x2F;&#x2F;github.com&#x2F;next-theme&#x2F;hexo-theme-next themes&#x2F;next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>再将hexo配置文件中theme改为<code>theme: next</code>。</p>
+<p>同样在next主题目录下也有一个_config.yml，具体配置见<a href="https://github.com/next-theme/hexo-theme-next">hexo-theme-next</a>。</p>
+<p>修改conf里的nginx.conf，搜索root，<code>root html</code>修改为<code>root html/hexo/public</code>。</p>
+<p>到sbin文件夹里执行<code>./nginx -s reload</code>重载配置。</p>
+<h2 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hexo new  &lt;title&gt;</td>
+<td>新建一篇以title为名的文章。</td>
+</tr>
+<tr>
+<td>hexo generate &#x2F; hexo g</td>
+<td>生成静态文件。此时会产生一个public文件夹。</td>
+</tr>
+<tr>
+<td>hexo server</td>
+<td>启动hexo服务器，默认端口4000。</td>
+</tr>
+<tr>
+<td>hexo deploy &#x2F; hexo d</td>
+<td>部署网站。</td>
+</tr>
+</tbody></table>
+<p>这些是基础命令，更多可以看<a href="https://hexo.bootcss.com/docs/commands.html">hexo命令</a>。</p>
+<h2 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h2><p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问<a href="http://ip/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0">http://ip/可以看到</a></p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png" alt="image-20220625111433935"></p>
+<p>则已经部署好。</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>

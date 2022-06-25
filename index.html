@@ -241,7 +241,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-06-25 12:57:20 / 修改时间：16:36:39" itemprop="dateCreated datePublished" datetime="2022-06-25T12:57:20+08:00">2022-06-25</time>
+      <time title="创建时间：2022-06-25 12:57:20 / 修改时间：16:45:08" itemprop="dateCreated datePublished" datetime="2022-06-25T12:57:20+08:00">2022-06-25</time>
     </span>
 
   
@@ -259,101 +259,14 @@
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token comment">//效果相同</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="jQuery对象获取"><a href="#jQuery对象获取" class="headerlink" title="jQuery对象获取"></a>jQuery对象获取</h2><p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
-<p>且JQuery对象只能使用JQuery方法，不能使用原生DOM方法</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> jq <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="DOM对象转换为JQuery对象"><a href="#DOM对象转换为JQuery对象" class="headerlink" title="DOM对象转换为JQuery对象"></a>DOM对象转换为JQuery对象</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> dom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">$</span><span class="token punctuation">(</span>dom<span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="jQuery对象转换DOM对象"><a href="#jQuery对象转换DOM对象" class="headerlink" title="jQuery对象转换DOM对象"></a>jQuery对象转换DOM对象</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> jq <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> dom <span class="token operator">=</span> jq<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> dom <span class="token operator">=</span> jq<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="jQuery常用API"><a href="#jQuery常用API" class="headerlink" title="jQuery常用API"></a>jQuery常用API</h1><h2 id="jQuery基础选择器"><a href="#jQuery基础选择器" class="headerlink" title="jQuery基础选择器"></a>jQuery基础选择器</h2><p><code>$(&quot;选择器&quot;)</code></p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>用法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ID选择器</td>
-<td>$(‘#id’)</td>
-<td>获取指定id元素</td>
-</tr>
-<tr>
-<td>全选选择器</td>
-<td>$(‘*’)</td>
-<td>所有元素</td>
-</tr>
-<tr>
-<td>类选择器</td>
-<td>$(‘.class’)</td>
-<td>获取同一类class元素</td>
-</tr>
-<tr>
-<td>标签选择器</td>
-<td>$(‘div’)</td>
-<td>获取同一标签元素</td>
-</tr>
-<tr>
-<td>并集选择器</td>
-<td>$(‘div,p,li’)</td>
-<td>获取多个元素</td>
-</tr>
-<tr>
-<td>交集选择器</td>
-<td>$(‘div.li’)</td>
-<td>获取交集元素</td>
-</tr>
-</tbody></table>
-<h2 id="jQuery隐式迭代"><a href="#jQuery隐式迭代" class="headerlink" title="jQuery隐式迭代"></a>jQuery隐式迭代</h2><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span><span class="token string">'blue'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>会将所有div都变为蓝色</p>
-<h2 id="jQuery筛选选择器"><a href="#jQuery筛选选择器" class="headerlink" title="jQuery筛选选择器"></a>jQuery筛选选择器</h2><table>
-<thead>
-<tr>
-<th>语法</th>
-<th>用法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:first</td>
-<td>$(‘li:first’)</td>
-<td>获取第一个li</td>
-</tr>
-<tr>
-<td>:last</td>
-<td>$(‘li:last’)</td>
-<td>获取最后一个li</td>
-</tr>
-<tr>
-<td>:eq(index)</td>
-<td>$(‘li:eq(2)’)</td>
-<td>获取到索引为2的li元素（从0开始）</td>
-</tr>
-<tr>
-<td>:odd</td>
-<td>$(‘li:odd’)</td>
-<td>获取到索引为奇数的li元素</td>
-</tr>
-<tr>
-<td>:even</td>
-<td>$(‘li:even’)</td>
-<td>获取到索引为偶数的li元素</td>
-</tr>
-</tbody></table>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/jquery-bi-ji-01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

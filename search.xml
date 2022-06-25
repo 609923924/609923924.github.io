@@ -8,7 +8,7 @@
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token comment">//效果相同</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+<span id="more"></span>
 <h2 id="jQuery对象获取"><a href="#jQuery对象获取" class="headerlink" title="jQuery对象获取"></a>jQuery对象获取</h2><p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
 <p>且JQuery对象只能使用JQuery方法，不能使用原生DOM方法</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> jq <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>

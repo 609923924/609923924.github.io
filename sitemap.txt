@@ -1,5 +1,6 @@
-https://itechfans.com/links/index.html
+https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/
 https://itechfans.com/jquery-bi-ji-01/
+https://itechfans.com/links/index.html
 https://itechfans.com/hexo-bo-ke-da-jian/
 https://itechfans.com/javascrip-xue-xi-bi-ji-01/
 https://itechfans.com/springboot-xue-xi-bi-ji-01/
@@ -11,12 +12,12 @@ https://itechfans.com/tags/%E5%AD%A6%E4%B9%A0/
 https://itechfans.com/tags/%E5%89%8D%E7%AB%AF/
 https://itechfans.com/tags/hexo/
 https://itechfans.com/tags/%E6%95%99%E7%A8%8B/
+https://itechfans.com/tags/%E5%8D%9A%E5%AE%A2/
 https://itechfans.com/tags/%E5%90%8E%E7%AB%AF/
 https://itechfans.com/tags/SpringBoot/
-https://itechfans.com/tags/%E5%8D%9A%E5%AE%A2/
 https://itechfans.com/tags/javascript/
 https://itechfans.com/tags/%E7%AC%94%E8%AE%B0/
 https://itechfans.com/tags/es5/
-https://itechfans.com/categories/web%E5%90%8E%E7%AB%AF/
 https://itechfans.com/categories/%E6%95%99%E7%A8%8B/
 https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF/
+https://itechfans.com/categories/web%E5%90%8E%E7%AB%AF/

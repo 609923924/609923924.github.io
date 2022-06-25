@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -244,7 +244,16 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-06-25 12:57:20 / 修改时间：18:05:04" itemprop="dateCreated datePublished" datetime="2022-06-25T12:57:20+08:00">2022-06-25</time>
+      <time title="创建时间：2022-06-25 12:57:20 / 修改时间：23:15:23" itemprop="dateCreated datePublished" datetime="2022-06-25T12:57:20+08:00">2022-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">web前端</span></a>
+        </span>
     </span>
 
   
@@ -271,6 +280,138 @@
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="oliverkirk">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="oliverkirk`s blog">
+      <meta itemprop="description" content="分享科技与生活">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | oliverkirk`s blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hexo-bo-ke-da-jian-jin-jie-github-pages/" class="post-title-link" itemprop="url">hexo教程进阶-Github Pages</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-25 11:51:44" itemprop="dateCreated datePublished" datetime="2022-06-25T11:51:44+08:00">2022-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-26 00:14:17" itemprop="dateModified" datetime="2022-06-26T00:14:17+08:00">2022-06-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a>。</p>
+<ol>
+<li><p>首先要在<a target="_blank" rel="noopener" href="https://github.com/">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
+</li>
+<li><p>安装hexo插件 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">deploy:
+  type: git
+  repo: 仓库的url   # https:&#x2F;&#x2F;github.com&#x2F;&lt;name&gt;&#x2F;&lt;name&gt;.github.io.git
+  branch: master # 一般为master
+  ignore_hidden: true # default is true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>配置一下git全局的name和email</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git config –global user.name &quot;your_account_name&quot;
+git config –global user.email &quot;youremail@example.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
+<ol>
+<li><p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
+</li>
+<li><p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
+</li>
+<li><p>点击进入<a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
+</li>
+<li><p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="image-20220625234931976"></p>
+<p>点击后将内容粘贴进去。</p>
+<p>此时deploy可改为：</p>
+</li>
+</ol>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">deploy:
+  type: git
+  repo: git@github.com:&lt;name&gt;&#x2F;&lt;name&gt;.github.io.git
+  branch: master
+  ignore_hidden: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
+<ol start="4">
+<li><p>进入仓库settings</p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="image-20220626000344354"></p>
+</li>
+</ol>
+<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https:&#x2F;&#x2F;&lt;name&gt;.github.io进入网站。</p>
+<ol start="5">
+<li>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</li>
+<li>然后就可以通过自己的域名访问网站了。</li>
+</ol>
+
       
     </div>
 

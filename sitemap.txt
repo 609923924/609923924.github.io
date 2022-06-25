@@ -1,9 +1,11 @@
+https://itechfans.com/jquery-bi-ji-01/
 https://itechfans.com/hexo-bo-ke-da-jian/
 https://itechfans.com/javascrip-xue-xi-bi-ji-01/
 https://itechfans.com/springboot-xue-xi-bi-ji-01/
 https://itechfans.com/categories/index.html
 https://itechfans.com/tags/index.html
 https://itechfans.com/
+https://itechfans.com/tags/jQuery/
 https://itechfans.com/tags/%E5%AD%A6%E4%B9%A0/
 https://itechfans.com/tags/%E5%89%8D%E7%AB%AF/
 https://itechfans.com/tags/hexo/

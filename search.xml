@@ -1,6 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>jQuery学习笔记01</title>
+    <url>/jquery-bi-ji-01/</url>
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<h1 id="jQuery基本使用"><a href="#jQuery基本使用" class="headerlink" title="jQuery基本使用"></a>jQuery基本使用</h1><h2 id="jQuery顶级对象"><a href="#jQuery顶级对象" class="headerlink" title="jQuery顶级对象$"></a>jQuery顶级对象$</h2><p>$是JQuery的别称</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token comment">//效果相同</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="jQuery对象获取"><a href="#jQuery对象获取" class="headerlink" title="jQuery对象获取"></a>jQuery对象获取</h2><p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
+<p>且JQuery对象只能使用JQuery方法，不能使用原生DOM方法</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> jq <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="DOM对象转换为JQuery对象"><a href="#DOM对象转换为JQuery对象" class="headerlink" title="DOM对象转换为JQuery对象"></a>DOM对象转换为JQuery对象</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> dom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span>dom<span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="jQuery对象转换DOM对象"><a href="#jQuery对象转换DOM对象" class="headerlink" title="jQuery对象转换DOM对象"></a>jQuery对象转换DOM对象</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> jq <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> dom <span class="token operator">=</span> jq<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> dom <span class="token operator">=</span> jq<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="jQuery常用API"><a href="#jQuery常用API" class="headerlink" title="jQuery常用API"></a>jQuery常用API</h1><h2 id="jQuery基础选择器"><a href="#jQuery基础选择器" class="headerlink" title="jQuery基础选择器"></a>jQuery基础选择器</h2><p><code>$(&quot;选择器&quot;)</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID选择器</td>
+<td>$(‘#id’)</td>
+<td>获取指定id元素</td>
+</tr>
+<tr>
+<td>全选选择器</td>
+<td>$(‘*’)</td>
+<td>所有元素</td>
+</tr>
+<tr>
+<td>类选择器</td>
+<td>$(‘.class’)</td>
+<td>获取同一类class元素</td>
+</tr>
+<tr>
+<td>标签选择器</td>
+<td>$(‘div’)</td>
+<td>获取同一标签元素</td>
+</tr>
+<tr>
+<td>并集选择器</td>
+<td>$(‘div,p,li’)</td>
+<td>获取多个元素</td>
+</tr>
+<tr>
+<td>交集选择器</td>
+<td>$(‘div.li’)</td>
+<td>获取交集元素</td>
+</tr>
+</tbody></table>
+<h2 id="jQuery隐式迭代"><a href="#jQuery隐式迭代" class="headerlink" title="jQuery隐式迭代"></a>jQuery隐式迭代</h2><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span><span class="token string">'blue'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+    <div class="demobox">
+      <div class="demobox-result">
+    <div id="demo">
+    </div>
+    <button id="demobtn">
+        &#x6539;&#x53D8;&#x989C;&#x8272;
+    </button>
+<script>(function(){
+    document.getElementById('demobtn').onclick = function() {
+        var randomColor = '#' + Math.random().toString().substr(2,6);
+        document.getElementById('demo').style.background = randomColor;
+  }
+})();</script><style>
+    #demo{
+        height: 100px;
+        weight: 100px;
+        color = 'red';
+    }
+    #demobtn{
+        padding:10px;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">list</div><div class="demobox-intro"><p>example of demo</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;demobtn&quot;</span>&gt;</span></span><br><span class="line">    &#x6539;&#x53D8;&#x989C;&#x8272;</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&apos;demobtn&apos;</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">      <span class="keyword">var</span> randomColor = <span class="string">&apos;#&apos;</span> + <span class="built_in">Math</span>.random().toString().substr(<span class="number">2</span>,<span class="number">6</span>);</span><br><span class="line">      <span class="built_in">document</span>.getElementById(<span class="string">&apos;demo&apos;</span>).style.background = randomColor;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo</span>{</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">weight</span>: <span class="number">100px</span>;</span><br><span class="line">    color = &apos;red&apos;;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demobtn</span>{</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+<p>会将所有div都变为蓝色</p>
+<h2 id="jQuery筛选选择器"><a href="#jQuery筛选选择器" class="headerlink" title="jQuery筛选选择器"></a>jQuery筛选选择器</h2><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:first</td>
+<td>$(‘li:first’)</td>
+<td>获取第一个li</td>
+</tr>
+<tr>
+<td>:last</td>
+<td>$(‘li:last’)</td>
+<td>获取最后一个li</td>
+</tr>
+<tr>
+<td>:eq(index)</td>
+<td>$(‘li:eq(2)’)</td>
+<td>获取到索引为2的li元素（从0开始）</td>
+</tr>
+<tr>
+<td>:odd</td>
+<td>$(‘li:odd’)</td>
+<td>获取到索引为奇数的li元素</td>
+</tr>
+<tr>
+<td>:even</td>
+<td>$(‘li:even’)</td>
+<td>获取到索引为偶数的li元素</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>jQuery</tag>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SpringBoot学习笔记-01</title>
     <url>/springboot-xue-xi-bi-ji-01/</url>
     <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>

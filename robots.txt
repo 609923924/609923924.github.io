@@ -15,3 +15,4 @@ Disallow: /fancybox/
 
 Sitemap: https://itechfans.com/sitemap.xml
 Sitemap: https://itechfans.com/baidusitemap.xml
+Sitemap: https://itechfans.com/baidu_urls.txt

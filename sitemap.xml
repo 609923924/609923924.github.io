@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://itechfans.com/javascript-learning-notes-01/</loc>
-    
-    <lastmod>2022-06-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://itechfans.com/jquery-learning-notes-01/</loc>
-    
-    <lastmod>2022-06-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://itechfans.com/hexo-blog-building/</loc>
     
     <lastmod>2022-06-26</lastmod>
@@ -47,7 +29,34 @@
   </url>
   
   <url>
+    <loc>https://itechfans.com/tags/index.html</loc>
+    
+    <lastmod>2022-06-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itechfans.com/404.html</loc>
+    
+    <lastmod>2022-06-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/categories/index.html</loc>
+    
+    <lastmod>2022-06-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/jquery-learning-notes-01/</loc>
     
     <lastmod>2022-06-26</lastmod>
     
@@ -58,25 +67,16 @@
   <url>
     <loc>https://itechfans.com/links/index.html</loc>
     
-    <lastmod>2022-06-25</lastmod>
+    <lastmod>2022-06-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://itechfans.com/categories/index.html</loc>
+    <loc>https://itechfans.com/javascript-learning-notes-01/</loc>
     
-    <lastmod>2022-06-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://itechfans.com/tags/index.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
+    <lastmod>2022-06-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

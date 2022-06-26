@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>jQuery学习笔记01</title>
-    <url>/jquery-bi-ji-01/</url>
+    <url>/jquery-learning-notes-01/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1 id="jQuery基本使用"><a href="#jQuery基本使用" class="headerlink" title="jQuery基本使用"></a>jQuery基本使用</h1><h2 id="jQuery顶级对象"><a href="#jQuery顶级对象" class="headerlink" title="jQuery顶级对象$"></a>jQuery顶级对象$</h2><p>$是JQuery的别称</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -121,7 +121,7 @@
 <td>获取到索引为偶数的li元素</td>
 </tr>
 </tbody></table>
-<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/jquery-bi-ji-01/</p><p>访问原文「<a href='https://itechfans.com/jquery-bi-ji-01/'>jQuery学习笔记01</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
   Element.prototype.remove = function() {
@@ -155,7 +155,7 @@
   </entry>
   <entry>
     <title>SpringBoot学习笔记-01</title>
-    <url>/springboot-xue-xi-bi-ji-01/</url>
+    <url>/springboot-learning-notes-01/</url>
     <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>
 <li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
 <li>配置类本身也是组件。</li>
@@ -178,7 +178,7 @@
 <li>将指定包下的所有组件导入。(MainApplications所在地)</li>
 <li>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</li>
 </ol>
-<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/springboot-xue-xi-bi-ji-01/</p><p>访问原文「<a href='https://itechfans.com/springboot-xue-xi-bi-ji-01/'>SpringBoot学习笔记-01</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
   Element.prototype.remove = function() {
@@ -213,7 +213,7 @@
   </entry>
   <entry>
     <title>hexo博客搭建</title>
-    <url>/hexo-bo-ke-da-jian/</url>
+    <url>/hexo-blog-building/</url>
     <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io/">hexo</a>。</p>
 <span id="more"></span>
 <h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
@@ -309,7 +309,7 @@ make install<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <h2 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h2><p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问<a href="http://ip/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0">http://ip/可以看到</a></p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Hexo Hello World"></p>
 <p>则已经部署好。</p>
-<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/hexo-bo-ke-da-jian/</p><p>访问原文「<a href='https://itechfans.com/hexo-bo-ke-da-jian/'>hexo博客搭建</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
   Element.prototype.remove = function() {
@@ -342,7 +342,7 @@ make install<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
   </entry>
   <entry>
     <title>hexo教程进阶-Github Pages</title>
-    <url>/hexo-bo-ke-da-jian-jin-jie-github-pages/</url>
+    <url>/advanced-hexo-tutorial-github-pages/</url>
     <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
 <ol>
 <li><p>首先要在<a href="https://github.com/">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
@@ -393,7 +393,7 @@ git config –global user.email &quot;youremail@example.com&quot;<span aria-hidd
 <li>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</li>
 <li>然后就可以通过自己的域名访问网站了。</li>
 </ol>
-<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/</p><p>访问原文「<a href='https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/'>hexo教程进阶-Github Pages</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
   Element.prototype.remove = function() {
@@ -426,7 +426,7 @@ git config –global user.email &quot;youremail@example.com&quot;<span aria-hidd
   </entry>
   <entry>
     <title>javascript学习笔记-01</title>
-    <url>/javascrip-xue-xi-bi-ji-01/</url>
+    <url>/javascript-learning-notes-01/</url>
     <content><![CDATA[<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><ul>
 <li>不确定实参个数时，使用arguments获取所有参数</li>
 </ul>
@@ -536,7 +536,7 @@ div<span class="token punctuation">.</span><span class="token function-variable 
 <li><p>事件对象是事件的一系列相关数据的集合。</p>
 </li>
 </ul>
-<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/javascrip-xue-xi-bi-ji-01/</p><p>访问原文「<a href='https://itechfans.com/javascrip-xue-xi-bi-ji-01/'>javascript学习笔记-01</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
   Element.prototype.remove = function() {

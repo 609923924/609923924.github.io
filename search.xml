@@ -121,6 +121,28 @@
 <td>获取到索引为偶数的li元素</td>
 </tr>
 </tbody></table>
+<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/jquery-bi-ji-01/</p><p>访问原文「<a href='https://itechfans.com/jquery-bi-ji-01/'>jQuery学习笔记01</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
+
 ]]></content>
       <categories>
         <category>web前端</category>
@@ -156,6 +178,29 @@
 <li>将指定包下的所有组件导入。(MainApplications所在地)</li>
 <li>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</li>
 </ol>
+<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/springboot-xue-xi-bi-ji-01/</p><p>访问原文「<a href='https://itechfans.com/springboot-xue-xi-bi-ji-01/'>SpringBoot学习笔记-01</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
+
+
 ]]></content>
       <categories>
         <category>web后端</category>
@@ -264,6 +309,27 @@ make install<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <h2 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h2><p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问<a href="http://ip/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0">http://ip/可以看到</a></p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="image-20220625111433935"></p>
 <p>则已经部署好。</p>
+<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/hexo-bo-ke-da-jian/</p><p>访问原文「<a href='https://itechfans.com/hexo-bo-ke-da-jian/'>hexo博客搭建</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -327,6 +393,27 @@ git config –global user.email &quot;youremail@example.com&quot;<span aria-hidd
 <li>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</li>
 <li>然后就可以通过自己的域名访问网站了。</li>
 </ol>
+<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/</p><p>访问原文「<a href='https://itechfans.com/hexo-bo-ke-da-jian-jin-jie-github-pages/'>hexo教程进阶-Github Pages</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -449,6 +536,27 @@ div<span class="token punctuation">.</span><span class="token function-variable 
 <li><p>事件对象是事件的一系列相关数据的集合。</p>
 </li>
 </ul>
+<span class='source'><blockquote><p>转载请注明出处：https://itechfans.com/javascrip-xue-xi-bi-ji-01/</p><p>访问原文「<a href='https://itechfans.com/javascrip-xue-xi-bi-ji-01/'>javascript学习笔记-01</a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
 ]]></content>
       <categories>
         <category>web前端</category>

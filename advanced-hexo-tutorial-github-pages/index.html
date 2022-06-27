@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/blue/pace-theme-mac-osx.css">
   <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"itechfans.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"itechfans.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="hexo搭建的进阶教程，如何部署到GitHub Pages">
 <meta property="og:type" content="article">
@@ -301,18 +301,13 @@
 <li><p>安装hexo插件 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
 <span id="more"></span>
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">deploy:
-  type: git
-  repo: 仓库的url   # https:&#x2F;&#x2F;github.com&#x2F;&lt;name&gt;&#x2F;&lt;name&gt;.github.io.git
-  branch: master # 一般为master
-  ignore_hidden: true # default is true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
 
 <p>配置一下git全局的name和email</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git config –global user.name &quot;your_account_name&quot;
-git config –global user.email &quot;youremail@example.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
 <ol>
@@ -327,11 +322,7 @@ git config –global user.email &quot;youremail@example.com&quot;<span aria-hidd
 <p>此时deploy可改为：</p>
 </li>
 </ol>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">deploy:
-  type: git
-  repo: git@github.com:&lt;name&gt;&#x2F;&lt;name&gt;.github.io.git
-  branch: master
-  ignore_hidden: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
 <ol start="4">
@@ -390,7 +381,7 @@ git config –global user.email &quot;youremail@example.com&quot;<span aria-hidd
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/jquery-learning-notes-01/" rel="next" title="jQuery学习笔记01">
+                <a href="/" rel="next" title="jQuery学习笔记01">
                   jQuery学习笔记01 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>

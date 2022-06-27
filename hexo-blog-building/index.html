@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/blue/pace-theme-mac-osx.css">
   <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"itechfans.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"itechfans.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="hexo博客基本搭建">
 <meta property="og:type" content="article">
@@ -325,8 +325,7 @@
 </li>
 <li><p>直接加入环境变量<code>nano /etc/profile</code></p>
 <p>在最后一行加入</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">PATH&#x3D;&quot;$PATH:&#x2F;root&#x2F;node-v16.15.1-linux-x64&#x2F;bin&quot;
-export PATH<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="string">&quot;<span class="variable">$PATH</span>:/root/node-v16.15.1-linux-x64/bin&quot;</span></span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>刷新一下<code>source /etc/profile</code></p>
 </li>
@@ -338,9 +337,7 @@ export PATH<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <li>安装基础包<br><code>yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel</code></li>
 <li>下载nginx包<br><code>wget http://nginx.org/download/nginx-1.23.0.tar.gz</code></li>
 <li>解压<br><code>tar -zxvf nginx-1.23.0.tar.gz</code></li>
-<li>切换到<code>cd nginx-1.23.0</code><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;configure
-make
-make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>切换到<code>cd nginx-1.23.0</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li>
 <li>安装完成后就可以到&#x2F;usr&#x2F;local&#x2F;nginx的安装目录</li>
 <li>进入到conf目录可以看到nginx.conf里面为nginx基本配置</li>
 <li>html文件夹下就是访问路径了</li>
@@ -356,7 +353,7 @@ make install<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <li>这时候的_config.yml可以根据<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.bootcss.com/docs/configuration.html">hexo官网配置</a>进行修改</li>
 </ol>
 <h2 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h2><p>在FILENAME文件夹下</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone https:&#x2F;&#x2F;github.com&#x2F;next-theme&#x2F;hexo-theme-next themes&#x2F;next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
 <p>再将hexo配置文件中theme改为<code>theme: next</code>。</p>
 <p>同样在next主题目录下也有一个_config.yml，具体配置见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/next-theme/hexo-theme-next">hexo-theme-next</a>。</p>

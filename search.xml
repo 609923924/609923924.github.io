@@ -212,8 +212,8 @@
       </tags>
   </entry>
   <entry>
-    <title>flex学习笔记1</title>
-    <url>/flex-learning-notes-1/</url>
+    <title>flex学习笔记</title>
+    <url>/flex-learning-notes/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h1><h2 id="Flex由来"><a href="#Flex由来" class="headerlink" title="Flex由来"></a>Flex由来</h2><p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
 <h2 id="Flex是什么"><a href="#Flex是什么" class="headerlink" title="Flex是什么"></a>Flex是什么</h2><p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>

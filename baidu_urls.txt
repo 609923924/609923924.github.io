@@ -1,4 +1,4 @@
-https://itechfans.com/flex-learning-notes-1/
+https://itechfans.com/flex-learning-notes/
 https://itechfans.com/jquery-learning-notes-01/
 https://itechfans.com/advanced-hexo-tutorial-github-pages/
 https://itechfans.com/hexo-blog-building/

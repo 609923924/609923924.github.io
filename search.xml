@@ -212,6 +212,269 @@
       </tags>
   </entry>
   <entry>
+    <title>flex学习笔记</title>
+    <url>/flex-learning-notes/</url>
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<h1 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h1><h2 id="Flex由来"><a href="#Flex由来" class="headerlink" title="Flex由来"></a>Flex由来</h2><p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
+<h2 id="Flex是什么"><a href="#Flex是什么" class="headerlink" title="Flex是什么"></a>Flex是什么</h2><p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>
+<h2 id="Flex布局与传统布局的区别"><a href="#Flex布局与传统布局的区别" class="headerlink" title="Flex布局与传统布局的区别"></a>Flex布局与传统布局的区别</h2><h3 id="传统布局"><a href="#传统布局" class="headerlink" title="传统布局"></a>传统布局</h3><p>优点：</p>
+<ol>
+<li>传统布局为大多数浏览器所兼容，包括ie11以下的所有版本。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>在移动端适配具有局限性。</li>
+<li>基于盒子模型，依赖 display属性 、position属性 、float属性；布局繁琐。<span id="more"></span></li>
+</ol>
+<h3 id="Flex布局-1"><a href="#Flex布局-1" class="headerlink" title="Flex布局"></a>Flex布局</h3><p>优点：</p>
+<ol>
+<li>操作更为简单，几行代码就能实现垂直居中，且移动端适配好。</li>
+<li>pc端浏览器已基本支持。<br>缺点：</li>
+<li>ie11及以下版本不支持。</li>
+</ol>
+<h2 id="Flex布局简单应用"><a href="#Flex布局简单应用" class="headerlink" title="Flex布局简单应用"></a>Flex布局简单应用</h2>
+    <div class="demobox">
+      <div class="demobox-result">
+  <div id="demo1">
+      <div id="demobox">test1</div>
+      <div id="demobox">test2</div>
+      <div id="demobox">test3</div>
+  </div>
+<script>(function(){})();</script><style>
+    #demo1{
+        width:360px;
+        height: 150px;
+        display: flex;
+    }
+    #demobox{
+        width: 100px;
+        heght: 100px;
+        background-color: blue;
+        margin: 0 10px;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">Flex&#x7B80;&#x5355;&#x5E94;&#x7528;</div><div class="demobox-intro"><p>Flex&#x5E03;&#x5C40;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo1</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">360px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demobox</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">heght</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+
+<h2 id="Flex布局原理"><a href="#Flex布局原理" class="headerlink" title="Flex布局原理"></a>Flex布局原理</h2><ul>
+<li>当父元素设置为flex布局后，子元素中的float、clear与vertical-align将失效。</li>
+<li>在flex中父元素（父盒子）被成为flex父容器，其中的元素被称为子容器（flex项目）。</li>
+<li>通过给<strong>父元素</strong>添加flex属性，从而控制子元素位置与排列方式。</li>
+</ul>
+<h2 id="Flex常见父属性"><a href="#Flex常见父属性" class="headerlink" title="Flex常见父属性"></a>Flex常见父属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#flex-direction">flex-direction</a></td>
+<td>row,row-reverse,column,column-reverse</td>
+<td>设置主轴方向</td>
+</tr>
+<tr>
+<td><a href="#justufy-content">justufy-content</a></td>
+<td>flex-start,flex-end,center,space-around,space-between</td>
+<td>设置主轴上子元素排列方式</td>
+</tr>
+<tr>
+<td><a href="#flex-wrap">flex-wrap</a></td>
+<td></td>
+<td>设置子元素换行</td>
+</tr>
+<tr>
+<td><a href="#align-content">align-content</a></td>
+<td></td>
+<td>设置侧轴上子元素排列方式（多行）</td>
+</tr>
+<tr>
+<td><a href="#align-items">align-items</a></td>
+<td></td>
+<td>设置侧轴上子元素排列方式（单行）</td>
+</tr>
+<tr>
+<td><a href="#flex-flow">flex-flow</a></td>
+<td></td>
+<td>复合属性</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>默认主轴水平向右，x方向。</p>
+</li>
+<li><p>默认侧轴竖直向下，y方向。</p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/202206271417925.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="坐标"></p>
+</li>
+</ul>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><span id = "flex-direction">flex-direction</span></h3><table>
+<thead>
+<tr>
+<th>值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#direction-row">row</a></td>
+<td>x轴正序排列，并设置主轴为x轴方向</td>
+</tr>
+<tr>
+<td><a href="#direction-row-reverse">row-reverse</a></td>
+<td>x轴倒序排列，并设置主轴为x轴方向</td>
+</tr>
+<tr>
+<td><a href="#direction-column">column</a></td>
+<td>y轴正序排列，并设置主轴为y轴方向</td>
+</tr>
+<tr>
+<td><a href="#direction-column-reverse">column-reverse</a></td>
+<td>y轴倒序排列，并设置主轴为y轴方向</td>
+</tr>
+</tbody></table>
+<p><span id="direction-row"></span></p>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div id="demo2">
+      <div id="demo2box">test1</div>
+      <div id="demo2box">test2</div>
+      <div id="demo2box">test3</div>
+  </div>
+<script>(function(){})();</script><style>
+    #demo2{
+        width:360px;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+    }
+    #demo2box{
+        width: 100px;
+        heght: 100px;
+        background-color: blue;
+        margin: 0 10px;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: row</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo2</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">360px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo2box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">heght</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+
+<p><span id="direction-row-reverse"></span></p>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div id="demo3">
+      <div id="demo3box">test1</div>
+      <div id="demo3box">test2</div>
+      <div id="demo3box">test3</div>
+  </div>
+<script>(function(){})();</script><style>
+    #demo3{
+        width:360px;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+    }
+    #demo3box{
+        width: 100px;
+        heght: 100px;
+        background-color: blue;
+        margin: 0 10px;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: row-reverse</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo3</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">360px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo3box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">heght</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+
+<p><span id="direction-column"></span></p>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div id="demo4">
+      <div id="demo4box">test1</div>
+      <div id="demo4box">test2</div>
+      <div id="demo4box">test3</div>
+  </div>
+<script>(function(){})();</script><style>
+    #demo4{
+        width:360px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+    #demo4box{
+        background-color: blue;
+        margin: 0 10px;
+        flex: 1;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: column</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo4</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">360px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo4box</span>{</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+
+<p><span id="direction-column-reverse"></span></p>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div id="demo5">
+      <div id="demo5box">test1</div>
+      <div id="demo5box">test2</div>
+      <div id="demo5box">test3</div>
+  </div>
+<script>(function(){})();</script><style>
+    #demo5{
+        width:360px;
+        height: 150px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #demo5box{
+        background-color: blue;
+        margin: 0 10px;
+        flex: 1;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: column-reverse</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo5</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">360px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column-reverse;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo5box</span>{</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+
+
+
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
+]]></content>
+      <categories>
+        <category>web前端-css</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+        <tag>flex</tag>
+        <tag>笔记</tag>
+        <tag>css</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo博客搭建</title>
     <url>/hexo-blog-building/</url>
     <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io/">hexo</a>。</p>

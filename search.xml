@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>jQuery学习笔记01</title>
-    <url>//</url>
+    <url>/jquery-learning-notes-01/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1 id="jQuery基本使用"><a href="#jQuery基本使用" class="headerlink" title="jQuery基本使用"></a>jQuery基本使用</h1><h2 id="jQuery顶级对象"><a href="#jQuery顶级对象" class="headerlink" title="jQuery顶级对象$"></a>jQuery顶级对象$</h2><p>$是JQuery的别称</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>

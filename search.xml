@@ -145,7 +145,7 @@
 
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>web前端-js</category>
       </categories>
       <tags>
         <tag>jQuery</tag>
@@ -203,7 +203,7 @@
 
 ]]></content>
       <categories>
-        <category>web后端</category>
+        <category>web后端-springboot</category>
       </categories>
       <tags>
         <tag>学习</tag>
@@ -559,13 +559,13 @@ div<span class="token punctuation">.</span><span class="token function-variable 
 </script>
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>web前端-js</category>
       </categories>
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>javascript</tag>
         <tag>笔记</tag>
+        <tag>javascript</tag>
         <tag>es5</tag>
       </tags>
   </entry>

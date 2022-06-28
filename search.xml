@@ -223,10 +223,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>笔记</tag>
+        <tag>Less</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>Less</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -283,13 +283,13 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>后端</tag>
         <tag>SpringBoot</tag>
+        <tag>后端</tag>
       </tags>
   </entry>
   <entry>
     <title>flex学习笔记</title>
-    <url>/flex-learning-notes/</url>
+    <url>//</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h1><h2 id="Flex由来"><a href="#Flex由来" class="headerlink" title="Flex由来"></a>Flex由来</h2><p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
 <h2 id="Flex是什么"><a href="#Flex是什么" class="headerlink" title="Flex是什么"></a>Flex是什么</h2><p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>
@@ -890,10 +890,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>flex</tag>
-        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
+        <tag>笔记</tag>
+        <tag>flex</tag>
       </tags>
   </entry>
   <entry>
@@ -1018,8 +1018,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>教程</tag>
         <tag>博客</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -1093,8 +1093,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>教程</tag>
         <tag>博客</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>

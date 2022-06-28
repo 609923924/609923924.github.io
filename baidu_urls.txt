@@ -5,4 +5,4 @@ https://itechfans.com/jquery-learning-notes-01/
 https://itechfans.com/advanced-hexo-tutorial-github-pages/
 https://itechfans.com/hexo-blog-building/
 https://itechfans.com/javascript-learning-notes-01/
-https://itechfans.com/
+https://itechfans.com/springboot-learning-notes-01/

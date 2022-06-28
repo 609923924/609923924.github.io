@@ -236,7 +236,7 @@
   </entry>
   <entry>
     <title>SpringBoot学习笔记-01</title>
-    <url>//</url>
+    <url>/springboot-learning-notes-01/</url>
     <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>
 <li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
 <li>配置类本身也是组件。</li>

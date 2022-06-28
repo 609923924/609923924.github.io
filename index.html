@@ -220,7 +220,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://itechfans.com/es6-es11-note-1/">
+    <link itemprop="mainEntityOfPage" href="https://itechfans.com/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://qiniu.itechfans.com/avatar/avatar256.png">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/es6-es11-note-1/" class="post-title-link" itemprop="url">es6-es11笔记1</a>
+          <a href="/" class="post-title-link" itemprop="url">es6-es11笔记1</a>
         </h2>
 
         <div class="post-meta-container">
@@ -250,7 +250,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-06-28 15:43:16 / 修改时间：23:33:28" itemprop="dateCreated datePublished" datetime="2022-06-28T15:43:16+08:00">2022-06-28</time>
+      <time title="创建时间：2022-06-28 15:43:16 / 修改时间：23:35:24" itemprop="dateCreated datePublished" datetime="2022-06-28T15:43:16+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -269,7 +269,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -288,10 +288,47 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <link rel="stylesheet" href="/css/demobox.css" />[toc]
+          <link rel="stylesheet" href="/css/demobox.css" />
+
+<!-- toc -->
+
+<ul>
+<li><a href="#es6%E8%AF%AD%E6%B3%95">ES6语法</a><ul>
+<li><a href="#let%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E">let变量声明</a><ul>
+<li><a href="#let%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E5%A3%B0%E6%98%8E">let不可重复声明</a></li>
+<li><a href="#%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F">块级作用域</a></li>
+<li><a href="#%E6%B2%A1%E6%9C%89%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87">没有变量提升</a></li>
+<li><a href="#%E4%B8%8D%E5%BD%B1%E5%93%8D%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE">不影响作用域链</a></li>
+</ul>
+</li>
+<li><a href="#const%E5%A3%B0%E6%98%8E%E5%B8%B8%E9%87%8F">const声明常量</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC">变量解构赋值</a><ul>
+<li><a href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%A7%A3%E6%9E%84">数组的解构</a></li>
+<li><a href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%A7%A3%E6%9E%84">对象的解构</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2">模板字符串</a><ul>
+<li><a href="#%E5%A3%B0%E6%98%8E">声明</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9%E4%B8%AD%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E5%87%BA%E7%8E%B0%E6%8D%A2%E8%A1%8C%E7%AC%A6">内容中可以直接出现换行符</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F%E6%8B%BC%E6%8E%A5">变量拼接</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AE%80%E5%8C%96%E5%AF%B9%E8%B1%A1%E5%86%99%E6%B3%95">简化对象写法</a></li>
+<li><a href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">箭头函数</a><ul>
+<li><a href="#this%E6%98%AF%E9%9D%99%E6%80%81%E7%9A%84this%E5%A7%8B%E7%BB%88%E6%8C%87%E5%90%91u%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8Eu%E6%97%B6%E6%89%80%E5%9C%A8%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8B%E7%9A%84-this-%E7%9A%84%E5%80%BC">this是静态的，this始终指向**<u>函数声明</u>**时所在作用域下的 this 的值。</a></li>
+<li><a href="#%E4%B8%8D%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%9E%84%E9%80%A0%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%AF%B9%E8%B1%A1">不能作为构造实例化对象</a></li>
+<li><a href="#%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8arguments%E5%8F%98%E9%87%8F">不能使用arguments变量</a></li>
+<li><a href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84%E7%AE%80%E5%86%99">箭头函数的简写</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%AE%9E%E4%BE%8B">箭头函数实例</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/es6-es11-note-1/#more" rel="contents">
+              <a class="btn" href="/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -358,7 +395,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-28 23:30:16" itemprop="dateModified" datetime="2022-06-28T23:30:16+08:00">2022-06-28</time>
+      <time title="修改时间：2022-06-28 23:35:11" itemprop="dateModified" datetime="2022-06-28T23:35:11+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -377,7 +414,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
+      <span>3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -396,7 +433,40 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[toc]</p>
+          <!-- toc -->
+
+<ul>
+<li><a href="#less%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BB%8B%E7%BB%8D">Less使用方法与介绍</a><ul>
+<li><a href="#less%E4%BB%8B%E7%BB%8D">Less介绍</a></li>
+<li><a href="#less%E7%9A%84%E5%AE%89%E8%A3%85">Less的安装</a></li>
+<li><a href="#less%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8">Less的基础使用</a><ul>
+<li><a href="#less%E5%8F%98%E9%87%8F">Less变量</a><ul>
+<li><a href="#less%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">Less变量命名规范</a></li>
+</ul>
+</li>
+<li><a href="#less%E7%BC%96%E8%AF%91">Less编译</a><ul>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E8%A1%8C">通过命令行</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87vscode%E6%8F%92%E4%BB%B6">通过VScode插件</a></li>
+</ul>
+</li>
+<li><a href="#less%E5%B5%8C%E5%A5%97">Less嵌套</a></li>
+<li><a href="#less%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8">Less伪类选择器</a></li>
+</ul>
+</li>
+<li><a href="#less%E7%9A%84%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8">Less的高级使用</a><ul>
+<li><a href="#less%E8%BF%90%E7%AE%97">Less运算</a></li>
+<li><a href="#%E6%97%A0%E5%8F%82%E6%96%B9%E6%B3%95%E4%B8%8E%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95">无参方法与默认参数方法</a></li>
+<li><a href="#%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0">不定参数</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F">方法的匹配模式</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">方法的命名空间</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E7%AD%9B%E9%80%89">条件筛选</a></li>
+<li><a href="#%E6%9C%80%E9%AB%98%E4%BC%98%E5%85%88%E7%BA%A7">最高优先级</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/less-learning-notes/#more" rel="contents">
@@ -466,7 +536,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-28 23:30:34" itemprop="dateModified" datetime="2022-06-28T23:30:34+08:00">2022-06-28</time>
+      <time title="修改时间：2022-06-28 23:35:29" itemprop="dateModified" datetime="2022-06-28T23:35:29+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -504,7 +574,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <link rel="stylesheet" href="/css/demobox.css" />[toc]
+          <link rel="stylesheet" href="/css/demobox.css" />
+
+<!-- toc -->
+
+<ul>
+<li><a href="#flex%E5%B8%83%E5%B1%80">Flex布局</a><ul>
+<li><a href="#flex%E7%94%B1%E6%9D%A5">Flex由来</a></li>
+<li><a href="#flex%E6%98%AF%E4%BB%80%E4%B9%88">Flex是什么</a></li>
+<li><a href="#flex%E5%B8%83%E5%B1%80%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80%E7%9A%84%E5%8C%BA%E5%88%AB">Flex布局与传统布局的区别</a><ul>
+<li><a href="#%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80">传统布局</a></li>
+<li><a href="#flex%E5%B8%83%E5%B1%80-1">Flex布局</a></li>
+</ul>
+</li>
+<li><a href="#flex%E5%B8%83%E5%B1%80%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8">Flex布局简单应用</a></li>
+<li><a href="#flex%E5%B8%83%E5%B1%80%E5%8E%9F%E7%90%86">Flex布局原理</a></li>
+<li><a href="#flex%E5%B8%B8%E8%A7%81%E7%88%B6%E5%B1%9E%E6%80%A7">Flex常见父属性</a><ul>
+<li><a href="#span-id-flex-directionflex-direction%E5%B1%9E%E6%80%A7%E5%B1%95%E7%A4%BAspan"><span id = "flex-direction">flex-direction属性展示</span></a></li>
+<li><a href="#span-id-justify-contentjustify-content%E5%B1%9E%E6%80%A7%E5%B1%95%E7%A4%BAspan"><span id = "justify-content">justify-content属性展示</span></a></li>
+<li><a href="#span-id-flex-wrapflex-wrap%E5%B1%9E%E6%80%A7%E5%B1%95%E7%A4%BAspan"><span id = "flex-wrap">flex-wrap属性展示</span></a></li>
+<li><a href="#span-id-align-itemsalign-items%E5%8D%95%E8%A1%8C%E5%B1%9E%E6%80%A7%E5%B1%95%E7%A4%BAspan"><span id = "align-items">align-items（单行）属性展示</span></a></li>
+<li><a href="#span-id-align-contentalign-content%E5%A4%9A%E8%A1%8C%E5%B1%9E%E6%80%A7%E5%B1%95%E7%A4%BAspan"><span id = "align-content">align-content（多行）属性展示</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/flex-learning-notes/#more" rel="contents">
@@ -574,7 +670,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-28 23:29:59" itemprop="dateModified" datetime="2022-06-28T23:29:59+08:00">2022-06-28</time>
+      <time title="修改时间：2022-06-28 23:35:07" itemprop="dateModified" datetime="2022-06-28T23:35:07+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -593,14 +689,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -612,7 +708,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <link rel="stylesheet" href="/css/demobox.css" />[toc]
+          <link rel="stylesheet" href="/css/demobox.css" />
+
+<!-- toc -->
+
+<ul>
+<li><a href="#jquery%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">jQuery基本使用</a><ul>
+<li><a href="#jquery%E9%A1%B6%E7%BA%A7%E5%AF%B9%E8%B1%A1">jQuery顶级对象$</a></li>
+<li><a href="#jquery%E5%AF%B9%E8%B1%A1%E8%8E%B7%E5%8F%96">jQuery对象获取</a><ul>
+<li><a href="#dom%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2%E4%B8%BAjquery%E5%AF%B9%E8%B1%A1">DOM对象转换为JQuery对象</a></li>
+<li><a href="#jquery%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2dom%E5%AF%B9%E8%B1%A1">jQuery对象转换DOM对象</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#jquery%E5%B8%B8%E7%94%A8api">jQuery常用API</a><ul>
+<li><a href="#jquery%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8">jQuery基础选择器</a></li>
+<li><a href="#%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1">隐藏与显示对象</a></li>
+<li><a href="#jquery%E9%9A%90%E5%BC%8F%E8%BF%AD%E4%BB%A3">jQuery隐式迭代</a></li>
+<li><a href="#jquery%E7%AD%9B%E9%80%89%E9%80%89%E6%8B%A9%E5%99%A8">jQuery筛选选择器</a></li>
+<li><a href="#jquery%E9%80%89%E6%8B%A9%E5%99%A8">jQuery选择器</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/jquery-learning-notes-01/#more" rel="contents">
@@ -646,7 +765,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://itechfans.com/advanced-hexo-tutorial-github-pages/">
+    <link itemprop="mainEntityOfPage" href="https://itechfans.com/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://qiniu.itechfans.com/avatar/avatar256.png">
@@ -664,7 +783,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/advanced-hexo-tutorial-github-pages/" class="post-title-link" itemprop="url">hexo教程进阶-Github Pages</a>
+          <a href="/" class="post-title-link" itemprop="url">hexo教程进阶-Github Pages</a>
         </h2>
 
         <div class="post-meta-container">
@@ -727,7 +846,7 @@
 <li><p>安装hexo插件 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/advanced-hexo-tutorial-github-pages/#more" rel="contents">
+              <a class="btn" href="/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -794,7 +913,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-28 23:31:12" itemprop="dateModified" datetime="2022-06-28T23:31:12+08:00">2022-06-28</time>
+      <time title="修改时间：2022-06-28 23:35:34" itemprop="dateModified" datetime="2022-06-28T23:35:34+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -832,7 +951,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[toc]</p>
+          <!-- toc -->
+
+<ul>
+<li><a href="#%E4%BC%98%E7%82%B9">优点</a></li>
+<li><a href="#%E7%BC%BA%E7%82%B9">缺点</a></li>
+</ul>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B">搭建教程</a><ul>
+<li><a href="#%E5%AE%89%E8%A3%85nodejs">安装nodejs</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85nginx">安装nginx</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85hexo-cli">安装hexo-cli</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98">安装next主题</a></li>
+<li><a href="#hexo%E5%91%BD%E4%BB%A4">hexo命令</a></li>
+<li><a href="#%E8%AE%BF%E9%97%AE%E6%B5%8B%E8%AF%95">访问测试</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/hexo-blog-building/#more" rel="contents">
@@ -902,7 +1038,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-28 23:30:59" itemprop="dateModified" datetime="2022-06-28T23:30:59+08:00">2022-06-28</time>
+      <time title="修改时间：2022-06-28 23:35:42" itemprop="dateModified" datetime="2022-06-28T23:35:42+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -921,7 +1057,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -940,7 +1076,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[toc]</p>
+          <!-- toc -->
+
+<ul>
+<li><a href="#arguments%E7%9A%84%E4%BD%BF%E7%94%A8">arguments的使用</a></li>
+<li><a href="#javascript%E4%BD%9C%E7%94%A8%E5%9F%9F">javascript作用域</a><ul>
+<li><a href="#%E5%85%A8%E5%B1%80%E4%BD%9C%E7%94%A8%E5%9F%9F">全局作用域</a></li>
+<li><a href="#%E5%B1%80%E9%83%A8%E4%BD%9C%E7%94%A8%E5%9F%9F">局部作用域</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F%E7%9A%84%E9%94%80%E6%AF%81">变量的销毁</a></li>
+<li><a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE">作用域链</a></li>
+</ul>
+</li>
+<li><a href="#js%E8%BF%90%E8%A1%8C%E6%AD%A5%E9%AA%A4">js运行步骤</a><ul>
+<li><a href="#%E9%A2%84%E8%A7%A3%E6%9E%90">预解析</a><ul>
+<li><a href="#%E5%8F%98%E9%87%8F%E9%A2%84%E8%A7%A3%E6%9E%90">变量预解析</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E9%A2%84%E8%A7%A3%E6%9E%90">函数预解析</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C">代码执行</a></li>
+</ul>
+</li>
+<li><a href="#new%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B">new的执行过程</a></li>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1">事件对象</a></li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/javascript-learning-notes-01/#more" rel="contents">
@@ -974,7 +1133,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://itechfans.com/springboot-learning-notes-01/">
+    <link itemprop="mainEntityOfPage" href="https://itechfans.com/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://qiniu.itechfans.com/avatar/avatar256.png">
@@ -992,7 +1151,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/springboot-learning-notes-01/" class="post-title-link" itemprop="url">SpringBoot学习笔记-01</a>
+          <a href="/" class="post-title-link" itemprop="url">SpringBoot学习笔记-01</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1010,7 +1169,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-28 23:30:25" itemprop="dateModified" datetime="2022-06-28T23:30:25+08:00">2022-06-28</time>
+      <time title="修改时间：2022-06-28 23:35:16" itemprop="dateModified" datetime="2022-06-28T23:35:16+08:00">2022-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1029,7 +1188,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>722</span>
+      <span>842</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1048,10 +1207,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[toc]</p>
+          <!-- toc -->
+
+<ul>
+<li><a href="#configuration%E6%B3%A8%E8%A7%A3">@Configuration注解</a></li>
+<li><a href="#conditional%E6%9D%A1%E4%BB%B6%E8%A3%85%E9%85%8D">@Conditional条件装配</a></li>
+<li><a href="#configurationproperties%E9%85%8D%E7%BD%AE%E7%BB%91%E5%AE%9A">@ConfigurationProperties配置绑定</a></li>
+<li><a href="#springbootconfiguration">@SpringBootConfiguration</a></li>
+<li><a href="#componentscan%E5%8C%85%E6%89%AB%E6%8F%8F">@ComponentScan包扫描</a></li>
+<li><a href="#autoconfigurationpackge">@AutoConfigurationPackge</a></li>
+</ul>
+<!-- tocstop -->
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/springboot-learning-notes-01/#more" rel="contents">
+              <a class="btn" href="/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1105,14 +1274,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">22k</span>
+    <span title="站点总字数">23k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
   </span>
 </div>
   <div class="powered-by">

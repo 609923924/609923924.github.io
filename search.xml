@@ -228,10 +228,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>Less</tag>
-        <tag>css</tag>
         <tag>html</tag>
         <tag>笔记</tag>
+        <tag>css</tag>
+        <tag>Less</tag>
       </tags>
   </entry>
   <entry>
@@ -288,205 +288,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>SpringBoot</tag>
         <tag>后端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>es6-es11笔记1</title>
-    <url>/es6-es11-note-1/</url>
-    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
-<h1 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h1><p>[toc]</p>
-<h2 id="let变量声明"><a href="#let变量声明" class="headerlink" title="let变量声明"></a>let变量声明</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d,e;</span><br><span class="line"><span class="keyword">let</span> k = <span class="number">555</span>;</span><br><span class="line"><span class="keyword">let</span> t = <span class="string">&quot;init&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> y = [];</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<ul>
-<li>let不可重复声明</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">200</span>; <span class="comment">//错误的声明</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>块级作用域</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">//报错，not defined</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>没有变量提升</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//undefined，变量提升</span></span><br><span class="line"><span class="keyword">var</span> tag = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">---------------------------;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//报错</span></span><br><span class="line"><span class="keyword">let</span> tag = <span class="string">&quot;name&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>不影响作用域链</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;doc&quot;</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-    <div class="demobox">
-      <div class="demobox-result">
-     <div class="container">
-        <h2 class="page-header">&#x70B9;&#x51FB;&#x5207;&#x6362;&#x989C;&#x8272;</h2>
-        <div class="demo1"></div>
-        <div class="demo1"></div>
-        <div class="demo1"></div>
-    </div>
-<script>(function(){
-let items = document.getElementsByClassName('demo1');
-  //遍历并绑定事件
-for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
-    items[i].onclick = function() {
-    //修改当前元素的背景颜色
-    // this.style.background = 'pink';
-    items[i].style.background = 'pink';
-  }
-}
-})();</script><style>
-    .demo1 {
-            width: 100px;
-            height: 50px;
-            border: solid 1px rgb(42, 156, 156);
-            float: left;
-            margin-right: 10px;
-        }
-</style></div>
-    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">let&#x6848;&#x4F8B;</div><div class="demobox-intro"><p><em>let&#x6848;&#x4F8B;</em></p>
-</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;page-header&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x5207;&#x6362;&#x989C;&#x8272;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> items = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&apos;demo1&apos;</span>);</span><br><span class="line">  <span class="comment">//&#x904D;&#x5386;&#x5E76;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span> ; i&lt;items.length ; i++){ <span class="comment">//&#x8981;&#x4F7F;&#x7528;let i = 0</span></span><br><span class="line">    items[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">    <span class="comment">//&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;</span></span><br><span class="line">    <span class="comment">// this.style.background = &apos;pink&apos;;</span></span><br><span class="line">    items[i].style.background = <span class="string">&apos;pink&apos;</span>;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span> {</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">        <span class="attribute">border</span>: solid <span class="number">1px</span> <span class="built_in">rgb</span>(<span class="number">42</span>, <span class="number">156</span>, <span class="number">156</span>);</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">    }</span><br></pre></td></tr></table></figure></div></div></div>
-  
-
-<p>若使用var i&#x3D;0;变量会被提升为全局变量，每次点击执行回调函数时，都会执行items[3].style.background &#x3D; ‘pink’;所以会出现问题。而使用let时i会作为回调函数内的一个元素，而不会被提升为全局变量。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> i;</span><br><span class="line">i=<span class="number">3</span>;</span><br><span class="line">&#123;</span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;  <span class="comment">//使用var时</span></span><br><span class="line">&#125;</span><br><span class="line">-----------------------------------------------------------</span><br><span class="line">&#123;</span><br><span class="line">    let i=<span class="number">0</span>;                            <span class="comment">//使用let时</span></span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    let i=<span class="number">1</span>;</span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    let i=<span class="number">2</span>;</span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="const声明常量"><a href="#const声明常量" class="headerlink" title="const声明常量"></a>const声明常量</h2><p><code>const NORMAL = &quot;常量&quot;;</code></p>
-<ul>
-<li>const声明必须有初始值。</li>
-<li>一般使用大写。</li>
-<li>常量值不能修改。</li>
-<li>块级作用域。</li>
-<li>对数组与对象的修改不算对常量的修改。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">num.<span class="title function_">push</span>(<span class="number">6</span>);  <span class="comment">//正确的写法</span></span><br><span class="line">num = <span class="number">10</span>; <span class="comment">//错误的写法</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="变量解构赋值"><a href="#变量解构赋值" class="headerlink" title="变量解构赋值"></a>变量解构赋值</h2><blockquote>
-<p>ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这被称为解构赋值。</p>
-</blockquote>
-<ol>
-<li>数组的解构</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> [a,b,c,d]=nums;  <span class="comment">//将a,b,c,d分别赋值</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>对象的解构</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>;</span><br><span class="line">    <span class="attr">ability</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;ok&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age,ability&#125; = people;  <span class="comment">//必须与对象属性名相同</span></span><br><span class="line"><span class="title function_">ability</span>();</span><br></pre></td></tr></table></figure>
-
-<h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><ol>
-<li>声明</li>
-</ol>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`字符串`</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>内容中可以直接出现换行符</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`多</span></span><br><span class="line"><span class="string">           行</span></span><br><span class="line"><span class="string">           子</span></span><br><span class="line"><span class="string">           符</span></span><br><span class="line"><span class="string">           串`</span>;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>变量拼接</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">&quot;字符串&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> sout = <span class="string">`<span class="subst">$&#123;str1&#125;</span>&lt;-这是拼接进来的字符串`</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="简化对象写法"><a href="#简化对象写法" class="headerlink" title="简化对象写法"></a>简化对象写法</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;tname&quot;</span>,age = <span class="string">&quot;18&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> people=&#123;</span><br><span class="line">    name,  <span class="comment">//等同于name=name;</span></span><br><span class="line">    age,  <span class="comment">//age=age;</span></span><br><span class="line">    <span class="title function_">improve</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a&quot;</span>);    <span class="comment">// 等同于 improve = function()&#123;</span></span><br><span class="line">                             <span class="comment">//                               console.log(&quot;a&quot;);</span></span><br><span class="line">                             <span class="comment">//                           &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params">a,b</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>this是静态的，this始终指向**<u>函数声明</u>**时所在作用域下的 this 的值。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getName</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">getName2</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">name</span>=<span class="string">&quot;name1&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> s = &#123;</span><br><span class="line">    name = <span class="string">&quot;name2&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getName</span>();   <span class="comment">//直接调用this指向window</span></span><br><span class="line"><span class="title function_">getName2</span>();   <span class="comment">// name1</span></span><br><span class="line"></span><br><span class="line">getName.<span class="title function_">call</span>(s);   <span class="comment">//name2</span></span><br><span class="line">getName2.<span class="title function_">call</span>(s);  <span class="comment">//name1</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>不能作为构造实例化对象</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">Person</span> = (<span class="params">name,age</span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span>=name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span>=age;          <span class="comment">//错误的使用方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>不能使用arguments变量</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);    <span class="comment">//错误的使用方法</span></span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><p>箭头函数的简写</p>
-<p>i. 当形参有且只有一个时可省略小括号。</p>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = (<span class="params">n</span>) =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简化为</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = n =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​      ii.当代码体只有一条时可省略花括号,且return也应一并省去。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">p</span> = (<span class="params">n</span>) =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简化为</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">p</span> = n =&gt; n++;</span><br></pre></td></tr></table></figure>
-
-<h2 id="箭头函数实例"><a href="#箭头函数实例" class="headerlink" title="箭头函数实例"></a>箭头函数实例</h2>
-    <div class="demobox">
-      <div class="demobox-result">
-  <div id="demo2"></div>
-<script>(function(){
-  let de = document.getElementById('demo2');
-  de.addEventListener("click", function(){        //用箭头函数的写法
-            setTimeout(() => {       
-                this.style.background = 'pink';
-            }, 2000);
-        });
-//   de.addEventListener("click", function(){        //不用箭头函数的写法
-//            let _this = this;  //保存 this 的值,使_this指向
-//            setTimeout(function(){       
-//               _this.style.background = 'pink'; //修改背景颜色 this
-//            }, 2000);
-//        });
-})();</script><style>
-div {
-     width: 200px;
-     height: 200px;
-     background: #58a;
-}
-</style></div>
-    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5B9E;&#x4F8B;</div><div class="demobox-intro"></div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> de = <span class="built_in">document</span>.getElementById(<span class="string">&apos;demo2&apos;</span>);</span><br><span class="line">  de.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{        <span class="comment">//&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;</span></span><br><span class="line">            setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> {       </span><br><span class="line">                <span class="keyword">this</span>.style.background = <span class="string">&apos;pink&apos;</span>;</span><br><span class="line">            }, <span class="number">2000</span>);</span><br><span class="line">        });</span><br><span class="line"><span class="comment">//   de.addEventListener(&quot;click&quot;, function(){        //&#x4E0D;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;</span></span><br><span class="line"><span class="comment">//            let _this = this;  //&#x4FDD;&#x5B58; this &#x7684;&#x503C;,&#x4F7F;_this&#x6307;&#x5411;</span></span><br><span class="line"><span class="comment">//            setTimeout(function(){       </span></span><br><span class="line"><span class="comment">//               _this.style.background = &apos;pink&apos;; //&#x4FEE;&#x6539;&#x80CC;&#x666F;&#x989C;&#x8272; this</span></span><br><span class="line"><span class="comment">//            }, 2000);</span></span><br><span class="line"><span class="comment">//        });</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background</span>: <span class="number">#58a</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
-  
-
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>]; <span class="comment">//取其中偶数</span></span><br><span class="line"><span class="keyword">const</span> res = a.<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">i</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span>===<span class="number">0</span>)&#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//使用箭头函数</span></span><br><span class="line"><span class="keyword">const</span> res = a.<span class="title function_">filter</span>(<span class="function"><span class="params">i</span> =&gt;</span> i%<span class="number">2</span>===<span class="number">0</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>箭头函数适合做与this无关的回调，如定时器与数组方法回调。</p>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
-      <categories>
-        <category>web前端-js</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-        <tag>html</tag>
-        <tag>笔记</tag>
-        <tag>es6</tag>
-        <tag>es11</tag>
-        <tag>javascript</tag>
+        <tag>SpringBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -1092,10 +895,10 @@ div {
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>css</tag>
         <tag>html</tag>
         <tag>笔记</tag>
         <tag>flex</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -1220,8 +1023,8 @@ div {
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1295,13 +1098,13 @@ div {
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
     <title>javascript学习笔记-01</title>
-    <url>/javascript-learning-notes-01/</url>
+    <url>//</url>
     <content><![CDATA[<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><ul>
 <li>不确定实参个数时，使用arguments获取所有参数</li>
 </ul>
@@ -1397,8 +1200,8 @@ div {
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>笔记</tag>
         <tag>javascript</tag>
+        <tag>笔记</tag>
         <tag>es5</tag>
       </tags>
   </entry>

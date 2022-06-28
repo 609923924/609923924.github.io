@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>jQuery学习笔记01</title>
-    <url>/jquery-learning-notes-01/</url>
+    <url>//</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1 id="jQuery基本使用"><a href="#jQuery基本使用" class="headerlink" title="jQuery基本使用"></a>jQuery基本使用</h1><h2 id="jQuery顶级对象"><a href="#jQuery顶级对象" class="headerlink" title="jQuery顶级对象$"></a>jQuery顶级对象$</h2><p>$是JQuery的别称</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">&#125;) <span class="comment">//效果相同</span></span><br></pre></td></tr></table></figure>
@@ -223,10 +223,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>Less</tag>
+        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>笔记</tag>
+        <tag>Less</tag>
       </tags>
   </entry>
   <entry>
@@ -283,8 +283,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>SpringBoot</tag>
         <tag>后端</tag>
+        <tag>SpringBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -890,10 +890,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
+        <tag>flex</tag>
+        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>笔记</tag>
-        <tag>flex</tag>
       </tags>
   </entry>
   <entry>
@@ -1018,8 +1018,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1093,8 +1093,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>

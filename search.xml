@@ -236,7 +236,7 @@
   </entry>
   <entry>
     <title>SpringBoot学习笔记-01</title>
-    <url>/springboot-learning-notes-01/</url>
+    <url>//</url>
     <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>
 <li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
 <li>配置类本身也是组件。</li>
@@ -295,8 +295,8 @@
   <entry>
     <title>es6-es11笔记1</title>
     <url>/es6-es11-note-1/</url>
-    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" /># ES6语法
-<h2 id="let变量声明"><a href="#let变量声明" class="headerlink" title="let变量声明"></a>let变量声明</h2><span id="more"></span>
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<h1 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h1><h2 id="let变量声明"><a href="#let变量声明" class="headerlink" title="let变量声明"></a>let变量声明</h2><span id="more"></span>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d,e;</span><br><span class="line"><span class="keyword">let</span> k = <span class="number">555</span>;</span><br><span class="line"><span class="keyword">let</span> t = <span class="string">&quot;init&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> y = [];</span><br></pre></td></tr></table></figure>
 
 

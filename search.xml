@@ -55,6 +55,7 @@
 <td>获取交集元素</td>
 </tr>
 </tbody></table>
+<h2 id="隐藏与显示对象"><a href="#隐藏与显示对象" class="headerlink" title="隐藏与显示对象"></a>隐藏与显示对象</h2><p><code>.show()</code>显示；<code>.hide()</code>隐藏。</p>
 <h2 id="jQuery隐式迭代"><a href="#jQuery隐式迭代" class="headerlink" title="jQuery隐式迭代"></a>jQuery隐式迭代</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="string">&#x27;div&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;background&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>会将所有div都变为蓝色</p>
 
@@ -65,7 +66,7 @@
     <div class="demo">3</div>
     <div class="demo">4</div>
 <script>(function(){
-    $('.demo').css('background','blue');
+    $('.demo').css('background-image','linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)');
 })();</script><style>
     .demo{
         width: 40px;
@@ -73,7 +74,7 @@
     }
 </style></div>
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</div><div class="demobox-intro"><p>jQuery&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</p>
-</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line">$(<span class="string">&apos;.demo&apos;</span>).css(<span class="string">&apos;background&apos;</span>,<span class="string">&apos;blue&apos;</span>);</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line">$(<span class="string">&apos;.demo&apos;</span>).css(<span class="string">&apos;background-image&apos;</span>,<span class="string">&apos;linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)&apos;</span>);</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
 <h2 id="jQuery筛选选择器"><a href="#jQuery筛选选择器" class="headerlink" title="jQuery筛选选择器"></a>jQuery筛选选择器</h2><table>
 <thead>
@@ -109,6 +110,10 @@
 <td>获取到索引为偶数的li元素</td>
 </tr>
 </tbody></table>
+<h2 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220628124314257.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="image-20220628124314257"></p>
+<blockquote>
+<p>图片来源： <a href="https://www.bilibili.com/video/BV1Sy4y1C7ha">https://www.bilibili.com/video/BV1Sy4y1C7ha</a></p>
+</blockquote>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
@@ -1024,7 +1029,7 @@
   </entry>
   <entry>
     <title>hexo教程进阶-Github Pages</title>
-    <url>//</url>
+    <url>/advanced-hexo-tutorial-github-pages/</url>
     <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
 <ol>
 <li><p>首先要在<a href="https://github.com/">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>

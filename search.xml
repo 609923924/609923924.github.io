@@ -1104,7 +1104,7 @@
   </entry>
   <entry>
     <title>javascript学习笔记-01</title>
-    <url>//</url>
+    <url>/javascript-learning-notes-01/</url>
     <content><![CDATA[<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><ul>
 <li>不确定实参个数时，使用arguments获取所有参数</li>
 </ul>

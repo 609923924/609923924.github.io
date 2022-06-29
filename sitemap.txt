@@ -1,9 +1,9 @@
+https://itechfans.com/springboot-learning-notes-1/
 https://itechfans.com/es6-es11-note-1/
 https://itechfans.com/javascript-quick-learning/
-https://itechfans.com/
+https://itechfans.com/hexo-blog-building/
 https://itechfans.com/flex-learning-notes/
 https://itechfans.com/jquery-learning-notes-1/
-https://itechfans.com/springboot-learning-notes-1/
 https://itechfans.com/less-learning-notes/
 https://itechfans.com/advanced-hexo-tutorial-github-pages/
 https://itechfans.com/tags/index.html
@@ -20,12 +20,12 @@ https://itechfans.com/tags/html/
 https://itechfans.com/tags/hexo/
 https://itechfans.com/tags/%E6%95%99%E7%A8%8B/
 https://itechfans.com/tags/%E5%8D%9A%E5%AE%A2/
+https://itechfans.com/tags/javascript/
 https://itechfans.com/tags/%E5%90%8E%E7%AB%AF/
 https://itechfans.com/tags/Less/
 https://itechfans.com/tags/SpringBoot/
 https://itechfans.com/tags/es6/
 https://itechfans.com/tags/es11/
-https://itechfans.com/tags/javascript/
 https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-css/
 https://itechfans.com/categories/%E6%95%99%E7%A8%8B/
 https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-js/

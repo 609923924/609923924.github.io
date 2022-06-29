@@ -1,10 +1,10 @@
 https://itechfans.com/
 https://itechfans.com/javascript-quick-learning/
-https://itechfans.com/hexo-blog-building/
-https://itechfans.com/flex-learning-notes/
+https://itechfans.com/
+https://itechfans.com/
 https://itechfans.com/jquery-learning-notes-1/
-https://itechfans.com/springboot-learning-notes-1/
-https://itechfans.com/less-learning-notes/
+https://itechfans.com/
+https://itechfans.com/
 https://itechfans.com/advanced-hexo-tutorial-github-pages/
 https://itechfans.com/tags/index.html
 https://itechfans.com/categories/index.html

@@ -536,7 +536,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>flex学习笔记</title>
-    <url>/flex-learning-notes/</url>
+    <url>//</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>Flex布局</h1>
 <h2 id="Flex由来-2">Flex由来</h2>

@@ -1,7 +1,7 @@
+https://itechfans.com/es6-es11-note-1/
 https://itechfans.com/javascript-quick-learning/
 https://itechfans.com/hexo-blog-building/
 https://itechfans.com/flex-learning-notes/
-https://itechfans.com/es6-es11-note-1/
 https://itechfans.com/jquery-learning-notes-1/
 https://itechfans.com/springboot-learning-notes-1/
 https://itechfans.com/less-learning-notes/

@@ -535,17 +535,461 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </tags>
   </entry>
   <entry>
-    <title>es6-es11笔记2</title>
-    <url>/es6-es11-note-2/</url>
-    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
-<p>接<a href="https://itechfans.com/es6-es11-note-1/">es6-es11笔记1</a></p>
-<h1>ES6语法</h1>
+    <title>hexo教程进阶-Github Pages</title>
+    <url>/advanced-hexo-tutorial-github-pages/</url>
+    <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
+<ol>
+<li class="lvl-3">
+<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
+</li>
+<li class="lvl-3">
+<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
 <span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
+<p>配置一下git全局的name和email</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
+<ol>
+<li class="lvl-6">
+<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
+</li>
+<li class="lvl-6">
+<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
+</li>
+<li class="lvl-6">
+<p>点击进入https://github.com/settings/keys</p>
+</li>
+<li class="lvl-6">
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
+<p>点击后将内容粘贴进去。</p>
+<p>此时deploy可改为：</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
+<ol start="4">
+<li class="lvl-3">
+<p>进入仓库settings</p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
+</li>
+</ol>
+<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
+<ol start="5">
+<li class="lvl-3">
+<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
+</li>
+<li class="lvl-3">
+<p>然后就可以通过自己的域名访问网站了。</p>
+</li>
+</ol>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>教程</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>javascript快速学习</title>
+    <url>/javascript-quick-learning/</url>
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<h1>javascript快速学习</h1>
+<h3 id="一、前提">一、前提</h3>
+<blockquote>
+<p>至少有一门编程语言基础</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="二、js注释">二、js注释</h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//这是单行注释</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这是多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、js输入输出">三、js输入输出</h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alter</span>(message);       <span class="comment">//浏览器弹出框</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message); <span class="comment">//控制台输出</span></span><br><span class="line"><span class="title function_">prompt</span>(information)   <span class="comment">//浏览器弹出输入框</span></span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">
+<h3 id="例子">例子</h3>
+</li>
+</ul>
 
     <div class="demobox">
-      <div class="demobox-result"><script>(function(){})();</script><style></style></div>
-    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">[title]</div><div class="demobox-intro"></div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+      <div class="demobox-result">
+    <button id="alter">&#x70B9;&#x51FB;&#x51FA;&#x73B0;&#x63D0;&#x793A;&#x6846;</button>
+    <button id="console">&#x70B9;&#x51FB;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;</button>
+    <button id="prompt">&#x70B9;&#x51FB;&#x5F39;&#x51FA;&#x8F93;&#x5165;&#x6846;</button>
+<script>(function(){
+    $(document).ready(function(){
+        $('#alter').click(function(){
+            alter('这是消息提示框');
+        });
+        $('#console').click(function(){
+            console.log("这是控制台消息");    //按F12唤出浏览器开发者工具
+        });
+        $("#prompt").click(function(){
+            var val = prompt("随便输入点东西:");
+            console.log(val);
+        })
+    });
+})();</script><style>
+    button{
+        margin: 10px 10px;
+    }
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">js&#x8F93;&#x5165;&#x8F93;&#x51FA;</div><div class="demobox-intro"><p>&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x6709;&#x4E0D;&#x540C;&#x6548;&#x679C;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;alter&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x51FA;&#x73B0;&#x63D0;&#x793A;&#x6846;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;console&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;prompt&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x5F39;&#x51FA;&#x8F93;&#x5165;&#x6846;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    $(<span class="string">&apos;#alter&apos;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">        alter(<span class="string">&apos;&#x8FD9;&#x662F;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x6846;&apos;</span>);</span><br><span class="line">    });</span><br><span class="line">    $(<span class="string">&apos;#console&apos;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;&#x8FD9;&#x662F;&#x63A7;&#x5236;&#x53F0;&#x6D88;&#x606F;&quot;</span>);    <span class="comment">//&#x6309;F12&#x5524;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</span></span><br><span class="line">    });</span><br><span class="line">    $(<span class="string">&quot;#prompt&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">        <span class="keyword">var</span> val = prompt(<span class="string">&quot;&#x968F;&#x4FBF;&#x8F93;&#x5165;&#x70B9;&#x4E1C;&#x897F;:&quot;</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(val);</span><br><span class="line">    })</span><br><span class="line">});</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">button</span>{</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
+<h2 id="四、变量">四、变量</h2>
+<ol>
+<li class="lvl-3">
+<h3 id="声明变量">声明变量</h3>
+<ul class="lvl-2">
+<li class="lvl-5"><code>var</code>是js关键字，用于声明变量。</li>
+<li class="lvl-5">name为变量名，通过变量名访问值。</li>
+<li class="lvl-5">变量命名遵循规则与C语言相同</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name;  <span class="comment">//声明一个name变量</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li class="lvl-3">
+<h3 id="赋值">赋值</h3>
+<p>​	<code>name = 18</code> 为变量赋值18.</p>
+</li>
+</ol>
+<h2 id="五、数据类型">五、数据类型</h2>
+<p>javascript是一种弱类型语言（动态语言）。不必提前声明变量类型，在程序运行中会自动确定，js引擎根据右值判断类型。</p>
+<h3 id="简单数据类型">简单数据类型</h3>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number</td>
+<td>数字型</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>布尔型</td>
+<td>false</td>
+</tr>
+<tr>
+<td>String</td>
+<td>字符串型</td>
+<td>“”</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>未定义值,如<code>var a;</code>却未赋值</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>空值</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<h4 id="字符串"> 字符串</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>字符串嵌套：<code>str='这是一个&quot;这是嵌套的字符串&quot;字符串'</code>或<code>&quot;str=这是一个'这是嵌套的字符串'字符串&quot;</code>。</p>
+</li>
+<li class="lvl-2">
+<p>转义字符与C语言相似。</p>
+</li>
+</ul>
+<h4 id="数据类型转换">数据类型转换</h4>
+<p>  1. 数字转字符串</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toString()方法</td>
+<td><code>var num=20;var str = num.toString()</code></td>
+</tr>
+<tr>
+<td>String()强制转换</td>
+<td><code>var num=20;var str = String(num)</code></td>
+</tr>
+<tr>
+<td>加号拼接</td>
+<td><code>var num = 20;var str = num+&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>  2. 字符串转数字</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parseInt(string)</td>
+<td><code>parseInt('20');</code>若输入为小数字符串则取整，错误则为NaN</td>
+</tr>
+<tr>
+<td>parseFloat(string)</td>
+<td><code>parseFloat('20.21');</code></td>
+</tr>
+<tr>
+<td>Number()强制转换</td>
+<td><code>Number('88');</code></td>
+</tr>
+<tr>
+<td>js隐式转换</td>
+<td><code>'10'-0;</code></td>
+</tr>
+</tbody>
+</table>
+<p>  3.转换布尔型</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>代表<strong>空</strong>或者<strong>否定</strong>的值会转换为false，如<code>''</code>,<code>0</code>,<code>NaN</code>,<code>null</code>,<code>undefined</code></p>
+</li>
+<li class="lvl-2">
+<p>其他值均为true</p>
+</li>
+</ul>
+<h2 id="六、运算符">六、运算符</h2>
+<h3 id="前置递增运算符">前置递增运算符</h3>
+<p><code>i++</code>与<code>i--</code></p>
+<h3 id="后置递增运算符">后置递增运算符</h3>
+<p><code>++i</code>与<code>--i</code></p>
+<h3 id="比较运算符">比较运算符</h3>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220629152121343.png?imageMogr2/auto-orient/thumbnail/x400/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="比较运算符"></p>
+<blockquote>
+<p>图片来源：<a href="https://www.bilibili.com/video/BV1Sy4y1C7ha">https://www.bilibili.com/video/BV1Sy4y1C7ha</a></p>
+</blockquote>
+<h3 id="逻辑运算符">逻辑运算符</h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>逻辑与，两边同时为true时为true。</td>
+</tr>
+<tr>
+<td>||</td>
+<td>逻辑或，两边有一方为true则为true。</td>
+</tr>
+<tr>
+<td>!</td>
+<td>条件为true时为false，条件为false时为true。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="短路运算"> 短路运算</h4>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表达式1 &amp;&amp; 表达式2</td>
+<td>当表达式1为假时，不在计算表达式2，直接返回假。</td>
+</tr>
+<tr>
+<td>表达式1 || 表达式2</td>
+<td>当表达式一为真时，不再计算表达式2，直接返回真。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="运算符优先级">运算符优先级</h3>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220629154625051.png?imageMogr2/auto-orient/thumbnail/x400/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="逻辑运算符优先级"></p>
+<h2 id="七、流程控制">七、流程控制</h2>
+<h3 id="（一）、if分支语句">（一）、if分支语句</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件表达式)&#123;</span><br><span class="line">    语句;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(条件表达式)&#123;</span><br><span class="line">    语句;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>三元表达式：(条件表达式) : 表达式1 ? 表达式2;</p>
+</blockquote>
+<h3 id="（二）、switch多分支语句">（二）、switch多分支语句</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">value1</span>: </span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">value2</span>: </span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">        语句; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（三）、循环">（三）、循环</h3>
+<h4 id="1-for循环">  1. for循环</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化变量;条件判断;循环一次后的操作)&#123;</span><br><span class="line">    循环体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-while循环">  2. while循环</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(条件表达式)&#123;</span><br><span class="line">    循环体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-do…while-循环">  3. do…while()循环</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    循环体;</span><br><span class="line">&#125;<span class="keyword">while</span>(条件表达式);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>continue</code>关键字：跳过本次循环，进入下一次循环。</p>
+<p><code>break</code>关键字：跳出循环，不再执行循环。</p>
+</blockquote>
+<h2 id="八、数组">八、数组</h2>
+<h3 id="（一）、创建方式">（一）、创建方式</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>使用new创建数组。</p>
+</li>
+<li class="lvl-2">
+<p>利用数组字面量创建数组。</p>
+</li>
+</ul>
+<h3 id="（二）、new创建数组">（二）、new创建数组</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">ArrayName</span> = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br></pre></td></tr></table></figure>
+<h3 id="（三）、数组字面量创建数组">（三）、数组字面量创建数组</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">ArrayName</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];  <span class="comment">//常用</span></span><br></pre></td></tr></table></figure>
+<h2 id="九、函数">九、函数</h2>
+<h3 id="（一）、函数的使用">（一）、函数的使用</h3>
+<h4 id="1-声明函数">  1. 声明函数</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fnName</span>(<span class="params"></span>)&#123;</span><br><span class="line">    语句;</span><br><span class="line">&#125;</span><br><span class="line">-------------------------;</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    语句;      <span class="comment">//匿名函数      </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>();    <span class="comment">//fn为变量名，不是函数名</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-调用函数">  2. 调用函数</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fnName</span>();</span><br></pre></td></tr></table></figure>
+<h4 id="3-函数的参数">  3. 函数的参数</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fnName</span>(<span class="params">parameter1,parameter2</span>)&#123;</span><br><span class="line">    语句;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fnName</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">--------------------;</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">function</span>(<span class="params"><span class="variable language_">arguments</span></span>)&#123;</span><br><span class="line">    语句;     </span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="4-函数的返回值">  4. 函数的返回值</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">num1,num2</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> num1+num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getSum</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="5-arguments的使用">  5.arguments的使用</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>不确定实参个数时，使用arguments获取所有参数</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"><span class="variable language_">arguments</span></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>arguments并不是真正意义上的数组</strong>：</p>
+<ol>
+<li class="lvl-3">
+<p>具有length</p>
+</li>
+<li class="lvl-3">
+<p>以索引进行存储</p>
+</li>
+<li class="lvl-3">
+<p>没有pop()与push()等数组方法</p>
+</li>
+</ol>
+<h2 id="十、作用域">十、作用域</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>javascript作用域分为全局作用域与局部作用域</p>
+</li>
+</ul>
+<h3 id="（一）、全局作用域">（一）、全局作用域</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>整个script标签可用,或单独的js文件可用</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//可在函数中使用</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="（二）、局部作用域">（二）、局部作用域</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>仅在函数内部起作用</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//num is not defined</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在函数内部未经声明，直接赋值的变量也是全局变量</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">// 10</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="（三）、变量的销毁">（三）、变量的销毁</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>全局变量：浏览器关闭时才会销毁。</p>
+</li>
+<li class="lvl-2">
+<p>局部变量：代码块结束后，就会被销毁。</p>
+</li>
+</ul>
+<h3 id="（四）、作用域链">（四）、作用域链</h3>
+<p>当函数中嵌套了函数，作用域链就产生了。</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn1</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn2</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//20</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十一、js运行步骤">十一、js运行步骤</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>javascript解析器在运行javascript语句时分两步：预解析和代码执行。</p>
+</li>
+</ul>
+<h3 id="（一）、预解析">（一）、预解析</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>预解析分为变量<strong>预解析</strong>（变量提升）和<strong>函数预解析</strong>（函数提升）。</p>
+</li>
+<li class="lvl-2">
+<p>js解析器会将所有的var与function提升到<strong>当前作用域</strong>的最前面。</p>
+</li>
+</ul>
+<h4 id="1-变量预解析">1. 变量预解析</h4>
+<p>不提升赋值操作</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> num;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//undefined</span></span><br><span class="line">num = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="2-函数预解析">2. 函数预解析</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fn</span>();</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> fn;</span><br><span class="line"><span class="title function_">fn</span>();</span><br><span class="line">fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（二）、代码执行">（二）、代码执行</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>代码按照书写顺序，由上到下依次执行</p>
+</li>
+</ul>
+<h2 id="十二、new的执行过程">十二、new的执行过程</h2>
+<ol>
+<li class="lvl-3">
+<p>在内存中创建空对象。</p>
+</li>
+<li class="lvl-3">
+<p>this指向空对象。</p>
+</li>
+<li class="lvl-3">
+<p>执行构造函数，并添加属性和方法。</p>
+</li>
+<li class="lvl-3">
+<p>返回新对象。</p>
+</li>
+</ol>
+<h2 id="十三、js对象">十三、js对象</h2>
+<h3 id="（一）、内置对象">（一）、内置对象</h3>
+<blockquote>
+<p>内置对象是指JS语言自带的对象，提供了一些常用的的或最基本而且必要的方法，能帮助开发者快速开发，如：Math,Date,Array,String等。</p>
+</blockquote>
+<p>更多内置方法详见<a href="https://developer.mozilla.org/zh-CN/">MDN</a></p>
+<h4 id="Array数组的一些方法">  Array数组的一些方法</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">3</span>);    <span class="comment">//创建含有三个空元素的数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">2</span>,<span class="number">3</span>); <span class="comment">//等价于var arr1 = [2,3];</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr <span class="keyword">instanceof</span> <span class="title class_">Array</span>;      <span class="comment">//第一种方式判断arr是否为数组</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr);        <span class="comment">//第二种方式判断arr是否是数组，优先于instanceof</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">1</span>);               <span class="comment">//追加新元素在最后</span></span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">2</span>);            <span class="comment">//在数组最前面追加元素</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">pop</span>();                 <span class="comment">//删除并返回最后一个元素</span></span><br><span class="line">arr.<span class="title function_">shift</span>();               <span class="comment">//删除并返回最前面一个函数</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">reverse</span>();             <span class="comment">//反转数组</span></span><br><span class="line">arr.<span class="title function_">sort</span>();                <span class="comment">//对数组排序</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">indexOf</span>(<span class="number">1</span>);            <span class="comment">//查找给定元素的第一个索引</span></span><br><span class="line">arr.<span class="title function_">lastIndexOf</span>(<span class="number">1</span>);        <span class="comment">//查找给的元素的最后一个索引</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">toString</span>();            <span class="comment">//数组转化为字符串-&gt; 4,5,6,7,8,9</span></span><br><span class="line">arr.<span class="title function_">join</span>(分隔符);           <span class="comment">//不加分隔符与toString()相同，arr.join(&#x27;-&#x27;); 输出 4-5-6-7-8-9;</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">concat</span>(arr1,arr2);     <span class="comment">//连接两个或多个数组,返回新数组</span></span><br><span class="line">arr.<span class="title function_">slice</span>(begin,end);      <span class="comment">//截取数组从begin到end，返回新数组(从0开始);</span></span><br><span class="line">arr.<span class="title function_">splice</span>(begin,num);     <span class="comment">//删除从begin开始的num个数，返回新数组，影响原数组</span></span><br><span class="line">arr.<span class="title function_">splice</span>(begin,num,item1...) <span class="comment">//在begin位置删除num个数并插入item</span></span><br><span class="line"><span class="comment">//eg. arr.splice(2,1,1,2,3); 输出 4,5,1,2,3,7,8,9;</span></span><br></pre></td></tr></table></figure>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
@@ -576,15 +1020,14 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
         <tag>前端</tag>
         <tag>笔记</tag>
         <tag>html</tag>
-        <tag>es6</tag>
-        <tag>es11</tag>
         <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
     <title>flex学习笔记</title>
     <url>/flex-learning-notes/</url>
-    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" /># Flex布局
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<h1>Flex布局</h1>
 <h2 id="Flex由来">Flex由来</h2>
 <blockquote>
 <p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
@@ -1225,6 +1668,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <url>/hexo-blog-building/</url>
     <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io">hexo</a>。</p>
 <span id="more"></span>
+<h1>优点与缺点</h1>
 <h2 id="优点">优点</h2>
 <ol>
 <li class="lvl-3">生成的是静态网页，对服务器性能要求低，可以部署到例如<a href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
@@ -1398,230 +1842,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
         <tag>hexo</tag>
         <tag>教程</tag>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo教程进阶-Github Pages</title>
-    <url>/advanced-hexo-tutorial-github-pages/</url>
-    <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
-<ol>
-<li class="lvl-3">
-<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
-</li>
-<li class="lvl-3">
-<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
-<span id="more"></span>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li class="lvl-3">
-<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
-<p>配置一下git全局的name和email</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
-<ol>
-<li class="lvl-6">
-<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
-</li>
-<li class="lvl-6">
-<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
-</li>
-<li class="lvl-6">
-<p>点击进入https://github.com/settings/keys</p>
-</li>
-<li class="lvl-6">
-<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
-<p>点击后将内容粘贴进去。</p>
-<p>此时deploy可改为：</p>
-</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
-<ol start="4">
-<li class="lvl-3">
-<p>进入仓库settings</p>
-<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
-</li>
-</ol>
-<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
-<ol start="5">
-<li class="lvl-3">
-<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
-</li>
-<li class="lvl-3">
-<p>然后就可以通过自己的域名访问网站了。</p>
-</li>
-</ol>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>教程</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>javascript学习笔记1</title>
-    <url>/javascript-learning-notes-1/</url>
-    <content><![CDATA[<h2 id="arguments的使用">arguments的使用</h2>
-<ul class="lvl-0">
-<li class="lvl-2">不确定实参个数时，使用arguments获取所有参数</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"><span class="variable language_">arguments</span></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p>arguments并不是真正意义上的数组：</p>
-<ol>
-<li class="lvl-3">
-<p>具有length</p>
-</li>
-<li class="lvl-3">
-<p>以索引进行存储</p>
-</li>
-<li class="lvl-3">
-<p>没有pop()与push()等数组方法</p>
-</li>
-</ol>
-<h2 id="javascript作用域">javascript作用域</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>javascript作用域分为全局作用域与局部作用域</p>
-</li>
-</ul>
-<h3 id="全局作用域">全局作用域</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>整个script标签可用,或单独的js文件可用</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//可在函数中使用</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="局部作用域">局部作用域</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>仅在函数内部起作用</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//num is not defined</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在函数内部未经声明，直接赋值的变量也是全局变量</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">// 10</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="变量的销毁">变量的销毁</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>全局变量：浏览器关闭时才会销毁。</p>
-</li>
-<li class="lvl-2">
-<p>局部变量：代码块结束后，就会被销毁。</p>
-</li>
-</ul>
-<h3 id="作用域链">作用域链</h3>
-<p>当函数中嵌套了函数，作用域链就产生了。</p>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn1</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn2</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//20</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="js运行步骤">js运行步骤</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>javascript解析器在运行javascript语句时分两步：预解析和代码执行。</p>
-</li>
-</ul>
-<h3 id="预解析">预解析</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>预解析分为变量<strong>预解析</strong>（变量提升）和<strong>函数预解析</strong>（函数提升）。</p>
-</li>
-<li class="lvl-2">
-<p>js解析器会将所有的var与function提升到<strong>当前作用域</strong>的最前面。</p>
-</li>
-</ul>
-<h4 id="变量预解析">变量预解析</h4>
-<p>不提升赋值操作</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> num;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//undefined</span></span><br><span class="line">num = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="函数预解析">函数预解析</h4>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fn</span>();</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> fn;</span><br><span class="line"><span class="title function_">fn</span>();</span><br><span class="line">fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="代码执行">代码执行</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>代码按照书写顺序，由上到下依次执行</p>
-</li>
-</ul>
-<h2 id="new的执行过程">new的执行过程</h2>
-<ol>
-<li class="lvl-3">
-<p>在内存中创建空对象。</p>
-</li>
-<li class="lvl-3">
-<p>this指向空对象。</p>
-</li>
-<li class="lvl-3">
-<p>执行构造函数，并添加属性和方法。</p>
-</li>
-<li class="lvl-3">
-<p>返回新对象。</p>
-</li>
-</ol>
-<h2 id="事件对象">事件对象</h2>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">div.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">    <span class="comment">//event就是事件对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>只有有onclick事件绑定才会有事件对象产生。</p>
-</li>
-<li class="lvl-2">
-<p>事件对象是事件的一系列相关数据的集合。</p>
-</li>
-</ul>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
-      <categories>
-        <category>web前端-js</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-        <tag>笔记</tag>
-        <tag>javascript</tag>
-        <tag>es5</tag>
       </tags>
   </entry>
 </search>

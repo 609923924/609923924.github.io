@@ -160,7 +160,7 @@
   </entry>
   <entry>
     <title>Less学习笔记</title>
-    <url>//</url>
+    <url>/less-learning-notes/</url>
     <content><![CDATA[<h1>Less使用方法与介绍</h1>
 <h2 id="Less介绍">Less介绍</h2>
 <span id="more"></span>
@@ -582,7 +582,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>flex学习笔记</title>
-    <url>//</url>
+    <url>/flex-learning-notes/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" /># Flex布局
 <h2 id="Flex由来">Flex由来</h2>
 <blockquote>
@@ -1226,7 +1226,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>hexo教程进阶-Github Pages</title>
-    <url>//</url>
+    <url>/advanced-hexo-tutorial-github-pages/</url>
     <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
 <ol>
 <li class="lvl-3">

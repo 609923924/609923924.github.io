@@ -160,7 +160,7 @@
   </entry>
   <entry>
     <title>Less学习笔记</title>
-    <url>//</url>
+    <url>/less-learning-notes/</url>
     <content><![CDATA[<h1>Less使用方法与介绍</h1>
 <h2 id="Less介绍">Less介绍</h2>
 <span id="more"></span>
@@ -1176,7 +1176,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>hexo博客搭建</title>
-    <url>//</url>
+    <url>/hexo-blog-building/</url>
     <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io">hexo</a>。</p>
 <span id="more"></span>
 <h1>优点与缺点</h1>
@@ -1442,7 +1442,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>javascript快速学习</title>
-    <url>//</url>
+    <url>/javascript-quick-learning/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>javascript快速学习</h1>
 <h3 id="一、前提">一、前提</h3>

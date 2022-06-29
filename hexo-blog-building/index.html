@@ -153,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">搭建教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="nav-number">1.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nginx"><span class="nav-number">2.</span> <span class="nav-text">安装nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-cli"><span class="nav-number">3.</span> <span class="nav-text">安装hexo-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">安装next主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">hexo命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%B5%8B%E8%AF%95"><span class="nav-number">6.</span> <span class="nav-text">访问测试</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">搭建教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="nav-number">1.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nginx"><span class="nav-number">2.</span> <span class="nav-text">安装nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-cli"><span class="nav-number">3.</span> <span class="nav-text">安装hexo-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">安装next主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">hexo命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%B5%8B%E8%AF%95"><span class="nav-number">6.</span> <span class="nav-text">访问测试</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,7 +168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -303,83 +303,135 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/">hexo</a>。</p>
+        <p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">hexo</a>。</p>
 <span id="more"></span>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
-<li>生成的是静态网页，对服务器性能要求低，可以部署到例如<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
-<li>seo优化好，对于蜘蛛来说，静态网站加载速度快，可在单位时间内抓取更多的内容。</li>
-<li>不易被攻击，静态网页没有后台，黑客几乎无从下手，能让站长更专注于内容，而不是黑客攻防。</li>
-<li>内容方便迁移，内容完全是md文档，可以随时备份到自己电脑上，安全性高。</li>
-<li>好看的主题多，选择较多。（虽然没wordpress多）</li>
+<h2 id="优点">优点</h2>
+<ol>
+<li class="lvl-3">生成的是静态网页，对服务器性能要求低，可以部署到例如<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
+<li class="lvl-3">seo优化好，对于蜘蛛来说，静态网站加载速度快，可在单位时间内抓取更多的内容。</li>
+<li class="lvl-3">不易被攻击，静态网页没有后台，黑客几乎无从下手，能让站长更专注于内容，而不是黑客攻防。</li>
+<li class="lvl-3">内容方便迁移，内容完全是md文档，可以随时备份到自己电脑上，安全性高。</li>
+<li class="lvl-3">好看的主题多，选择较多。（虽然没wordpress多）</li>
 </ol>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ol>
-<li>静态博客不方便后期维护。</li>
-<li>没有集成的评论系统，只能通过第三方插件实现评论，我个人使用的是<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/posativ/isso">isso</a>。</li>
-<li>没有浏览统计，也是通过第三方插件完成。</li>
-<li>Github Pages国内速度不太行，但可用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/">vercel</a>来代替，国内速度不错。</li>
+<h2 id="缺点">缺点</h2>
+<ol>
+<li class="lvl-3">
+<p>静态博客不方便后期维护。</p>
+</li>
+<li class="lvl-3">
+<p>没有集成的评论系统，只能通过第三方插件实现评论，我个人使用的是<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/posativ/isso">isso</a>。</p>
+</li>
+<li class="lvl-3">
+<p>没有浏览统计，也是通过第三方插件完成。</p>
+</li>
+<li class="lvl-3">
+<p>Github Pages国内速度不太行，但可用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/">vercel</a>来代替，国内速度不错。</p>
+</li>
 </ol>
 <p>如果你决定使用hexo作为你的博客框架，你可以继续往下看教程。</p>
-<h1 id="搭建教程"><a href="#搭建教程" class="headerlink" title="搭建教程"></a>搭建教程</h1><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol>
-<li><p>在服务器中安装nodejs环境。我使用的环境是centos7</p>
+<h1>搭建教程</h1>
+<h2 id="安装nodejs">安装nodejs</h2>
+<ol>
+<li class="lvl-3">
+<p>在服务器中安装nodejs环境。我使用的环境是centos7</p>
 <p>官网下载 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://nodejs.org/">nodejs</a></p>
 <p><code>wget https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz</code></p>
 </li>
-<li><p>解压</p>
+<li class="lvl-3">
+<p>解压</p>
 <p><code>xz -d node-v16.15.1-linux-x64.tar.xz </code></p>
 <p><code>tar -zxvf node-v16.15.1-linux-x64.tar </code></p>
 </li>
-<li><p>进入文件夹<code>cd node-v16.15.1-linux-x64</code> </p>
+<li class="lvl-3">
+<p>进入文件夹<code>cd node-v16.15.1-linux-x64</code></p>
 <p>可以看到bin文件夹</p>
 </li>
-<li><p>直接加入环境变量<code>nano /etc/profile</code></p>
+<li class="lvl-3">
+<p>直接加入环境变量<code>nano /etc/profile</code></p>
 <p>在最后一行加入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="string">&quot;<span class="variable">$PATH</span>:/root/node-v16.15.1-linux-x64/bin&quot;</span></span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>刷新一下<code>source /etc/profile</code></p>
+<li class="lvl-3">
+<p>刷新一下<code>source /etc/profile</code></p>
 </li>
-<li><p>执行一下<code>node -v</code></p>
+<li class="lvl-3">
+<p>执行一下<code>node -v</code></p>
 <p>输出了node版本即为配置完成</p>
 </li>
 </ol>
-<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><ol>
-<li>安装基础包<br><code>yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel</code></li>
-<li>下载nginx包<br><code>wget http://nginx.org/download/nginx-1.23.0.tar.gz</code></li>
-<li>解压<br><code>tar -zxvf nginx-1.23.0.tar.gz</code></li>
-<li>切换到<code>cd nginx-1.23.0</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li>
-<li>安装完成后就可以到&#x2F;usr&#x2F;local&#x2F;nginx的安装目录</li>
-<li>进入到conf目录可以看到nginx.conf里面为nginx基本配置</li>
-<li>html文件夹下就是访问路径了</li>
-<li>进到sbin文件夹内利用<code>./nginx</code>可以启动nginx服务器</li>
+<h2 id="安装nginx">安装nginx</h2>
+<ol>
+<li class="lvl-3">
+<p>安装基础包<br>
+<code>yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel</code></p>
+</li>
+<li class="lvl-3">
+<p>下载nginx包<br>
+<code>wget http://nginx.org/download/nginx-1.23.0.tar.gz</code></p>
+</li>
+<li class="lvl-3">
+<p>解压<br>
+<code>tar -zxvf nginx-1.23.0.tar.gz</code></p>
+</li>
+<li class="lvl-3">
+<p>切换到<code>cd nginx-1.23.0</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>安装完成后就可以到/usr/local/nginx的安装目录</p>
+</li>
+<li class="lvl-3">
+<p>进入到conf目录可以看到nginx.conf里面为nginx基本配置</p>
+</li>
+<li class="lvl-3">
+<p>html文件夹下就是访问路径了</p>
+</li>
+<li class="lvl-3">
+<p>进到sbin文件夹内利用<code>./nginx</code>可以启动nginx服务器</p>
+</li>
 </ol>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625000735608.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Welcome to nginx"></p>
-<p>访问<a target="_blank" rel="noopener external nofollow noreferrer" href="http://ip/%E7%9C%8B%E5%88%B0%E8%BF%99%E4%B8%AA%E5%B0%B1%E8%AF%B4%E6%98%8E%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90">http://ip/看到这个就说明配置完成</a></p>
-<h2 id="安装hexo-cli"><a href="#安装hexo-cli" class="headerlink" title="安装hexo-cli"></a>安装hexo-cli</h2><ol>
-<li>进入html文件夹内删除默认文件<code>rm -rf *</code></li>
-<li>执行<code>npm install hexo-cli -g</code></li>
-<li>初始化hexo目录<code>hexo init FILENAME</code>，FILENAME为任意名称</li>
-<li>进入FILENAME</li>
-<li>这时候的_config.yml可以根据<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.bootcss.com/docs/configuration.html">hexo官网配置</a>进行修改</li>
+<p>访问http://ip/看到这个就说明配置完成</p>
+<h2 id="安装hexo-cli">安装hexo-cli</h2>
+<ol>
+<li class="lvl-3">
+<p>进入html文件夹内删除默认文件<code>rm -rf *</code></p>
+</li>
+<li class="lvl-3">
+<p>执行<code>npm install hexo-cli -g</code></p>
+</li>
+<li class="lvl-3">
+<p>初始化hexo目录<code>hexo init FILENAME</code>，FILENAME为任意名称</p>
+</li>
+<li class="lvl-3">
+<p>进入FILENAME</p>
+</li>
+<li class="lvl-3">
+<p>这时候的_config.yml可以根据<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.bootcss.com/docs/configuration.html">hexo官网配置</a>进行修改</p>
+</li>
 </ol>
-<h2 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h2><p>在FILENAME文件夹下</p>
+<h2 id="安装next主题">安装next主题</h2>
+<p>在FILENAME文件夹下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
 <p>再将hexo配置文件中theme改为<code>theme: next</code>。</p>
 <p>同样在next主题目录下也有一个_config.yml，具体配置见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/next-theme/hexo-theme-next">hexo-theme-next</a>。</p>
 <p>修改conf里的nginx.conf，搜索root，<code>root html</code>修改为<code>root html/hexo/public</code>。</p>
 <p>到sbin文件夹里执行<code>./nginx -s reload</code>重载配置。</p>
-<h2 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h2><table>
+<h2 id="hexo命令">hexo命令</h2>
+<table>
 <thead>
 <tr>
 <th>命令</th>
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>hexo new  &lt;title&gt;</td>
 <td>新建一篇以title为名的文章。</td>
 </tr>
 <tr>
-<td>hexo generate &#x2F; hexo g</td>
+<td>hexo generate / hexo g</td>
 <td>生成静态文件。此时会产生一个public文件夹。</td>
 </tr>
 <tr>
@@ -387,12 +439,14 @@
 <td>启动hexo服务器，默认端口4000。</td>
 </tr>
 <tr>
-<td>hexo deploy &#x2F; hexo d</td>
+<td>hexo deploy / hexo d</td>
 <td>部署网站。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>这些是基础命令，更多可以看<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.bootcss.com/docs/commands.html">hexo命令</a>。</p>
-<h2 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h2><p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问<a target="_blank" rel="noopener external nofollow noreferrer" href="http://ip/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0">http://ip/可以看到</a></p>
+<h2 id="访问测试">访问测试</h2>
+<p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问http://ip/可以看到</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Hexo Hello World"></p>
 <p>则已经部署好。</p>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
@@ -453,12 +507,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/javascript-learning-notes-01/" rel="prev" title="javascript学习笔记-01">
-                  <i class="fa fa-chevron-left"></i> javascript学习笔记-01
+                <a href="/" rel="prev" title="javascript学习笔记1">
+                  <i class="fa fa-chevron-left"></i> javascript学习笔记1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/advanced-hexo-tutorial-github-pages/" rel="next" title="hexo教程进阶-Github Pages">
+                <a href="/" rel="next" title="hexo教程进阶-Github Pages">
                   hexo教程进阶-Github Pages <i class="fa fa-chevron-right"></i>
                 </a>
             </div>

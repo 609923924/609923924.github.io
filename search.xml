@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>jQuery学习笔记01</title>
-    <url>/jquery-learning-notes-01/</url>
+    <title>jQuery学习笔记1</title>
+    <url>/jquery-learning-notes-1/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
-<h1 id="jQuery基本使用"><a href="#jQuery基本使用" class="headerlink" title="jQuery基本使用"></a>jQuery基本使用</h1><h2 id="jQuery顶级对象"><a href="#jQuery顶级对象" class="headerlink" title="jQuery顶级对象$"></a>jQuery顶级对象$</h2><p>$是JQuery的别称</p>
+<h1>jQuery基本使用</h1>
+<h2 id="jQuery顶级对象-2">jQuery顶级对象$</h2>
+<p>$是JQuery的别称</p>
 <span id="more"></span>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">&#125;) <span class="comment">//效果相同</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="jQuery对象获取"><a href="#jQuery对象获取" class="headerlink" title="jQuery对象获取"></a>jQuery对象获取</h2><p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
+<h2 id="jQuery对象获取-2">jQuery对象获取</h2>
+<p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
 <p>且JQuery对象只能使用JQuery方法，不能使用原生DOM方法</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="DOM对象转换为JQuery对象"><a href="#DOM对象转换为JQuery对象" class="headerlink" title="DOM对象转换为JQuery对象"></a>DOM对象转换为JQuery对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dom = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">$(dom); </span><br></pre></td></tr></table></figure>
-
-<h3 id="jQuery对象转换DOM对象"><a href="#jQuery对象转换DOM对象" class="headerlink" title="jQuery对象转换DOM对象"></a>jQuery对象转换DOM对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> dom = jq[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> dom = jq.<span class="title function_">get</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-
-<h1 id="jQuery常用API"><a href="#jQuery常用API" class="headerlink" title="jQuery常用API"></a>jQuery常用API</h1><h2 id="jQuery基础选择器"><a href="#jQuery基础选择器" class="headerlink" title="jQuery基础选择器"></a>jQuery基础选择器</h2><p><code>$(&quot;选择器&quot;)</code></p>
+<h3 id="DOM对象转换为JQuery对象-2">DOM对象转换为JQuery对象</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dom = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">$(dom); </span><br></pre></td></tr></table></figure>
+<h3 id="jQuery对象转换DOM对象-2">jQuery对象转换DOM对象</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> dom = jq[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> dom = jq.<span class="title function_">get</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<h1>jQuery常用API</h1>
+<h2 id="jQuery基础选择器-2">jQuery基础选择器</h2>
+<p><code>$(&quot;选择器&quot;)</code></p>
 <table>
 <thead>
 <tr>
@@ -25,7 +28,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ID选择器</td>
 <td>$(‘#id’)</td>
 <td>获取指定id元素</td>
@@ -52,12 +56,15 @@
 </tr>
 <tr>
 <td>交集选择器</td>
-<td>$(‘div.li’)</td>
+<td>$(‘<a href="http://div.li">div.li</a>’)</td>
 <td>获取交集元素</td>
 </tr>
-</tbody></table>
-<h2 id="隐藏与显示对象"><a href="#隐藏与显示对象" class="headerlink" title="隐藏与显示对象"></a>隐藏与显示对象</h2><p><code>.show()</code>显示；<code>.hide()</code>隐藏。</p>
-<h2 id="jQuery隐式迭代"><a href="#jQuery隐式迭代" class="headerlink" title="jQuery隐式迭代"></a>jQuery隐式迭代</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="string">&#x27;div&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;background&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</tbody>
+</table>
+<h2 id="隐藏与显示对象">隐藏与显示对象</h2>
+<p><code>.show()</code>显示；<code>.hide()</code>隐藏。</p>
+<h2 id="jQuery隐式迭代-2">jQuery隐式迭代</h2>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="string">&#x27;div&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;background&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>会将所有div都变为蓝色</p>
 
     <div class="demobox">
@@ -77,7 +84,8 @@
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</div><div class="demobox-intro"><p>jQuery&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line">$(<span class="string">&apos;.demo&apos;</span>).css(<span class="string">&apos;background-image&apos;</span>,<span class="string">&apos;linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)&apos;</span>);</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h2 id="jQuery筛选选择器"><a href="#jQuery筛选选择器" class="headerlink" title="jQuery筛选选择器"></a>jQuery筛选选择器</h2><table>
+<h2 id="jQuery筛选选择器-2">jQuery筛选选择器</h2>
+<table>
 <thead>
 <tr>
 <th>语法</th>
@@ -85,7 +93,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>:first</td>
 <td>$(‘li:first’)</td>
 <td>获取第一个li</td>
@@ -110,8 +119,10 @@
 <td>$(‘li:even’)</td>
 <td>获取到索引为偶数的li元素</td>
 </tr>
-</tbody></table>
-<h2 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220628124314257.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="image-20220628124314257"></p>
+</tbody>
+</table>
+<h2 id="jQuery选择器">jQuery选择器</h2>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220628124314257.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="image-20220628124314257"></p>
 <blockquote>
 <p>图片来源： <a href="https://www.bilibili.com/video/BV1Sy4y1C7ha">https://www.bilibili.com/video/BV1Sy4y1C7ha</a></p>
 </blockquote>
@@ -150,56 +161,100 @@
   <entry>
     <title>Less学习笔记</title>
     <url>/less-learning-notes/</url>
-    <content><![CDATA[<h1 id="Less使用方法与介绍"><a href="#Less使用方法与介绍" class="headerlink" title="Less使用方法与介绍"></a>Less使用方法与介绍</h1><h2 id="Less介绍"><a href="#Less介绍" class="headerlink" title="Less介绍"></a>Less介绍</h2><span id="more"></span>
+    <content><![CDATA[<h1>Less使用方法与介绍</h1>
+<h2 id="Less介绍">Less介绍</h2>
+<span id="more"></span>
 <blockquote>
 <p>Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。</p>
 </blockquote>
 <p>Less并没有减少CSS的功能，而是在现有的CSS语法上为CSS加入了程序设计语言的特性。</p>
-<h2 id="Less的安装"><a href="#Less的安装" class="headerlink" title="Less的安装"></a>Less的安装</h2><p>通过 <a href="https://www.npmjs.org/">npm</a> 安装</p>
+<h2 id="Less的安装">Less的安装</h2>
+<p>通过 <a href="https://www.npmjs.org/">npm</a> 安装</p>
 <p><code>npm i less -g</code></p>
-<h2 id="Less的基础使用"><a href="#Less的基础使用" class="headerlink" title="Less的基础使用"></a>Less的基础使用</h2><p>创建以.less为后缀名的文件，文件内书写less语句。</p>
-<h3 id="Less变量"><a href="#Less变量" class="headerlink" title="Less变量"></a>Less变量</h3><p><code>@variableName: value</code></p>
-<h4 id="Less变量命名规范"><a href="#Less变量命名规范" class="headerlink" title="Less变量命名规范"></a>Less变量命名规范</h4><ul>
-<li><p>必须由@为前缀</p>
+<h2 id="Less的基础使用">Less的基础使用</h2>
+<p>创建以.less为后缀名的文件，文件内书写less语句。</p>
+<h3 id="Less变量">Less变量</h3>
+<p><code>@variableName: value</code></p>
+<h4 id="Less变量命名规范">Less变量命名规范</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>必须由@为前缀</p>
 </li>
-<li><p>不能包含特殊字符</p>
+<li class="lvl-2">
+<p>不能包含特殊字符</p>
 </li>
-<li><p>不能以数字开头</p>
+<li class="lvl-2">
+<p>不能以数字开头</p>
 </li>
-<li><p>大小写敏感</p>
+<li class="lvl-2">
+<p>大小写敏感</p>
 <p>eg.</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@color:</span> blue;</span><br><span class="line"><span class="variable">@imgurl:</span> <span class="string">&quot;../img&quot;</span>;</span><br><span class="line"><span class="variable">@border:</span> <span class="number">1px</span>;</span><br><span class="line"><span class="variable">@background:</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    weight: 100px;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@border</span> solid red;</span><br><span class="line">    &#125;</span><br><span class="line">body&#123;</span><br><span class="line">    <span class="variable">@background</span>();</span><br><span class="line">    backgroud-<span class="attribute">color</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@color:</span> blue;</span><br><span class="line"><span class="variable">@imgurl:</span> <span class="string">&quot;../img&quot;</span>;</span><br><span class="line"><span class="variable">@border:</span> <span class="number">1px</span>;</span><br><span class="line"><span class="variable">@background:</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    weight: 100px;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@border</span> solid red;</span><br><span class="line">    &#125;</span><br><span class="line">body&#123;</span><br><span class="line">    <span class="variable">@background</span>();</span><br><span class="line">    backgroud-<span class="attribute">color</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Less编译">Less编译</h3>
+<h4 id="通过命令行">通过命令行</h4>
+<p>语法：<code>lessc --选项 源文件地址 目标文件名</code></p>
+<p>eg. <code>lessc bootstrap.less bootstrap.css</code></p>
+<h4 id="通过VScode插件">通过VScode插件</h4>
+<p>下载 <em>Easy LESS</em> 插件将less文件编译为css，每次保存后会自动生成css文件。</p>
+<h3 id="Less嵌套">Less嵌套</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.classname</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="selector-class">.divclass</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: yellow;</span><br><span class="line">        <span class="selector-class">.imgname</span>&#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Less伪类选择器">Less伪类选择器</h3>
+<p>注意点：当遇见（交集、伪类、伪类选择器）</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>内层选择器前若没有&amp;符号，则被解析为父选择器后代。</p>
+</li>
+<li class="lvl-4">
+<p>若有&amp;符号，则被解析为父元素自身或父元素伪类。</p>
+</li>
+<li class="lvl-4">
+<p>&amp;符表示本元素的父元素。</p>
+</li>
 </ul>
-<h3 id="Less编译"><a href="#Less编译" class="headerlink" title="Less编译"></a>Less编译</h3><h4 id="通过命令行"><a href="#通过命令行" class="headerlink" title="通过命令行"></a>通过命令行</h4><p>  语法：<code>lessc --选项 源文件地址 目标文件名</code></p>
-<p>  eg. <code>lessc bootstrap.less bootstrap.css</code></p>
-<h4 id="通过VScode插件"><a href="#通过VScode插件" class="headerlink" title="通过VScode插件"></a>通过VScode插件</h4><p>  下载 <em>Easy LESS</em> 插件将less文件编译为css，每次保存后会自动生成css文件。</p>
-<h3 id="Less嵌套"><a href="#Less嵌套" class="headerlink" title="Less嵌套"></a>Less嵌套</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.classname</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="selector-class">.divclass</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: yellow;</span><br><span class="line">        <span class="selector-class">.imgname</span>&#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Less伪类选择器"><a href="#Less伪类选择器" class="headerlink" title="Less伪类选择器"></a>Less伪类选择器</h3><pre><code>注意点：当遇见（交集、伪类、伪类选择器）
-</code></pre>
-<ul>
-<li>内层选择器前若没有&amp;符号，则被解析为父选择器后代。</li>
-<li>若有&amp;符号，则被解析为父元素自身或父元素伪类。</li>
-<li>&amp;符表示本元素的父元素。  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Less的高级使用">Less的高级使用</h2>
+<h3 id="Less运算">Less运算</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@border:</span> <span class="number">5px</span>;</span><br><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: (<span class="number">120px</span> - <span class="number">100</span>);</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@border</span>+<span class="number">5</span> solid black;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#666</span> - <span class="number">#333</span>;</span><br><span class="line">&#125; <span class="comment">//最好使用括号</span></span><br></pre></td></tr></table></figure>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>运算符两侧必须敲一个空格隔开。</p>
+</li>
+<li class="lvl-4">
+<p>两数参与运算，且只有一个有单位，则结果以该单位为准。</p>
+</li>
+<li class="lvl-4">
+<p>两数参与运算，且都有单位，则以第一个单位为准。</p>
+</li>
 </ul>
-<h2 id="Less的高级使用"><a href="#Less的高级使用" class="headerlink" title="Less的高级使用"></a>Less的高级使用</h2><h3 id="Less运算"><a href="#Less运算" class="headerlink" title="Less运算"></a>Less运算</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@border:</span> <span class="number">5px</span>;</span><br><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: (<span class="number">120px</span> - <span class="number">100</span>);</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@border</span>+<span class="number">5</span> solid black;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#666</span> - <span class="number">#333</span>;</span><br><span class="line">&#125; <span class="comment">//最好使用括号</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>运算符两侧必须敲一个空格隔开。</li>
-<li>两数参与运算，且只有一个有单位，则结果以该单位为准。</li>
-<li>两数参与运算，且都有单位，则以第一个单位为准。</li>
+<h3 id="无参方法与默认参数方法">无参方法与默认参数方法</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.method1</span>()&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> gray;</span><br><span class="line">&#125; <span class="comment">//无参方法</span></span><br><span class="line"><span class="selector-class">.method2</span>(<span class="variable">@a</span>:<span class="number">1px</span>,<span class="variable">@b</span>:<span class="number">2px</span>,<span class="variable">@c</span>:<span class="number">3px</span>,<span class="variable">@color</span>:<span class="number">#123123</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@a</span> solid <span class="variable">@color</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">@arguments</span>; <span class="comment">//arguments代表全部参数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main1</span>&#123;</span><br><span class="line">    <span class="selector-class">.method1</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main2</span>&#123;</span><br><span class="line">    <span class="selector-class">.method2</span>();</span><br><span class="line">&#125; <span class="comment">//两种方法均被调用才能生效</span></span><br></pre></td></tr></table></figure>
+<h3 id="不定参数">不定参数</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.boxShadow</span>(...)&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.boxShadow</span>(<span class="number">1px</span>,<span class="number">2px</span>,<span class="number">3px</span>,red);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法的匹配模式">方法的匹配模式</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.method</span>(top,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.method</span>(right,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.method</span>(bottom,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.method</span>(left,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.method</span>(<span class="variable">@_</span>,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.method</span>(bottom,<span class="number">1px</span>,<span class="number">#111</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>相当于方法的重载</p>
+<h3 id="方法的命名空间">方法的命名空间</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#method</span>()&#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="selector-class">.d</span>(<span class="variable">@w</span>:<span class="number">300px</span>)&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="variable">@w</span>;</span><br><span class="line">        <span class="selector-id">#a</span>(<span class="variable">@h</span>:<span class="number">300px</span>)&#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="variable">@h</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-id">#method</span> &gt; <span class="selector-class">.d</span> &gt;<span class="selector-id">#a</span>(<span class="number">100px</span>);</span><br><span class="line">    <span class="selector-id">#method</span> &gt; <span class="selector-class">.d</span>(<span class="number">100px</span>);</span><br><span class="line">    <span class="selector-id">#method</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main1</span>&#123;</span><br><span class="line">    <span class="selector-class">.d</span>(<span class="number">122px</span>); <span class="comment">//错误的使用方法，没有调用其父元素则无法调用.d</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>在CSS中<code> &gt;</code>选择器，选择的是儿子元素，就是必须与父元素有直接联系的元素。</p>
+</li>
+<li class="lvl-4">
+<p>在引入命令空间时，如使用<code>&gt;</code>选择器，父元素不能加括号。</p>
+</li>
+<li class="lvl-4">
+<p>不得单独使用命名空间的方法必须先引入命名空间，才能使用其中方法。</p>
+</li>
+<li class="lvl-4">
+<p>子方法可以使用上一层传进来的方法。</p>
+</li>
 </ul>
-<h3 id="无参方法与默认参数方法"><a href="#无参方法与默认参数方法" class="headerlink" title="无参方法与默认参数方法"></a>无参方法与默认参数方法</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.method1</span>()&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> gray;</span><br><span class="line">&#125; <span class="comment">//无参方法</span></span><br><span class="line"><span class="selector-class">.method2</span>(<span class="variable">@a</span>:<span class="number">1px</span>,<span class="variable">@b</span>:<span class="number">2px</span>,<span class="variable">@c</span>:<span class="number">3px</span>,<span class="variable">@color</span>:<span class="number">#123123</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@a</span> solid <span class="variable">@color</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">@arguments</span>; <span class="comment">//arguments代表全部参数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main1</span>&#123;</span><br><span class="line">    <span class="selector-class">.method1</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main2</span>&#123;</span><br><span class="line">    <span class="selector-class">.method2</span>();</span><br><span class="line">&#125; <span class="comment">//两种方法均被调用才能生效</span></span><br></pre></td></tr></table></figure>
-<h3 id="不定参数"><a href="#不定参数" class="headerlink" title="不定参数"></a>不定参数</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.boxShadow</span>(...)&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.boxShadow</span>(<span class="number">1px</span>,<span class="number">2px</span>,<span class="number">3px</span>,red);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="方法的匹配模式"><a href="#方法的匹配模式" class="headerlink" title="方法的匹配模式"></a>方法的匹配模式</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.method</span>(top,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.method</span>(right,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.method</span>(bottom,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.method</span>(left,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.method</span>(<span class="variable">@_</span>,<span class="variable">@width</span>:<span class="number">20px</span>,<span class="variable">@color</span>:<span class="number">#666</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">@width</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.method</span>(bottom,<span class="number">1px</span>,<span class="number">#111</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  相当于方法的重载</p>
-<h3 id="方法的命名空间"><a href="#方法的命名空间" class="headerlink" title="方法的命名空间"></a>方法的命名空间</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#method</span>()&#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="selector-class">.d</span>(<span class="variable">@w</span>:<span class="number">300px</span>)&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="variable">@w</span>;</span><br><span class="line">        <span class="selector-id">#a</span>(<span class="variable">@h</span>:<span class="number">300px</span>)&#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="variable">@h</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-id">#method</span> &gt; <span class="selector-class">.d</span> &gt;<span class="selector-id">#a</span>(<span class="number">100px</span>);</span><br><span class="line">    <span class="selector-id">#method</span> &gt; <span class="selector-class">.d</span>(<span class="number">100px</span>);</span><br><span class="line">    <span class="selector-id">#method</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main1</span>&#123;</span><br><span class="line">    <span class="selector-class">.d</span>(<span class="number">122px</span>); <span class="comment">//错误的使用方法，没有调用其父元素则无法调用.d</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在CSS中<code> &gt;</code>选择器，选择的是儿子元素，就是必须与父元素有直接联系的元素。</li>
-<li>在引入命令空间时，如使用<code>&gt;</code>选择器，父元素不能加括号。</li>
-<li>不得单独使用命名空间的方法必须先引入命名空间，才能使用其中方法。</li>
-<li>子方法可以使用上一层传进来的方法。</li>
+<h3 id="条件筛选">条件筛选</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#divclass</span>&#123;</span><br><span class="line">    <span class="selector-class">.boxShadow</span>(<span class="variable">@a</span>,<span class="variable">@b</span>,<span class="variable">@c</span>,<span class="variable">@color</span>) <span class="keyword">when</span>(<span class="variable">@a</span>&gt;<span class="number">10px</span>) <span class="keyword">and</span>(<span class="variable">@b</span>&lt;<span class="number">20px</span>)&#123;  <span class="comment">//且方法</span></span><br><span class="line">        <span class="attribute">box-shadow</span>: <span class="variable">@arguments</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.background</span>(<span class="variable">@color</span>) <span class="keyword">when</span> <span class="keyword">not</span> (<span class="variable">@color</span>=<span class="number">#666</span>)&#123;  <span class="comment">//非方法</span></span><br><span class="line">        <span class="attribute">background</span>: <span class="variable">@color</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.font</span>(<span class="variable">@size</span>:<span class="number">20px</span>) <span class="keyword">when</span> (<span class="variable">@size</span>&gt;<span class="number">20px</span>),(<span class="variable">@size</span>&lt;<span class="number">60px</span>)&#123;  <span class="comment">//逗号为或方法</span></span><br><span class="line">        <span class="attribute">font-size</span>:<span class="variable">@size</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-id">#divclass</span>&gt;<span class="selector-class">.boxShadow</span>(<span class="number">1px</span>,<span class="number">2px</span>,<span class="number">3px</span>,<span class="number">#777</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="最高优先级">最高优先级</h3>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.border</span>()&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.border</span>() !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="条件筛选"><a href="#条件筛选" class="headerlink" title="条件筛选"></a>条件筛选</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#divclass</span>&#123;</span><br><span class="line">    <span class="selector-class">.boxShadow</span>(<span class="variable">@a</span>,<span class="variable">@b</span>,<span class="variable">@c</span>,<span class="variable">@color</span>) <span class="keyword">when</span>(<span class="variable">@a</span>&gt;<span class="number">10px</span>) <span class="keyword">and</span>(<span class="variable">@b</span>&lt;<span class="number">20px</span>)&#123;  <span class="comment">//且方法</span></span><br><span class="line">        <span class="attribute">box-shadow</span>: <span class="variable">@arguments</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.background</span>(<span class="variable">@color</span>) <span class="keyword">when</span> <span class="keyword">not</span> (<span class="variable">@color</span>=<span class="number">#666</span>)&#123;  <span class="comment">//非方法</span></span><br><span class="line">        <span class="attribute">background</span>: <span class="variable">@color</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.font</span>(<span class="variable">@size</span>:<span class="number">20px</span>) <span class="keyword">when</span> (<span class="variable">@size</span>&gt;<span class="number">20px</span>),(<span class="variable">@size</span>&lt;<span class="number">60px</span>)&#123;  <span class="comment">//逗号为或方法</span></span><br><span class="line">        <span class="attribute">font-size</span>:<span class="variable">@size</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-id">#divclass</span>&gt;<span class="selector-class">.boxShadow</span>(<span class="number">1px</span>,<span class="number">2px</span>,<span class="number">3px</span>,<span class="number">#777</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="最高优先级"><a href="#最高优先级" class="headerlink" title="最高优先级"></a>最高优先级</h3>  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.border</span>()&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.border</span>() !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
@@ -235,29 +290,52 @@
       </tags>
   </entry>
   <entry>
-    <title>SpringBoot学习笔记-01</title>
-    <url>/springboot-learning-notes-01/</url>
-    <content><![CDATA[<h2 id="Configuration注解"><a href="#Configuration注解" class="headerlink" title="@Configuration注解"></a>@Configuration注解</h2><ol>
-<li>告诉SpringBoot本文件为配置类，可用于添加组件。</li>
-<li>配置类本身也是组件。</li>
-<li>配置类中的组件无论调用多少遍，都是单实例对象。(@Configuration注解中的proxyBeanMethods默认为true，可以保证组件为单实例，为 false则会创建多实例)</li>
-<li>proxyBeanMethods中有full与lite模式，其中lite模式(为false时)会跳过检测实例是否已存在。<span id="more"></span></li>
+    <title>SpringBoot学习笔记1</title>
+    <url>/springboot-learning-notes-1/</url>
+    <content><![CDATA[<h2 id="Configuration注解">@Configuration注解</h2>
+<ol>
+<li class="lvl-3">告诉SpringBoot本文件为配置类，可用于添加组件。</li>
+<li class="lvl-3">配置类本身也是组件。</li>
+<li class="lvl-3">配置类中的组件无论调用多少遍，都是单实例对象。(@Configuration注解中的proxyBeanMethods默认为true，可以保证组件为单实例，为 false则会创建多实例)</li>
+<li class="lvl-3">proxyBeanMethods中有full与lite模式，其中lite模式(为false时)会跳过检测实例是否已存在。</li>
 </ol>
-<h2 id="Conditional条件装配"><a href="#Conditional条件装配" class="headerlink" title="@Conditional条件装配"></a>@Conditional条件装配</h2><ol>
-<li>@ConditionalOnBean(name&#x3D;”xxx”)容器中含有xxx组件时,装配该组件。</li>
-<li>@ConditionalOnMissingBean(name&#x3D;”xxx”)容器中不含有xxx组件时,装配该组件。</li>
-<li>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。</li>
+<span id="more"></span>
+<h2 id="Conditional条件装配">@Conditional条件装配</h2>
+<ol>
+<li class="lvl-4">
+<p>@ConditionalOnBean(name=“xxx”)容器中含有xxx组件时,装配该组件。</p>
+</li>
+<li class="lvl-4">
+<p>@ConditionalOnMissingBean(name=“xxx”)容器中不含有xxx组件时,装配该组件。</p>
+</li>
+<li class="lvl-4">
+<p>@ImportResource(“classpath:xxx.xml”)允许读取xml的配置项。</p>
+</li>
 </ol>
-<h2 id="ConfigurationProperties配置绑定"><a href="#ConfigurationProperties配置绑定" class="headerlink" title="@ConfigurationProperties配置绑定"></a>@ConfigurationProperties配置绑定</h2><ol>
-<li>@ConfigurationProperties(prefix&#x3D;”xxx”)获取前缀为xxx的配置，用在pojo。</li>
-<li>@EnableConfigurationProperties(xxx.class)开启组件属性配置，将xxx自动注册到容器，用在配置项中。</li>
+<h2 id="ConfigurationProperties配置绑定">@ConfigurationProperties配置绑定</h2>
+<ol>
+<li class="lvl-3">
+<p>@ConfigurationProperties(prefix=“xxx”)获取前缀为xxx的配置，用在pojo。</p>
+</li>
+<li class="lvl-3">
+<p>@EnableConfigurationProperties(xxx.class)开启组件属性配置，将xxx自动注册到容器，用在配置项中。</p>
+</li>
 </ol>
-<h2 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h2><p>代表main是一个配置类</p>
-<h2 id="ComponentScan包扫描"><a href="#ComponentScan包扫描" class="headerlink" title="@ComponentScan包扫描"></a>@ComponentScan包扫描</h2><p>可指定位置扫描包的配置</p>
-<h2 id="AutoConfigurationPackge"><a href="#AutoConfigurationPackge" class="headerlink" title="@AutoConfigurationPackge"></a>@AutoConfigurationPackge</h2><ol>
-<li>利用Registrar为容器中导入一系列组件。</li>
-<li>将指定包下的所有组件导入。(MainApplications所在地)</li>
-<li>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</li>
+<h2 id="SpringBootConfiguration">@SpringBootConfiguration</h2>
+<p>代表main是一个配置类</p>
+<h2 id="ComponentScan包扫描">@ComponentScan包扫描</h2>
+<p>可指定位置扫描包的配置</p>
+<h2 id="AutoConfigurationPackge">@AutoConfigurationPackge</h2>
+<ol>
+<li class="lvl-3">
+<p>利用Registrar为容器中导入一系列组件。</p>
+</li>
+<li class="lvl-3">
+<p>将指定包下的所有组件导入。(MainApplications所在地)</p>
+</li>
+<li class="lvl-3">
+<p>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</p>
+</li>
 </ol>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
@@ -281,7 +359,6 @@
 })()
 </script>
 
-
 ]]></content>
       <categories>
         <category>web后端-springboot</category>
@@ -296,17 +373,18 @@
     <title>es6-es11笔记1</title>
     <url>/es6-es11-note-1/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
-<h1 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h1><h2 id="let变量声明"><a href="#let变量声明" class="headerlink" title="let变量声明"></a>let变量声明</h2><span id="more"></span>
+<h1>ES6语法</h1>
+<h2 id="let变量声明">let变量声明</h2>
+<span id="more"></span>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d,e;</span><br><span class="line"><span class="keyword">let</span> k = <span class="number">555</span>;</span><br><span class="line"><span class="keyword">let</span> t = <span class="string">&quot;init&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> y = [];</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="let不可重复声明"><a href="#let不可重复声明" class="headerlink" title="let不可重复声明"></a>let不可重复声明</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">200</span>; <span class="comment">//错误的声明</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">//报错，not defined</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="没有变量提升"><a href="#没有变量提升" class="headerlink" title="没有变量提升"></a>没有变量提升</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//undefined，变量提升</span></span><br><span class="line"><span class="keyword">var</span> tag = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">---------------------------;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//报错</span></span><br><span class="line"><span class="keyword">let</span> tag = <span class="string">&quot;name&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="不影响作用域链"><a href="#不影响作用域链" class="headerlink" title="不影响作用域链"></a>不影响作用域链</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;doc&quot;</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="let不可重复声明">let不可重复声明</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">200</span>; <span class="comment">//错误的声明</span></span><br></pre></td></tr></table></figure>
+<h3 id="块级作用域">块级作用域</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">//报错，not defined</span></span><br></pre></td></tr></table></figure>
+<h3 id="没有变量提升">没有变量提升</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//undefined，变量提升</span></span><br><span class="line"><span class="keyword">var</span> tag = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">---------------------------;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//报错</span></span><br><span class="line"><span class="keyword">let</span> tag = <span class="string">&quot;name&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="不影响作用域链">不影响作用域链</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;doc&quot;</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     <div class="demobox">
       <div class="demobox-result">
@@ -338,54 +416,61 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">let&#x6848;&#x4F8B;</div><div class="demobox-intro"><p><em>let&#x6848;&#x4F8B;</em></p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;page-header&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x5207;&#x6362;&#x989C;&#x8272;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> items = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&apos;demo1&apos;</span>);</span><br><span class="line">  <span class="comment">//&#x904D;&#x5386;&#x5E76;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span> ; i&lt;items.length ; i++){ <span class="comment">//&#x8981;&#x4F7F;&#x7528;let i = 0</span></span><br><span class="line">    items[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">    <span class="comment">//&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;</span></span><br><span class="line">    <span class="comment">// this.style.background = &apos;pink&apos;;</span></span><br><span class="line">    items[i].style.background = <span class="string">&apos;pink&apos;</span>;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span> {</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">        <span class="attribute">border</span>: solid <span class="number">1px</span> <span class="built_in">rgb</span>(<span class="number">42</span>, <span class="number">156</span>, <span class="number">156</span>);</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">    }</span><br></pre></td></tr></table></figure></div></div></div>
   
-
-<p>若使用var i&#x3D;0;变量会被提升为全局变量，每次点击执行回调函数时，都会执行items[3].style.background &#x3D; ‘pink’;所以会出现问题。而使用let时i会作为回调函数内的一个元素，而不会被提升为全局变量。</p>
+<p>若使用var i=0;变量会被提升为全局变量，每次点击执行回调函数时，都会执行items[3].style.background = ‘pink’;所以会出现问题。而使用let时i会作为回调函数内的一个元素，而不会被提升为全局变量。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> i;</span><br><span class="line">i=<span class="number">3</span>;</span><br><span class="line">&#123;</span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;  <span class="comment">//使用var时</span></span><br><span class="line">&#125;</span><br><span class="line">-----------------------------------------------------------</span><br><span class="line">&#123;</span><br><span class="line">    let i=<span class="number">0</span>;                            <span class="comment">//使用let时</span></span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    let i=<span class="number">1</span>;</span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    let i=<span class="number">2</span>;</span><br><span class="line">    items[i].style.background = <span class="string">&quot;pink&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="const声明常量"><a href="#const声明常量" class="headerlink" title="const声明常量"></a>const声明常量</h2><p><code>const NORMAL = &quot;常量&quot;;</code></p>
-<ul>
-<li>const声明必须有初始值。</li>
-<li>一般使用大写。</li>
-<li>常量值不能修改。</li>
-<li>块级作用域。</li>
-<li>对数组与对象的修改不算对常量的修改。</li>
+<h2 id="const声明常量">const声明常量</h2>
+<p><code>const NORMAL = &quot;常量&quot;;</code></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>const声明必须有初始值。</p>
+</li>
+<li class="lvl-2">
+<p>一般使用大写。</p>
+</li>
+<li class="lvl-2">
+<p>常量值不能修改。</p>
+</li>
+<li class="lvl-2">
+<p>块级作用域。</p>
+</li>
+<li class="lvl-2">
+<p>对数组与对象的修改不算对常量的修改。</p>
+</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">num.<span class="title function_">push</span>(<span class="number">6</span>);  <span class="comment">//正确的写法</span></span><br><span class="line">num = <span class="number">10</span>; <span class="comment">//错误的写法</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="变量解构赋值"><a href="#变量解构赋值" class="headerlink" title="变量解构赋值"></a>变量解构赋值</h2><blockquote>
+<h2 id="变量解构赋值">变量解构赋值</h2>
+<blockquote>
 <p>ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这被称为解构赋值。</p>
 </blockquote>
-<h3 id="数组的解构"><a href="#数组的解构" class="headerlink" title="数组的解构"></a>数组的解构</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> [a,b,c,d]=nums;  <span class="comment">//将a,b,c,d分别赋值</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="对象的解构"><a href="#对象的解构" class="headerlink" title="对象的解构"></a>对象的解构</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>;</span><br><span class="line">    <span class="attr">ability</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;ok&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age,ability&#125; = people;  <span class="comment">//必须与对象属性名相同</span></span><br><span class="line"><span class="title function_">ability</span>();</span><br></pre></td></tr></table></figure>
-
-<h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`字符串`</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="内容中可以直接出现换行符"><a href="#内容中可以直接出现换行符" class="headerlink" title="内容中可以直接出现换行符"></a>内容中可以直接出现换行符</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`多</span></span><br><span class="line"><span class="string">           行</span></span><br><span class="line"><span class="string">           子</span></span><br><span class="line"><span class="string">           符</span></span><br><span class="line"><span class="string">           串`</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="变量拼接"><a href="#变量拼接" class="headerlink" title="变量拼接"></a>变量拼接</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">&quot;字符串&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> sout = <span class="string">`<span class="subst">$&#123;str1&#125;</span>&lt;-这是拼接进来的字符串`</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="简化对象写法"><a href="#简化对象写法" class="headerlink" title="简化对象写法"></a>简化对象写法</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;tname&quot;</span>,age = <span class="string">&quot;18&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> people=&#123;</span><br><span class="line">    name,  <span class="comment">//等同于name=name;</span></span><br><span class="line">    age,  <span class="comment">//age=age;</span></span><br><span class="line">    <span class="title function_">improve</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a&quot;</span>);    <span class="comment">// 等同于 improve = function()&#123;</span></span><br><span class="line">                             <span class="comment">//                               console.log(&quot;a&quot;);</span></span><br><span class="line">                             <span class="comment">//                           &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params">a,b</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="this是静态的，this始终指向-函数声明-时所在作用域下的-this-的值。"><a href="#this是静态的，this始终指向-函数声明-时所在作用域下的-this-的值。" class="headerlink" title="this是静态的，this始终指向**函数声明**时所在作用域下的 this 的值。"></a>this是静态的，this始终指向**<u>函数声明</u>**时所在作用域下的 this 的值。</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getName</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">getName2</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">name</span>=<span class="string">&quot;name1&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> s = &#123;</span><br><span class="line">    name = <span class="string">&quot;name2&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getName</span>();   <span class="comment">//直接调用this指向window</span></span><br><span class="line"><span class="title function_">getName2</span>();   <span class="comment">// name1</span></span><br><span class="line"></span><br><span class="line">getName.<span class="title function_">call</span>(s);   <span class="comment">//name2</span></span><br><span class="line">getName2.<span class="title function_">call</span>(s);  <span class="comment">//name1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="不能作为构造实例化对象"><a href="#不能作为构造实例化对象" class="headerlink" title="不能作为构造实例化对象"></a>不能作为构造实例化对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">Person</span> = (<span class="params">name,age</span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span>=name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span>=age;          <span class="comment">//错误的使用方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="不能使用arguments变量"><a href="#不能使用arguments变量" class="headerlink" title="不能使用arguments变量"></a>不能使用arguments变量</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);    <span class="comment">//错误的使用方法</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="箭头函数的简写"><a href="#箭头函数的简写" class="headerlink" title="箭头函数的简写"></a>箭头函数的简写</h3><p>   i. 当形参有且只有一个时可省略小括号。</p>
+<h3 id="数组的解构">数组的解构</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> [a,b,c,d]=nums;  <span class="comment">//将a,b,c,d分别赋值</span></span><br></pre></td></tr></table></figure>
+<h3 id="对象的解构">对象的解构</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>;</span><br><span class="line">    <span class="attr">ability</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;ok&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age,ability&#125; = people;  <span class="comment">//必须与对象属性名相同</span></span><br><span class="line"><span class="title function_">ability</span>();</span><br></pre></td></tr></table></figure>
+<h2 id="模板字符串">模板字符串</h2>
+<h3 id="声明">声明</h3>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`字符串`</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="内容中可以直接出现换行符">内容中可以直接出现换行符</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`多</span></span><br><span class="line"><span class="string">           行</span></span><br><span class="line"><span class="string">           子</span></span><br><span class="line"><span class="string">           符</span></span><br><span class="line"><span class="string">           串`</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="变量拼接">变量拼接</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">&quot;字符串&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> sout = <span class="string">`<span class="subst">$&#123;str1&#125;</span>&lt;-这是拼接进来的字符串`</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="简化对象写法">简化对象写法</h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;tname&quot;</span>,age = <span class="string">&quot;18&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> people=&#123;</span><br><span class="line">    name,  <span class="comment">//等同于name=name;</span></span><br><span class="line">    age,  <span class="comment">//age=age;</span></span><br><span class="line">    <span class="title function_">improve</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a&quot;</span>);    <span class="comment">// 等同于 improve = function()&#123;</span></span><br><span class="line">                             <span class="comment">//                               console.log(&quot;a&quot;);</span></span><br><span class="line">                             <span class="comment">//                           &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="箭头函数">箭头函数</h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params">a,b</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="this是静态的，this始终指向-u-函数声明-u-时所在作用域下的-this-的值。">this是静态的，this始终指向**<u>函数声明</u>**时所在作用域下的 this 的值。</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getName</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">getName2</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">name</span>=<span class="string">&quot;name1&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> s = &#123;</span><br><span class="line">    name = <span class="string">&quot;name2&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getName</span>();   <span class="comment">//直接调用this指向window</span></span><br><span class="line"><span class="title function_">getName2</span>();   <span class="comment">// name1</span></span><br><span class="line"></span><br><span class="line">getName.<span class="title function_">call</span>(s);   <span class="comment">//name2</span></span><br><span class="line">getName2.<span class="title function_">call</span>(s);  <span class="comment">//name1</span></span><br></pre></td></tr></table></figure>
+<h3 id="不能作为构造实例化对象">不能作为构造实例化对象</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">Person</span> = (<span class="params">name,age</span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span>=name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span>=age;          <span class="comment">//错误的使用方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="不能使用arguments变量">不能使用arguments变量</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);    <span class="comment">//错误的使用方法</span></span><br></pre></td></tr></table></figure>
+<h3 id="箭头函数的简写">箭头函数的简写</h3>
+<p>i. 当形参有且只有一个时可省略小括号。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = (<span class="params">n</span>) =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简化为</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = n =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <pre><code>  ii.当代码体只有一条时可省略花括号,且return也应一并省去。
 </code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">p</span> = (<span class="params">n</span>) =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简化为</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">p</span> = n =&gt; n++;</span><br></pre></td></tr></table></figure>
+<h2 id="箭头函数实例">箭头函数实例</h2>
 
-<h2 id="箭头函数实例"><a href="#箭头函数实例" class="headerlink" title="箭头函数实例"></a>箭头函数实例</h2>
     <div class="demobox">
       <div class="demobox-result">
   <div id="demo2"></div>
@@ -412,10 +497,54 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5B9E;&#x4F8B;</div><div class="demobox-intro"><p>&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5B9E;&#x4F8B;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> de = <span class="built_in">document</span>.getElementById(<span class="string">&apos;demo2&apos;</span>);</span><br><span class="line">  de.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{        <span class="comment">//&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;</span></span><br><span class="line">            setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> {       </span><br><span class="line">                <span class="keyword">this</span>.style.background = <span class="string">&apos;pink&apos;</span>;</span><br><span class="line">            }, <span class="number">2000</span>);</span><br><span class="line">        });</span><br><span class="line"><span class="comment">//   de.addEventListener(&quot;click&quot;, function(){        //&#x4E0D;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;</span></span><br><span class="line"><span class="comment">//            let _this = this;  //&#x4FDD;&#x5B58; this &#x7684;&#x503C;,&#x4F7F;_this&#x6307;&#x5411;</span></span><br><span class="line"><span class="comment">//            setTimeout(function(){       </span></span><br><span class="line"><span class="comment">//               _this.style.background = &apos;pink&apos;; //&#x4FEE;&#x6539;&#x80CC;&#x666F;&#x989C;&#x8272; this</span></span><br><span class="line"><span class="comment">//            }, 2000);</span></span><br><span class="line"><span class="comment">//        });</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo2</span> {</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background</span>: <span class="number">#58a</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>]; <span class="comment">//取其中偶数</span></span><br><span class="line"><span class="keyword">const</span> res = a.<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">i</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span>===<span class="number">0</span>)&#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//使用箭头函数</span></span><br><span class="line"><span class="keyword">const</span> res = a.<span class="title function_">filter</span>(<span class="function"><span class="params">i</span> =&gt;</span> i%<span class="number">2</span>===<span class="number">0</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>箭头函数适合做与this无关的回调，如定时器与数组方法回调。</p>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
+]]></content>
+      <categories>
+        <category>web前端-js</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+        <tag>笔记</tag>
+        <tag>html</tag>
+        <tag>es6</tag>
+        <tag>es11</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>es6-es11笔记2</title>
+    <url>/es6-es11-note-2/</url>
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<p>接<a href="https://itechfans.com/es6-es11-note-1/">es6-es11笔记1</a></p>
+<span id="more"></span>
+
+    <div class="demobox">
+      <div class="demobox-result"><script>(function(){})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">[title]</div><div class="demobox-intro"></div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
@@ -455,28 +584,45 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <title>flex学习笔记</title>
     <url>/flex-learning-notes/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" /># Flex布局
-
-<h2 id="Flex由来"><a href="#Flex由来" class="headerlink" title="Flex由来"></a>Flex由来</h2><blockquote>
+<h2 id="Flex由来-2">Flex由来</h2>
+<blockquote>
 <p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="Flex是什么"><a href="#Flex是什么" class="headerlink" title="Flex是什么"></a>Flex是什么</h2><p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>
-<h2 id="Flex布局与传统布局的区别"><a href="#Flex布局与传统布局的区别" class="headerlink" title="Flex布局与传统布局的区别"></a>Flex布局与传统布局的区别</h2><h3 id="传统布局"><a href="#传统布局" class="headerlink" title="传统布局"></a>传统布局</h3><p>优点：</p>
+<h2 id="Flex是什么-2">Flex是什么</h2>
+<p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>
+<h2 id="Flex布局与传统布局的区别-2">Flex布局与传统布局的区别</h2>
+<h3 id="传统布局-2">传统布局</h3>
+<p>优点：</p>
 <ol>
-<li>传统布局为大多数浏览器所兼容，包括ie11以下的所有版本。</li>
+<li class="lvl-3">
+<p>传统布局为大多数浏览器所兼容，包括ie11以下的所有版本。</p>
+</li>
 </ol>
 <p>缺点：</p>
 <ol>
-<li>在移动端适配具有局限性。</li>
-<li>基于盒子模型，依赖 display属性 、position属性 、float属性；布局繁琐。</li>
+<li class="lvl-3">
+<p>在移动端适配具有局限性。</p>
+</li>
+<li class="lvl-3">
+<p>基于盒子模型，依赖 display属性 、position属性 、float属性；布局繁琐。</p>
+</li>
 </ol>
-<h3 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h3><p>优点：</p>
+<h3 id="Flex布局-2">Flex布局</h3>
+<p>优点：</p>
 <ol>
-<li>操作更为简单，几行代码就能实现垂直居中，且移动端适配好。</li>
-<li>pc端浏览器已基本支持。<br>缺点：</li>
-<li>ie11及以下版本不支持。</li>
+<li class="lvl-3">
+<p>操作更为简单，几行代码就能实现垂直居中，且移动端适配好。</p>
+</li>
+<li class="lvl-3">
+<p>pc端浏览器已基本支持。缺点：</p>
+</li>
+<li class="lvl-3">
+<p>ie11及以下版本不支持。</p>
+</li>
 </ol>
-<h2 id="Flex布局简单应用"><a href="#Flex布局简单应用" class="headerlink" title="Flex布局简单应用"></a>Flex布局简单应用</h2>
+<h2 id="Flex布局简单应用-2">Flex布局简单应用</h2>
+
     <div class="demobox">
       <div class="demobox-result">
   <div id="demo1">
@@ -500,20 +646,28 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">Flex&#x7B80;&#x5355;&#x5E94;&#x7528;</div><div class="demobox-intro"><p>Flex&#x5E03;&#x5C40;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo1</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demobox</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
-<h2 id="Flex布局原理"><a href="#Flex布局原理" class="headerlink" title="Flex布局原理"></a>Flex布局原理</h2><ul>
-<li>当父元素设置为flex布局后，子元素中的float、clear与vertical-align将失效。</li>
-<li>在flex中父元素（父盒子）被成为flex父容器，其中的元素被称为子容器（flex项目）。</li>
-<li>通过给<strong>父元素</strong>添加flex属性，从而控制子元素位置与排列方式。</li>
+<h2 id="Flex布局原理-2">Flex布局原理</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>当父元素设置为flex布局后，子元素中的float、clear与vertical-align将失效。</p>
+</li>
+<li class="lvl-2">
+<p>在flex中父元素（父盒子）被成为flex父容器，其中的元素被称为子容器（flex项目）。</p>
+</li>
+<li class="lvl-2">
+<p>通过给<strong>父元素</strong>添加flex属性，从而控制子元素位置与排列方式。</p>
+</li>
 </ul>
-<h2 id="Flex常见父属性"><a href="#Flex常见父属性" class="headerlink" title="Flex常见父属性"></a>Flex常见父属性</h2><table>
+<h2 id="Flex常见父属性-2">Flex常见父属性</h2>
+<table>
 <thead>
 <tr>
 <th>属性</th>
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><a href="#flex-direction">flex-direction</a></td>
 <td>设置主轴方向</td>
 </tr>
@@ -537,15 +691,19 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td><a href="#flex-flow">flex-flow</a></td>
 <td>复合属性</td>
 </tr>
-</tbody></table>
-<ul>
-<li><p>默认主轴水平向右，x方向。</p>
+</tbody>
+</table>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>默认主轴水平向右，x方向。</p>
 </li>
-<li><p>默认侧轴竖直向下，y方向。</p>
+<li class="lvl-2">
+<p>默认侧轴竖直向下，y方向。</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/202206271417925.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="坐标"></p>
 </li>
 </ul>
-<h3 id="flex-direction属性展示"><a href="#flex-direction属性展示" class="headerlink" title="flex-direction属性展示"></a><span id = "flex-direction">flex-direction属性展示</span></h3><p>flex-direction设置主轴方向，影响后续的排列效果，默认以水平向右为主轴方向。</p>
+<h3 id="span-id-flex-direction-flex-direction属性展示-span-2"><span id = "flex-direction">flex-direction属性展示</span></h3>
+<p>flex-direction设置主轴方向，影响后续的排列效果，默认以水平向右为主轴方向。</p>
 <table>
 <thead>
 <tr>
@@ -553,7 +711,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><a href="#direction-row">row</a></td>
 <td>x轴正序排列，并设置主轴为x轴方向</td>
 </tr>
@@ -569,7 +728,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td><a href="#direction-column-reverse">column-reverse</a></td>
 <td>y轴倒序排列，并设置主轴为y轴方向</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><span id="direction-row"></span></p>
 
     <div class="demobox">
@@ -596,7 +756,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: row</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo2box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo2</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo2box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id="direction-row-reverse"></span></p>
 
     <div class="demobox">
@@ -623,7 +782,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: row-reverse</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo3box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo3</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row-reverse;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo3box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id="direction-column"></span></p>
 
     <div class="demobox">
@@ -650,7 +808,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: column</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo4box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo4</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo4box</span>{</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id="direction-column-reverse"></span></p>
 
     <div class="demobox">
@@ -677,8 +834,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-direction:</div><div class="demobox-intro"><p>flex-direction: column-reverse</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo5box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo5</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column-reverse;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo5box</span>{</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
-<h3 id="justify-content属性展示"><a href="#justify-content属性展示" class="headerlink" title="justify-content属性展示"></a><span id = "justify-content">justify-content属性展示</span></h3><p>设置主轴上的排列方式。</p>
+<h3 id="span-id-justify-content-justify-content属性展示-span"><span id = "justify-content">justify-content属性展示</span></h3>
+<p>设置主轴上的排列方式。</p>
 <table>
 <thead>
 <tr>
@@ -686,7 +843,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><a href="#justify-flex-start">flex-start</a></td>
 <td>从左至右排列(主轴为x)或从上到下(主轴为y)</td>
 </tr>
@@ -706,7 +864,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td><a href="#justify-space-between">space-between</a></td>
 <td>先两边贴边，再平分剩余空间</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><span id = "justify-flex-start"></span></p>
 
     <div class="demobox">
@@ -733,7 +892,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: flex-start</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo6&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo6box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo6box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo6box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo6</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: flex-start;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo6box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id = "justify-flex-end"></span></p>
 
     <div class="demobox">
@@ -760,7 +918,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: flex-end</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo7&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo7box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo7box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo7box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo7</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo7box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id = "justify-center"></span></p>
 
     <div class="demobox">
@@ -787,7 +944,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: center</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo8box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo8box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo8box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo8</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo8box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id = "justify-space-around"></span></p>
 
     <div class="demobox">
@@ -814,7 +970,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: space-around</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo9&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo9box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo9box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo9box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo9</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo9box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
 <p><span id = "justify-space-between"></span></p>
 
     <div class="demobox">
@@ -841,8 +996,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: space-between</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo14</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo14box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
-<h3 id="flex-wrap属性展示"><a href="#flex-wrap属性展示" class="headerlink" title="flex-wrap属性展示"></a><span id = "flex-wrap">flex-wrap属性展示</span></h3><p>默认情况下，项目（子元素）都在一条线上（轴线）,flex-warp默认不换行，会直接缩小子元素宽度。</p>
+<h3 id="span-id-flex-wrap-flex-wrap属性展示-span-2"><span id = "flex-wrap">flex-wrap属性展示</span></h3>
+<p>默认情况下，项目（子元素）都在一条线上（轴线）,flex-warp默认不换行，会直接缩小子元素宽度。</p>
 <p>换行是相对于当前主轴而言</p>
 <p>x为主轴时：</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220627164047792.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="image-20220627164047792"></p>
@@ -853,7 +1008,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>nowrap</td>
 <td>不换行（默认）</td>
 </tr>
@@ -861,7 +1017,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td>wrap</td>
 <td>换行</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
     <div class="demobox">
       <div class="demobox-result">
@@ -888,7 +1045,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo10&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo10box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo10box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo10box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo10</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:  nowrap;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo10box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
 
-
     <div class="demobox">
       <div class="demobox-result">
   <div id="demo11">
@@ -913,8 +1069,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-wrap:</div><div class="demobox-intro"><p>flex-wrap: wrap</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo11</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:  wrap;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo11box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
-<h3 id="align-items（单行）属性展示"><a href="#align-items（单行）属性展示" class="headerlink" title="align-items（单行）属性展示"></a><span id = "align-items">align-items（单行）属性展示</span></h3><p>默认以x为主轴，y为侧轴，align-item用于设置单行侧轴的排列方式。</p>
+<h3 id="span-id-align-items-align-items（单行）属性展示-span-2"><span id = "align-items">align-items（单行）属性展示</span></h3>
+<p>默认以x为主轴，y为侧轴，align-item用于设置单行侧轴的排列方式。</p>
 <table>
 <thead>
 <tr>
@@ -922,7 +1078,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>flex-start</td>
 <td>从上到下</td>
 </tr>
@@ -938,7 +1095,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td>stretch</td>
 <td>拉伸（默认）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
     <div class="demobox">
       <div class="demobox-result">
@@ -965,7 +1123,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo12</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo12box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
 <p><em>通过这两个轴，可以将元素固定到任意位置。</em></p>
-<h3 id="align-content（多行）属性展示"><a href="#align-content（多行）属性展示" class="headerlink" title="align-content（多行）属性展示"></a><span id = "align-content">align-content（多行）属性展示</span></h3><p>设置子项在侧轴上的排列方式，用于子项出现<strong>换行</strong>的情况（多行），单行下无效果。</p>
+<h3 id="span-id-align-content-align-content（多行）属性展示-span-2"><span id = "align-content">align-content（多行）属性展示</span></h3>
+<p>设置子项在侧轴上的排列方式，用于子项出现<strong>换行</strong>的情况（多行），单行下无效果。</p>
 <table>
 <thead>
 <tr>
@@ -973,7 +1132,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>flex-start</td>
 <td>从侧轴头部开始排列</td>
 </tr>
@@ -997,7 +1157,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td>stretch</td>
 <td>设置子项元素高度平方父元素高度</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
     <div class="demobox">
       <div class="demobox-result">
@@ -1024,10 +1185,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-wrap:</div><div class="demobox-intro"><p>flex-wrap: wrap</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo13</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:  wrap;</span><br><span class="line">    <span class="attribute">align-content</span>: space-between;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo13box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-
-
-
-
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
@@ -1065,83 +1222,135 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   <entry>
     <title>hexo博客搭建</title>
     <url>/hexo-blog-building/</url>
-    <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io/">hexo</a>。</p>
+    <content><![CDATA[<p>前几天心血来潮，决定搭建一个博客来做做笔记，对比了一些博客框架，最终选择了<a href="https://hexo.io">hexo</a>。</p>
 <span id="more"></span>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
-<li>生成的是静态网页，对服务器性能要求低，可以部署到例如<a href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
-<li>seo优化好，对于蜘蛛来说，静态网站加载速度快，可在单位时间内抓取更多的内容。</li>
-<li>不易被攻击，静态网页没有后台，黑客几乎无从下手，能让站长更专注于内容，而不是黑客攻防。</li>
-<li>内容方便迁移，内容完全是md文档，可以随时备份到自己电脑上，安全性高。</li>
-<li>好看的主题多，选择较多。（虽然没wordpress多）</li>
+<h2 id="优点">优点</h2>
+<ol>
+<li class="lvl-3">生成的是静态网页，对服务器性能要求低，可以部署到例如<a href="https://pages.github.com/">Github Pages</a>等代码托管平台上,只需要花每个月十几块买一个能运行的服务器都可以正常的使用hexo，对于想建站却又不想花高额代价买服务器的学生来说很友好。</li>
+<li class="lvl-3">seo优化好，对于蜘蛛来说，静态网站加载速度快，可在单位时间内抓取更多的内容。</li>
+<li class="lvl-3">不易被攻击，静态网页没有后台，黑客几乎无从下手，能让站长更专注于内容，而不是黑客攻防。</li>
+<li class="lvl-3">内容方便迁移，内容完全是md文档，可以随时备份到自己电脑上，安全性高。</li>
+<li class="lvl-3">好看的主题多，选择较多。（虽然没wordpress多）</li>
 </ol>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ol>
-<li>静态博客不方便后期维护。</li>
-<li>没有集成的评论系统，只能通过第三方插件实现评论，我个人使用的是<a href="https://github.com/posativ/isso">isso</a>。</li>
-<li>没有浏览统计，也是通过第三方插件完成。</li>
-<li>Github Pages国内速度不太行，但可用<a href="https://vercel.com/">vercel</a>来代替，国内速度不错。</li>
+<h2 id="缺点">缺点</h2>
+<ol>
+<li class="lvl-3">
+<p>静态博客不方便后期维护。</p>
+</li>
+<li class="lvl-3">
+<p>没有集成的评论系统，只能通过第三方插件实现评论，我个人使用的是<a href="https://github.com/posativ/isso">isso</a>。</p>
+</li>
+<li class="lvl-3">
+<p>没有浏览统计，也是通过第三方插件完成。</p>
+</li>
+<li class="lvl-3">
+<p>Github Pages国内速度不太行，但可用<a href="https://vercel.com/">vercel</a>来代替，国内速度不错。</p>
+</li>
 </ol>
 <p>如果你决定使用hexo作为你的博客框架，你可以继续往下看教程。</p>
-<h1 id="搭建教程"><a href="#搭建教程" class="headerlink" title="搭建教程"></a>搭建教程</h1><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol>
-<li><p>在服务器中安装nodejs环境。我使用的环境是centos7</p>
+<h1>搭建教程</h1>
+<h2 id="安装nodejs">安装nodejs</h2>
+<ol>
+<li class="lvl-3">
+<p>在服务器中安装nodejs环境。我使用的环境是centos7</p>
 <p>官网下载 <a href="http://nodejs.org/">nodejs</a></p>
 <p><code>wget https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz</code></p>
 </li>
-<li><p>解压</p>
+<li class="lvl-3">
+<p>解压</p>
 <p><code>xz -d node-v16.15.1-linux-x64.tar.xz </code></p>
 <p><code>tar -zxvf node-v16.15.1-linux-x64.tar </code></p>
 </li>
-<li><p>进入文件夹<code>cd node-v16.15.1-linux-x64</code> </p>
+<li class="lvl-3">
+<p>进入文件夹<code>cd node-v16.15.1-linux-x64</code></p>
 <p>可以看到bin文件夹</p>
 </li>
-<li><p>直接加入环境变量<code>nano /etc/profile</code></p>
+<li class="lvl-3">
+<p>直接加入环境变量<code>nano /etc/profile</code></p>
 <p>在最后一行加入</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PATH=<span class="string">&quot;<span class="variable">$PATH</span>:/root/node-v16.15.1-linux-x64/bin&quot;</span></span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>刷新一下<code>source /etc/profile</code></p>
+<li class="lvl-3">
+<p>刷新一下<code>source /etc/profile</code></p>
 </li>
-<li><p>执行一下<code>node -v</code></p>
+<li class="lvl-3">
+<p>执行一下<code>node -v</code></p>
 <p>输出了node版本即为配置完成</p>
 </li>
 </ol>
-<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><ol>
-<li>安装基础包<br><code>yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel</code></li>
-<li>下载nginx包<br><code>wget http://nginx.org/download/nginx-1.23.0.tar.gz</code></li>
-<li>解压<br><code>tar -zxvf nginx-1.23.0.tar.gz</code></li>
-<li>切换到<code>cd nginx-1.23.0</code><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li>
-<li>安装完成后就可以到&#x2F;usr&#x2F;local&#x2F;nginx的安装目录</li>
-<li>进入到conf目录可以看到nginx.conf里面为nginx基本配置</li>
-<li>html文件夹下就是访问路径了</li>
-<li>进到sbin文件夹内利用<code>./nginx</code>可以启动nginx服务器</li>
+<h2 id="安装nginx">安装nginx</h2>
+<ol>
+<li class="lvl-3">
+<p>安装基础包<br>
+<code>yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel</code></p>
+</li>
+<li class="lvl-3">
+<p>下载nginx包<br>
+<code>wget http://nginx.org/download/nginx-1.23.0.tar.gz</code></p>
+</li>
+<li class="lvl-3">
+<p>解压<br>
+<code>tar -zxvf nginx-1.23.0.tar.gz</code></p>
+</li>
+<li class="lvl-3">
+<p>切换到<code>cd nginx-1.23.0</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>安装完成后就可以到/usr/local/nginx的安装目录</p>
+</li>
+<li class="lvl-3">
+<p>进入到conf目录可以看到nginx.conf里面为nginx基本配置</p>
+</li>
+<li class="lvl-3">
+<p>html文件夹下就是访问路径了</p>
+</li>
+<li class="lvl-3">
+<p>进到sbin文件夹内利用<code>./nginx</code>可以启动nginx服务器</p>
+</li>
 </ol>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625000735608.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Welcome to nginx"></p>
-<p>访问<a href="http://ip/%E7%9C%8B%E5%88%B0%E8%BF%99%E4%B8%AA%E5%B0%B1%E8%AF%B4%E6%98%8E%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90">http://ip/看到这个就说明配置完成</a></p>
-<h2 id="安装hexo-cli"><a href="#安装hexo-cli" class="headerlink" title="安装hexo-cli"></a>安装hexo-cli</h2><ol>
-<li>进入html文件夹内删除默认文件<code>rm -rf *</code></li>
-<li>执行<code>npm install hexo-cli -g</code></li>
-<li>初始化hexo目录<code>hexo init FILENAME</code>，FILENAME为任意名称</li>
-<li>进入FILENAME</li>
-<li>这时候的_config.yml可以根据<a href="https://hexo.bootcss.com/docs/configuration.html">hexo官网配置</a>进行修改</li>
+<p>访问http://ip/看到这个就说明配置完成</p>
+<h2 id="安装hexo-cli">安装hexo-cli</h2>
+<ol>
+<li class="lvl-3">
+<p>进入html文件夹内删除默认文件<code>rm -rf *</code></p>
+</li>
+<li class="lvl-3">
+<p>执行<code>npm install hexo-cli -g</code></p>
+</li>
+<li class="lvl-3">
+<p>初始化hexo目录<code>hexo init FILENAME</code>，FILENAME为任意名称</p>
+</li>
+<li class="lvl-3">
+<p>进入FILENAME</p>
+</li>
+<li class="lvl-3">
+<p>这时候的_config.yml可以根据<a href="https://hexo.bootcss.com/docs/configuration.html">hexo官网配置</a>进行修改</p>
+</li>
 </ol>
-<h2 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h2><p>在FILENAME文件夹下</p>
+<h2 id="安装next主题">安装next主题</h2>
+<p>在FILENAME文件夹下</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
 <p>再将hexo配置文件中theme改为<code>theme: next</code>。</p>
 <p>同样在next主题目录下也有一个_config.yml，具体配置见<a href="https://github.com/next-theme/hexo-theme-next">hexo-theme-next</a>。</p>
 <p>修改conf里的nginx.conf，搜索root，<code>root html</code>修改为<code>root html/hexo/public</code>。</p>
 <p>到sbin文件夹里执行<code>./nginx -s reload</code>重载配置。</p>
-<h2 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h2><table>
+<h2 id="hexo命令">hexo命令</h2>
+<table>
 <thead>
 <tr>
 <th>命令</th>
 <th>效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>hexo new  &lt;title&gt;</td>
 <td>新建一篇以title为名的文章。</td>
 </tr>
 <tr>
-<td>hexo generate &#x2F; hexo g</td>
+<td>hexo generate / hexo g</td>
 <td>生成静态文件。此时会产生一个public文件夹。</td>
 </tr>
 <tr>
@@ -1149,12 +1358,14 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <td>启动hexo服务器，默认端口4000。</td>
 </tr>
 <tr>
-<td>hexo deploy &#x2F; hexo d</td>
+<td>hexo deploy / hexo d</td>
 <td>部署网站。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>这些是基础命令，更多可以看<a href="https://hexo.bootcss.com/docs/commands.html">hexo命令</a>。</p>
-<h2 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h2><p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问<a href="http://ip/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0">http://ip/可以看到</a></p>
+<h2 id="访问测试">访问测试</h2>
+<p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问http://ip/可以看到</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Hexo Hello World"></p>
 <p>则已经部署好。</p>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
@@ -1190,47 +1401,57 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>hexo教程进阶-Github Pages</title>
-    <url>/advanced-hexo-tutorial-github-pages/</url>
+    <url>//</url>
     <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
 <ol>
-<li><p>首先要在<a href="https://github.com/">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
+<li class="lvl-3">
+<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
 </li>
-<li><p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
+<li class="lvl-3">
+<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
 <span id="more"></span>
-
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
+<li class="lvl-3">
+<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
-
 <p>配置一下git全局的name和email</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
 <ol>
-<li><p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
+<li class="lvl-6">
+<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
 </li>
-<li><p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
+<li class="lvl-6">
+<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
 </li>
-<li><p>点击进入<a href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
+<li class="lvl-6">
+<p>点击进入https://github.com/settings/keys</p>
 </li>
-<li><p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
+<li class="lvl-6">
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
 <p>点击后将内容粘贴进去。</p>
 <p>此时deploy可改为：</p>
 </li>
 </ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
 <ol start="4">
-<li><p>进入仓库settings</p>
+<li class="lvl-3">
+<p>进入仓库settings</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
 </li>
 </ol>
-<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https:&#x2F;&#x2F;&lt;name&gt;.github.io进入网站。</p>
+<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
 <ol start="5">
-<li>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</li>
-<li>然后就可以通过自己的域名访问网站了。</li>
+<li class="lvl-3">
+<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
+</li>
+<li class="lvl-3">
+<p>然后就可以通过自己的域名访问网站了。</p>
+</li>
 </ol>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
@@ -1264,73 +1485,109 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </tags>
   </entry>
   <entry>
-    <title>javascript学习笔记-01</title>
-    <url>/javascript-learning-notes-01/</url>
-    <content><![CDATA[<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><ul>
-<li>不确定实参个数时，使用arguments获取所有参数</li>
+    <title>javascript学习笔记1</title>
+    <url>//</url>
+    <content><![CDATA[<h2 id="arguments的使用">arguments的使用</h2>
+<ul class="lvl-0">
+<li class="lvl-2">不确定实参个数时，使用arguments获取所有参数</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"><span class="variable language_">arguments</span></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <p>arguments并不是真正意义上的数组：</p>
 <ol>
-<li>具有length</li>
-<li>以索引进行存储</li>
-<li>没有pop()与push()等数组方法</li>
+<li class="lvl-3">
+<p>具有length</p>
+</li>
+<li class="lvl-3">
+<p>以索引进行存储</p>
+</li>
+<li class="lvl-3">
+<p>没有pop()与push()等数组方法</p>
+</li>
 </ol>
-<h2 id="javascript作用域"><a href="#javascript作用域" class="headerlink" title="javascript作用域"></a>javascript作用域</h2><ul>
-<li>javascript作用域分为全局作用域与局部作用域</li>
+<h2 id="javascript作用域">javascript作用域</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>javascript作用域分为全局作用域与局部作用域</p>
+</li>
 </ul>
-<h3 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h3><ul>
-<li>整个script标签可用,或单独的js文件可用</li>
+<h3 id="全局作用域">全局作用域</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>整个script标签可用,或单独的js文件可用</p>
+</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//可在函数中使用</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h3><ul>
-<li>仅在函数内部起作用</li>
+<h3 id="局部作用域">局部作用域</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>仅在函数内部起作用</p>
+</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//num is not defined</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>在函数内部未经声明，直接赋值的变量也是全局变量</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        num = <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">// 10</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="变量的销毁"><a href="#变量的销毁" class="headerlink" title="变量的销毁"></a>变量的销毁</h3><ul>
-<li>全局变量：浏览器关闭时才会销毁。</li>
-<li>局部变量：代码块结束后，就会被销毁。</li>
+<h3 id="变量的销毁">变量的销毁</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>全局变量：浏览器关闭时才会销毁。</p>
+</li>
+<li class="lvl-2">
+<p>局部变量：代码块结束后，就会被销毁。</p>
+</li>
 </ul>
-<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>当函数中嵌套了函数，作用域链就产生了。</p>
+<h3 id="作用域链">作用域链</h3>
+<p>当函数中嵌套了函数，作用域链就产生了。</p>
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn1</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn2</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//20</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="js运行步骤"><a href="#js运行步骤" class="headerlink" title="js运行步骤"></a>js运行步骤</h2><ul>
-<li>javascript解析器在运行javascript语句时分两步：预解析和代码执行。</li>
-</ul>
-<h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><ul>
-<li><p>预解析分为变量<strong>预解析</strong>（变量提升）和<strong>函数预解析</strong>（函数提升）。</p>
-</li>
-<li><p>js解析器会将所有的var与function提升到<strong>当前作用域</strong>的最前面。</p>
+<h2 id="js运行步骤">js运行步骤</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>javascript解析器在运行javascript语句时分两步：预解析和代码执行。</p>
 </li>
 </ul>
-<h4 id="变量预解析"><a href="#变量预解析" class="headerlink" title="变量预解析"></a>变量预解析</h4><p>不提升赋值操作</p>
+<h3 id="预解析">预解析</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>预解析分为变量<strong>预解析</strong>（变量提升）和<strong>函数预解析</strong>（函数提升）。</p>
+</li>
+<li class="lvl-2">
+<p>js解析器会将所有的var与function提升到<strong>当前作用域</strong>的最前面。</p>
+</li>
+</ul>
+<h4 id="变量预解析">变量预解析</h4>
+<p>不提升赋值操作</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> num;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num); <span class="comment">//undefined</span></span><br><span class="line">num = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="函数预解析"><a href="#函数预解析" class="headerlink" title="函数预解析"></a>函数预解析</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fn</span>();</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> fn;</span><br><span class="line"><span class="title function_">fn</span>();</span><br><span class="line">fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="代码执行"><a href="#代码执行" class="headerlink" title="代码执行"></a>代码执行</h3><ul>
-<li>代码按照书写顺序，由上到下依次执行</li>
-</ul>
-<h2 id="new的执行过程"><a href="#new的执行过程" class="headerlink" title="new的执行过程"></a>new的执行过程</h2><ol>
-<li>在内存中创建空对象。</li>
-<li>this指向空对象。</li>
-<li>执行构造函数，并添加属性和方法。</li>
-<li>返回新对象。</li>
-</ol>
-<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">div.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">    <span class="comment">//event就是事件对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>只有有onclick事件绑定才会有事件对象产生。</p>
+<h4 id="函数预解析">函数预解析</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fn</span>();</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//相当于以下代码</span></span><br><span class="line"><span class="keyword">var</span> fn;</span><br><span class="line"><span class="title function_">fn</span>();</span><br><span class="line">fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码执行">代码执行</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>代码按照书写顺序，由上到下依次执行</p>
 </li>
-<li><p>事件对象是事件的一系列相关数据的集合。</p>
+</ul>
+<h2 id="new的执行过程">new的执行过程</h2>
+<ol>
+<li class="lvl-3">
+<p>在内存中创建空对象。</p>
+</li>
+<li class="lvl-3">
+<p>this指向空对象。</p>
+</li>
+<li class="lvl-3">
+<p>执行构造函数，并添加属性和方法。</p>
+</li>
+<li class="lvl-3">
+<p>返回新对象。</p>
+</li>
+</ol>
+<h2 id="事件对象">事件对象</h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">div.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">    <span class="comment">//event就是事件对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>只有有onclick事件绑定才会有事件对象产生。</p>
+</li>
+<li class="lvl-2">
+<p>事件对象是事件的一系列相关数据的集合。</p>
 </li>
 </ul>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>

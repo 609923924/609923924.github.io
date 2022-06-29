@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/</loc>
-    
-    <lastmod>2022-06-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://itechfans.com/jquery-learning-notes-1/</loc>
     
     <lastmod>2022-06-29</lastmod>
@@ -30,6 +21,15 @@
   
   <url>
     <loc>https://itechfans.com/springboot-learning-notes-1/</loc>
+    
+    <lastmod>2022-06-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/javascript-learning-notes-1/</loc>
     
     <lastmod>2022-06-29</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/</loc>
+    <loc>https://itechfans.com/advanced-hexo-tutorial-github-pages/</loc>
     
     <lastmod>2022-06-26</lastmod>
     

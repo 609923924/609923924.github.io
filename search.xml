@@ -5,20 +5,22 @@
     <url>/jquery-learning-notes-1/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>jQuery基本使用</h1>
-<h2 id="jQuery顶级对象">jQuery顶级对象$</h2>
+<h2 id="jQuery顶级对象-2">jQuery顶级对象$</h2>
 <p>$是JQuery的别称</p>
 <span id="more"></span>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">&#125;) <span class="comment">//效果相同</span></span><br></pre></td></tr></table></figure>
-<h2 id="jQuery对象获取">jQuery对象获取</h2>
+<h2 id="jQuery对象获取-2">jQuery对象获取</h2>
 <p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
 <p>且JQuery对象只能使用JQuery方法，不能使用原生DOM方法</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="DOM对象转换为JQuery对象">DOM对象转换为JQuery对象</h3>
+<pre><code>### DOM对象转换为JQuery对象
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dom = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">$(dom); </span><br></pre></td></tr></table></figure>
-<h3 id="jQuery对象转换DOM对象">jQuery对象转换DOM对象</h3>
+<pre><code>### jQuery对象转换DOM对象
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> dom = jq[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> dom = jq.<span class="title function_">get</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
 <h1>jQuery常用API</h1>
-<h2 id="jQuery基础选择器">jQuery基础选择器</h2>
+<h2 id="jQuery基础选择器-2">jQuery基础选择器</h2>
 <p><code>$(&quot;选择器&quot;)</code></p>
 <table>
 <thead>
@@ -63,7 +65,7 @@
 </table>
 <h2 id="隐藏与显示对象">隐藏与显示对象</h2>
 <p><code>.show()</code>显示；<code>.hide()</code>隐藏。</p>
-<h2 id="jQuery隐式迭代">jQuery隐式迭代</h2>
+<h2 id="jQuery隐式迭代-2">jQuery隐式迭代</h2>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="string">&#x27;div&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;background&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>会将所有div都变为蓝色</p>
 
@@ -84,7 +86,7 @@
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</div><div class="demobox-intro"><p>jQuery&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line">$(<span class="string">&apos;.demo&apos;</span>).css(<span class="string">&apos;background-image&apos;</span>,<span class="string">&apos;linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)&apos;</span>);</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h2 id="jQuery筛选选择器">jQuery筛选选择器</h2>
+<h2 id="jQuery筛选选择器-2">jQuery筛选选择器</h2>
 <table>
 <thead>
 <tr>
@@ -377,13 +379,17 @@
 <h2 id="let变量声明">let变量声明</h2>
 <span id="more"></span>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d,e;</span><br><span class="line"><span class="keyword">let</span> k = <span class="number">555</span>;</span><br><span class="line"><span class="keyword">let</span> t = <span class="string">&quot;init&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> y = [];</span><br></pre></td></tr></table></figure>
-<h3 id="let不可重复声明">let不可重复声明</h3>
+<pre><code>### let不可重复声明
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">200</span>; <span class="comment">//错误的声明</span></span><br></pre></td></tr></table></figure>
-<h3 id="块级作用域">块级作用域</h3>
+<pre><code>### 块级作用域
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">//报错，not defined</span></span><br></pre></td></tr></table></figure>
-<h3 id="没有变量提升">没有变量提升</h3>
+<pre><code>### 没有变量提升
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//undefined，变量提升</span></span><br><span class="line"><span class="keyword">var</span> tag = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">---------------------------;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tag); <span class="comment">//报错</span></span><br><span class="line"><span class="keyword">let</span> tag = <span class="string">&quot;name&quot;</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="不影响作用域链">不影响作用域链</h3>
+<pre><code>### 不影响作用域链
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&quot;doc&quot;</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     <div class="demobox">
@@ -442,28 +448,37 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <blockquote>
 <p>ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这被称为解构赋值。</p>
 </blockquote>
-<h3 id="数组的解构">数组的解构</h3>
+<pre><code>### 数组的解构
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> [a,b,c,d]=nums;  <span class="comment">//将a,b,c,d分别赋值</span></span><br></pre></td></tr></table></figure>
-<h3 id="对象的解构">对象的解构</h3>
+<pre><code>### 对象的解构
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>;</span><br><span class="line">    <span class="attr">ability</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;ok&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age,ability&#125; = people;  <span class="comment">//必须与对象属性名相同</span></span><br><span class="line"><span class="title function_">ability</span>();</span><br></pre></td></tr></table></figure>
 <h2 id="模板字符串">模板字符串</h2>
-<h3 id="声明">声明</h3>
+<pre><code>### 声明
+</code></pre>
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`字符串`</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="内容中可以直接出现换行符">内容中可以直接出现换行符</h3>
+<pre><code>### 内容中可以直接出现换行符
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`多</span></span><br><span class="line"><span class="string">           行</span></span><br><span class="line"><span class="string">           子</span></span><br><span class="line"><span class="string">           符</span></span><br><span class="line"><span class="string">           串`</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="变量拼接">变量拼接</h3>
+<pre><code>### 变量拼接
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">&quot;字符串&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> sout = <span class="string">`<span class="subst">$&#123;str1&#125;</span>&lt;-这是拼接进来的字符串`</span>;</span><br></pre></td></tr></table></figure>
 <h2 id="简化对象写法">简化对象写法</h2>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;tname&quot;</span>,age = <span class="string">&quot;18&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> people=&#123;</span><br><span class="line">    name,  <span class="comment">//等同于name=name;</span></span><br><span class="line">    age,  <span class="comment">//age=age;</span></span><br><span class="line">    <span class="title function_">improve</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a&quot;</span>);    <span class="comment">// 等同于 improve = function()&#123;</span></span><br><span class="line">                             <span class="comment">//                               console.log(&quot;a&quot;);</span></span><br><span class="line">                             <span class="comment">//                           &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="箭头函数">箭头函数</h2>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params">a,b</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="this是静态的，this始终指向-u-函数声明-u-时所在作用域下的-this-的值。">this是静态的，this始终指向**<u>函数声明</u>**时所在作用域下的 this 的值。</h3>
+<pre><code>### this是静态的，this始终指向**&lt;u&gt;函数声明&lt;/u&gt;**时所在作用域下的 this 的值。
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getName</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">getName2</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">name</span>=<span class="string">&quot;name1&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> s = &#123;</span><br><span class="line">    name = <span class="string">&quot;name2&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getName</span>();   <span class="comment">//直接调用this指向window</span></span><br><span class="line"><span class="title function_">getName2</span>();   <span class="comment">// name1</span></span><br><span class="line"></span><br><span class="line">getName.<span class="title function_">call</span>(s);   <span class="comment">//name2</span></span><br><span class="line">getName2.<span class="title function_">call</span>(s);  <span class="comment">//name1</span></span><br></pre></td></tr></table></figure>
-<h3 id="不能作为构造实例化对象">不能作为构造实例化对象</h3>
+<pre><code>### 不能作为构造实例化对象
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">Person</span> = (<span class="params">name,age</span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span>=name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span>=age;          <span class="comment">//错误的使用方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="不能使用arguments变量">不能使用arguments变量</h3>
+<pre><code>### 不能使用arguments变量
+</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt;&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);    <span class="comment">//错误的使用方法</span></span><br></pre></td></tr></table></figure>
-<h3 id="箭头函数的简写">箭头函数的简写</h3>
+<pre><code>### 箭头函数的简写
+</code></pre>
 <p>i. 当形参有且只有一个时可省略小括号。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = (<span class="params">n</span>) =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简化为</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = n =&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> n++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <pre><code>  ii.当代码体只有一条时可省略花括号,且return也应一并省去。

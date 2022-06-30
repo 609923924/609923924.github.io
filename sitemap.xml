@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itechfans.com/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itechfans.com/javascript-quick-learning/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -216,6 +225,20 @@
   
   <url>
     <loc>https://itechfans.com/tags/es11/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/seo/</loc>
     <lastmod>2022-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

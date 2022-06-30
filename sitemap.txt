@@ -1,3 +1,4 @@
+https://itechfans.com/
 https://itechfans.com/javascript-quick-learning/
 https://itechfans.com/springboot-learning-notes-1/
 https://itechfans.com/es6-es11-note-1/
@@ -26,6 +27,8 @@ https://itechfans.com/tags/Less/
 https://itechfans.com/tags/SpringBoot/
 https://itechfans.com/tags/es6/
 https://itechfans.com/tags/es11/
+https://itechfans.com/tags/%E6%8A%80%E5%B7%A7/
+https://itechfans.com/tags/seo/
 https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-css/
 https://itechfans.com/categories/%E6%95%99%E7%A8%8B/
 https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-js/

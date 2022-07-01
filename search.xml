@@ -153,9 +153,9 @@
         <category>web前端-js</category>
       </categories>
       <tags>
-        <tag>jQuery</tag>
         <tag>学习</tag>
         <tag>前端</tag>
+        <tag>jQuery</tag>
       </tags>
   </entry>
   <entry>
@@ -536,18 +536,18 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>flex学习笔记</title>
-    <url>//</url>
+    <url>/flex-learning-notes/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>Flex布局</h1>
-<h2 id="Flex由来-2">Flex由来</h2>
+<h2 id="Flex由来">Flex由来</h2>
 <blockquote>
 <p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="Flex是什么-2">Flex是什么</h2>
+<h2 id="Flex是什么">Flex是什么</h2>
 <p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>
-<h2 id="Flex布局与传统布局的区别-2">Flex布局与传统布局的区别</h2>
-<h3 id="传统布局-2">传统布局</h3>
+<h2 id="Flex布局与传统布局的区别">Flex布局与传统布局的区别</h2>
+<h3 id="传统布局">传统布局</h3>
 <p>优点：</p>
 <ol>
 <li class="lvl-3">
@@ -563,7 +563,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>基于盒子模型，依赖 display属性 、position属性 、float属性；布局繁琐。</p>
 </li>
 </ol>
-<h3 id="Flex布局-2">Flex布局</h3>
+<h3 id="Flex布局">Flex布局</h3>
 <p>优点：</p>
 <ol>
 <li class="lvl-3">
@@ -576,7 +576,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>ie11及以下版本不支持。</p>
 </li>
 </ol>
-<h2 id="Flex布局简单应用-2">Flex布局简单应用</h2>
+<h2 id="Flex布局简单应用">Flex布局简单应用</h2>
 
     <div class="demobox">
       <div class="demobox-result">
@@ -601,7 +601,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">Flex&#x7B80;&#x5355;&#x5E94;&#x7528;</div><div class="demobox-intro"><p>Flex&#x5E03;&#x5C40;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo1</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demobox</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h2 id="Flex布局原理-2">Flex布局原理</h2>
+<h2 id="Flex布局原理">Flex布局原理</h2>
 <ul class="lvl-0">
 <li class="lvl-2">
 <p>当父元素设置为flex布局后，子元素中的float、clear与vertical-align将失效。</p>
@@ -613,7 +613,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>通过给<strong>父元素</strong>添加flex属性，从而控制子元素位置与排列方式。</p>
 </li>
 </ul>
-<h2 id="Flex常见父属性-2">Flex常见父属性</h2>
+<h2 id="Flex常见父属性">Flex常见父属性</h2>
 <table>
 <thead>
 <tr>
@@ -657,7 +657,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p><img data-src="https://qiniu.itechfans.com/blogImage/202206271417925.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="坐标"></p>
 </li>
 </ul>
-<h3 id="span-id-flex-direction-flex-direction属性展示-span-2"><span id = "flex-direction">flex-direction属性展示</span></h3>
+<h3 id="span-id-flex-direction-flex-direction属性展示-span"><span id = "flex-direction">flex-direction属性展示</span></h3>
 <p>flex-direction设置主轴方向，影响后续的排列效果，默认以水平向右为主轴方向。</p>
 <table>
 <thead>
@@ -951,7 +951,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: space-between</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo14</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo14box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h3 id="span-id-flex-wrap-flex-wrap属性展示-span-2"><span id = "flex-wrap">flex-wrap属性展示</span></h3>
+<h3 id="span-id-flex-wrap-flex-wrap属性展示-span"><span id = "flex-wrap">flex-wrap属性展示</span></h3>
 <p>默认情况下，项目（子元素）都在一条线上（轴线）,flex-warp默认不换行，会直接缩小子元素宽度。</p>
 <p>换行是相对于当前主轴而言</p>
 <p>x为主轴时：</p>
@@ -1024,7 +1024,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-wrap:</div><div class="demobox-intro"><p>flex-wrap: wrap</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo11</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:  wrap;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo11box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h3 id="span-id-align-items-align-items（单行）属性展示-span-2"><span id = "align-items">align-items（单行）属性展示</span></h3>
+<h3 id="span-id-align-items-align-items（单行）属性展示-span"><span id = "align-items">align-items（单行）属性展示</span></h3>
 <p>默认以x为主轴，y为侧轴，align-item用于设置单行侧轴的排列方式。</p>
 <table>
 <thead>
@@ -1078,7 +1078,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo12</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo12box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
 <p><em>通过这两个轴，可以将元素固定到任意位置。</em></p>
-<h3 id="span-id-align-content-align-content（多行）属性展示-span-2"><span id = "align-content">align-content（多行）属性展示</span></h3>
+<h3 id="span-id-align-content-align-content（多行）属性展示-span"><span id = "align-content">align-content（多行）属性展示</span></h3>
 <p>设置子项在侧轴上的排列方式，用于子项出现<strong>换行</strong>的情况（多行），单行下无效果。</p>
 <table>
 <thead>
@@ -1166,9 +1166,9 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
         <category>web前端-css</category>
       </categories>
       <tags>
+        <tag>flex</tag>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>flex</tag>
         <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
@@ -1324,91 +1324,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问http://ip/可以看到</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Hexo Hello World"></p>
 <p>则已经部署好。</p>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>教程</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo教程进阶-Github Pages</title>
-    <url>/advanced-hexo-tutorial-github-pages/</url>
-    <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
-<ol>
-<li class="lvl-3">
-<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
-</li>
-<li class="lvl-3">
-<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
-<span id="more"></span>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li class="lvl-3">
-<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
-<p>配置一下git全局的name和email</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
-<ol>
-<li class="lvl-6">
-<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
-</li>
-<li class="lvl-6">
-<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
-</li>
-<li class="lvl-6">
-<p>点击进入https://github.com/settings/keys</p>
-</li>
-<li class="lvl-6">
-<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
-<p>点击后将内容粘贴进去。</p>
-<p>此时deploy可改为：</p>
-</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
-<ol start="4">
-<li class="lvl-3">
-<p>进入仓库settings</p>
-<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
-</li>
-</ol>
-<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
-<ol start="5">
-<li class="lvl-3">
-<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
-</li>
-<li class="lvl-3">
-<p>然后就可以通过自己的域名访问网站了。</p>
-</li>
-</ol>
 <span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
 <script type="text/javascript">
 (function() {
@@ -1842,6 +1757,91 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
         <tag>笔记</tag>
         <tag>html</tag>
         <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo教程进阶-Github Pages</title>
+    <url>/advanced-hexo-tutorial-github-pages/</url>
+    <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
+<ol>
+<li class="lvl-3">
+<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
+</li>
+<li class="lvl-3">
+<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
+<span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
+<p>配置一下git全局的name和email</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
+<ol>
+<li class="lvl-6">
+<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
+</li>
+<li class="lvl-6">
+<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
+</li>
+<li class="lvl-6">
+<p>点击进入https://github.com/settings/keys</p>
+</li>
+<li class="lvl-6">
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
+<p>点击后将内容粘贴进去。</p>
+<p>此时deploy可改为：</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
+<ol start="4">
+<li class="lvl-3">
+<p>进入仓库settings</p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
+</li>
+</ol>
+<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
+<ol start="5">
+<li class="lvl-3">
+<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
+</li>
+<li class="lvl-3">
+<p>然后就可以通过自己的域名访问网站了。</p>
+</li>
+</ol>
+<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
+<script type="text/javascript">
+(function() {
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+  }
+  var domain = document.domain;
+  var white_list = ['itechfans.com', 'mblog.tech'];
+  if (white_list.indexOf(domain) >= 0) {
+    var elements = document.getElementsByClassName('source');
+    elements.remove();
+  }
+})()
+</script>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>

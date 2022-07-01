@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Desktop 404</title>
-<link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-
-<div id="svgContainer"></div>
-
-<script src="js/eEjVBX.js"></script>
-<script src="js/MvBBBj.js"></script>
-<script src="js/script.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desktop 404</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      #svgContainer {
+        text-align: center;
+      }
+      span {
+        display: inline-block;
+        transform: translate(0, 512px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contian-svg">
+      <div id="svgContainer">
+        <span>您将会在</span>
+        <span id="time-svg">5</span>
+        <span>秒后跳转到主页。</span>
+      </div>
+    </div>
+    <script src="js/eEjVBX.js"></script>
+    <script src="js/MvBBBj.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      let el = document.getElementById("time-svg");
+      setInterval(() => {
+        el.innerText--;
+        if (el.innerText == 0) {
+          window.location.href = "https://itechfans.com";
+        }
+      }, 1000);
+    </script>
+  </body>
 </html>

@@ -45,9 +45,9 @@ spa: true
 <meta property="article:published_time" content="2022-06-25T04:57:20.000Z">
 <meta property="article:modified_time" content="2022-06-29T04:35:41.580Z">
 <meta property="article:author" content="oliverkirk">
+<meta property="article:tag" content="jQuery">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="前端">
-<meta property="article:tag" content="jQuery">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://qiniu.itechfans.com/blogImage/image-20220628124314257.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
 
@@ -176,7 +176,7 @@ spa: true
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -434,28 +434,7 @@ spa: true
 <blockquote>
 <p>图片来源： <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1Sy4y1C7ha">https://www.bilibili.com/video/BV1Sy4y1C7ha</a></p>
 </blockquote>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-
+<!-- source-text -->
 
     </div>
 
@@ -484,9 +463,9 @@ spa: true
 </div>
 
           <div class="post-tags">
+              <a href="/tags/jQuery/" rel="tag"><i class="fa fa-tag"></i> jQuery</a>
               <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
               <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
-              <a href="/tags/jQuery/" rel="tag"><i class="fa fa-tag"></i> jQuery</a>
           </div>
 
         
@@ -543,14 +522,14 @@ spa: true
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">29k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">26 分钟</span>
   </span>
 </div>
 <span id="sitetime"></span>

@@ -126,36 +126,15 @@
 <blockquote>
 <p>图片来源： <a href="https://www.bilibili.com/video/BV1Sy4y1C7ha">https://www.bilibili.com/video/BV1Sy4y1C7ha</a></p>
 </blockquote>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-
+<!-- source-text -->
 ]]></content>
       <categories>
         <category>web前端-js</category>
       </categories>
       <tags>
+        <tag>jQuery</tag>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>jQuery</tag>
       </tags>
   </entry>
   <entry>
@@ -255,28 +234,7 @@
 <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.border</span>()&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="selector-class">.border</span>() !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
+<!-- source-text -->]]></content>
       <categories>
         <category>web前端-css</category>
       </categories>
@@ -337,28 +295,7 @@
 <p>启动时自动配置全部加载，但得益于条件装配，不会加载所有的包。</p>
 </li>
 </ol>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-
+<!-- source-text -->
 ]]></content>
       <categories>
         <category>web后端-springboot</category>
@@ -499,28 +436,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>]; <span class="comment">//取其中偶数</span></span><br><span class="line"><span class="keyword">const</span> res = a.<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">i</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span>===<span class="number">0</span>)&#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//使用箭头函数</span></span><br><span class="line"><span class="keyword">const</span> res = a.<span class="title function_">filter</span>(<span class="function"><span class="params">i</span> =&gt;</span> i%<span class="number">2</span>===<span class="number">0</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>箭头函数适合做与this无关的回调，如定时器与数组方法回调。</p>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
+<!-- source-text -->]]></content>
       <categories>
         <category>web前端-js</category>
       </categories>
@@ -529,9 +445,9 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
         <tag>前端</tag>
         <tag>笔记</tag>
         <tag>html</tag>
-        <tag>javascript</tag>
         <tag>es6</tag>
         <tag>es11</tag>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -1140,35 +1056,14 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-wrap:</div><div class="demobox-intro"><p>flex-wrap: wrap</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo13box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo13</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:  wrap;</span><br><span class="line">    <span class="attribute">align-content</span>: space-between;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo13box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
+<!-- source-text -->]]></content>
       <categories>
         <category>web前端-css</category>
       </categories>
       <tags>
-        <tag>flex</tag>
         <tag>学习</tag>
         <tag>前端</tag>
+        <tag>flex</tag>
         <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
@@ -1324,28 +1219,71 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>到FILENAME目录执行<code>hexo g</code>看到public文件夹创建后，访问http://ip/可以看到</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625111433935.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="Hexo Hello World"></p>
 <p>则已经部署好。</p>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
+<!-- source-text -->]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>教程</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo教程进阶-Github Pages</title>
+    <url>/advanced-hexo-tutorial-github-pages/</url>
+    <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
+<ol>
+<li class="lvl-3">
+<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
+</li>
+<li class="lvl-3">
+<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
+<span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
+<p>配置一下git全局的name和email</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
+<ol>
+<li class="lvl-6">
+<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
+</li>
+<li class="lvl-6">
+<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
+</li>
+<li class="lvl-6">
+<p>点击进入https://github.com/settings/keys</p>
+</li>
+<li class="lvl-6">
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
+<p>点击后将内容粘贴进去。</p>
+<p>此时deploy可改为：</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
+<ol start="4">
+<li class="lvl-3">
+<p>进入仓库settings</p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
+</li>
+</ol>
+<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
+<ol start="5">
+<li class="lvl-3">
+<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
+</li>
+<li class="lvl-3">
+<p>然后就可以通过自己的域名访问网站了。</p>
+</li>
+</ol>
+<!-- source-text -->]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -1726,27 +1664,219 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>更多内置方法详见<a href="https://developer.mozilla.org/zh-CN/">MDN</a></p>
 <h4 id="Array数组的一些方法">  Array数组的一些方法</h4>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">3</span>);    <span class="comment">//创建含有三个空元素的数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">2</span>,<span class="number">3</span>); <span class="comment">//等价于var arr1 = [2,3];</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr <span class="keyword">instanceof</span> <span class="title class_">Array</span>;      <span class="comment">//第一种方式判断arr是否为数组</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr);        <span class="comment">//第二种方式判断arr是否是数组，优先于instanceof</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">1</span>);               <span class="comment">//追加新元素在最后</span></span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">2</span>);            <span class="comment">//在数组最前面追加元素</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">pop</span>();                 <span class="comment">//删除并返回最后一个元素</span></span><br><span class="line">arr.<span class="title function_">shift</span>();               <span class="comment">//删除并返回最前面一个函数</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">reverse</span>();             <span class="comment">//反转数组</span></span><br><span class="line">arr.<span class="title function_">sort</span>();                <span class="comment">//对数组排序</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">indexOf</span>(<span class="number">1</span>);            <span class="comment">//查找给定元素的第一个索引</span></span><br><span class="line">arr.<span class="title function_">lastIndexOf</span>(<span class="number">1</span>);        <span class="comment">//查找给的元素的最后一个索引</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">toString</span>();            <span class="comment">//数组转化为字符串-&gt; 4,5,6,7,8,9</span></span><br><span class="line">arr.<span class="title function_">join</span>(分隔符);           <span class="comment">//不加分隔符与toString()相同，arr.join(&#x27;-&#x27;); 输出 4-5-6-7-8-9;</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">concat</span>(arr1,arr2);     <span class="comment">//连接两个或多个数组,返回新数组</span></span><br><span class="line">arr.<span class="title function_">slice</span>(begin,end);      <span class="comment">//截取数组从begin到end，返回新数组(从0开始);</span></span><br><span class="line">arr.<span class="title function_">splice</span>(begin,num);     <span class="comment">//删除从begin开始的num个数，返回新数组，影响原数组</span></span><br><span class="line">arr.<span class="title function_">splice</span>(begin,num,item1...) <span class="comment">//在begin位置删除num个数并插入item</span></span><br><span class="line"><span class="comment">//eg. arr.splice(2,1,1,2,3); 输出 4,5,1,2,3,7,8,9;</span></span><br></pre></td></tr></table></figure>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
+<!-- source-text -->]]></content>
+      <categories>
+        <category>web前端-js</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+        <tag>笔记</tag>
+        <tag>html</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>javascript的web应用</title>
+    <url>/web-application-of-javascript/</url>
+    <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
+<h1>javascript的web应用</h1>
+<span id="more"></span>
+<h2 id="一、获取元素">一、获取元素</h2>
+<ol>
+<li class="lvl-3">
+<p>通过id获取</p>
+</li>
+<li class="lvl-3">
+<p>根据标签名获取</p>
+</li>
+<li class="lvl-3">
+<p>通过HTML5新增方式获取</p>
+</li>
+<li class="lvl-3">
+<p>特殊元素获取</p>
+</li>
+</ol>
+<h3 id="（一）、通过id获取">（一）、通过id获取</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;id&#x27;</span>);   <span class="comment">//找不到元素返回null</span></span><br></pre></td></tr></table></figure>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div id="demo1">&#x8FD9;&#x662F;div&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+  <button class="demo1-btn">&#x70B9;&#x51FB;&#x66FF;&#x6362;&#x5185;&#x5BB9;</button>
+<script>(function(){
+  var el = document.getElementById('demo1');
+  $(document).ready(function(){
+  $(".demo1-btn").click(function(){
+    el.innerHTML="替换后的内容";
+  });
+});
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">getElementById</div><div class="demobox-intro"><p>&#x901A;&#x8FC7;getElementById&#x83B7;&#x53D6;&#x5143;&#x7D20;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span>&#x8FD9;&#x662F;div&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo1-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x66FF;&#x6362;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">&apos;demo1&apos;</span>);</span><br><span class="line">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  $(<span class="string">&quot;.demo1-btn&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    el.innerHTML=<span class="string">&quot;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;&quot;</span>;</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<h3 id="（二）、通过标签名获取">（二）、通过标签名获取</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;tagName&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>获取元素集合，以伪数组形式存储。</p>
+<h3 id="（三）、通过新增方法获取">（三）、通过新增方法获取</h3>
+<ol>
+<li class="lvl-3">
+<h4 id="获取单个">获取单个</h4>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;选择器&#x27;</span>);  <span class="comment">//根据选择器返回第一个元素对象</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要加前缀符号如：. # 等。</p>
+</blockquote>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div class="demo2">&#x8FD9;&#x662F;div-demo2-1&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+  <div class="demo2">div-demo2-2</div>
+  <button class="demo2-btn">&#x70B9;&#x51FB;&#x66FF;&#x6362;&#x5185;&#x5BB9;</button>
+<script>(function(){
+  var el = document.querySelector('.demo2');
+  $(document).ready(function(){
+  $(".demo2-btn").click(function(){
+    el.innerHTML="替换后的内容";
+  });
+});
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">querySelector</div><div class="demobox-intro"><p>&#x901A;&#x8FC7;getElementById&#x83B7;&#x53D6;&#x5355;&#x4E2A;&#x5143;&#x7D20;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo2&quot;</span>&gt;</span>&#x8FD9;&#x662F;div-demo2-1&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo2&quot;</span>&gt;</span>div-demo2-2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo2-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x66FF;&#x6362;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo2&apos;</span>);</span><br><span class="line">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  $(<span class="string">&quot;.demo2-btn&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    el.innerHTML=<span class="string">&quot;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;&quot;</span>;</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<ol start="2">
+<li class="lvl-3">
+<h4 id="获取多个">获取多个</h4>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;选择器&#x27;</span>);  <span class="comment">//返回指定选择器所有元素对象集合</span></span><br></pre></td></tr></table></figure>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <div class="demo3">&#x8FD9;&#x662F;div-demo3-1&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+  <div class="demo3">&#x8FD9;&#x662F;div-demo3-2&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+  <div class="demo3">&#x8FD9;&#x662F;div-demo3-3&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+  <div class="demo3">&#x8FD9;&#x662F;div-demo3-4&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+  <button class="demo3-btn">&#x70B9;&#x51FB;&#x66FF;&#x6362;&#x5185;&#x5BB9;</button>
+<script>(function(){
+  var el = document.querySelectorAll('.demo3');
+  $(document).ready(function(){
+  $(".demo3-btn").click(function(){
+    for(let i=0 ;i<el.length;i++){
+      el[i].innerHTML='内容被改变了';
     }
+  });
+});
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">querySelectorAll</div><div class="demobox-intro"><p>&#x901A;&#x8FC7;querySelectorAll&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x96C6;&#x5408;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo3&quot;</span>&gt;</span>&#x8FD9;&#x662F;div-demo3-1&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo3&quot;</span>&gt;</span>&#x8FD9;&#x662F;div-demo3-2&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo3&quot;</span>&gt;</span>&#x8FD9;&#x662F;div-demo3-3&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo3&quot;</span>&gt;</span>&#x8FD9;&#x662F;div-demo3-4&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo3-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x66FF;&#x6362;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelectorAll(<span class="string">&apos;.demo3&apos;</span>);</span><br><span class="line">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  $(<span class="string">&quot;.demo3-btn&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span> ;i&lt;el.length;i++){</span><br><span class="line">      el[i].innerHTML=<span class="string">&apos;&#x5185;&#x5BB9;&#x88AB;&#x6539;&#x53D8;&#x4E86;&apos;</span>;</span><br><span class="line">    }</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<ol start="3">
+<li class="lvl-3">
+<h4 id="获取body与html">获取body与html</h4>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> htmlEl = <span class="variable language_">document</span>.<span class="property">documentElement</span>; <span class="comment">//获取html标签元素</span></span><br><span class="line"><span class="keyword">var</span> bodyEl = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="二、事件">二、事件</h2>
+<p>事件三要素：事件源、事件类型、事件处理程序。</p>
+<h3 id="（一）、事件源">（一）、事件源</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;button&#x27;</span>);  <span class="comment">//事件源</span></span><br></pre></td></tr></table></figure>
+<h3 id="（二）、事件类型">（二）、事件类型</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = btn.<span class="property">onclick</span></span><br></pre></td></tr></table></figure>
+<p>更多事件类型可以看<a href="https://www.w3school.com.cn/jsref/dom_obj_event.asp">W3 school HTML DOM 事件</a></p>
+<h3 id="（三）、事件处理程序">（三）、事件处理程序</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">ev = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;弹出对话框&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    <div class="demobox">
+      <div class="demobox-result">
+  <button class="demo4-btn">&#x70B9;&#x51FB;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;</button>
+<script>(function(){
+  var el = document.querySelector('.demo4-btn');  //事件源
+  el.onclick = function(){
+    alert('弹出对话框');
   }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x4E8B;&#x4EF6;</div><div class="demobox-intro"><p>js&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo4-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo4-btn&apos;</span>);  <span class="comment">//&#x4E8B;&#x4EF6;&#x6E90;</span></span><br><span class="line">el.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  alert(<span class="string">&apos;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;&apos;</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<h3 id="（四）、执行事件的步骤">（四）、执行事件的步骤</h3>
+<ol>
+<li class="lvl-3">
+<p>获取事件源 <code>var el = document.querySelector('div')</code></p>
+</li>
+<li class="lvl-3">
+<p>绑定事件 <code>el.onclick</code></p>
+</li>
+<li class="lvl-3">
+<p>添加事件处理程序 <code>el.onclick = function ()&#123; alert('选中'); &#125;</code></p>
+</li>
+</ol>
+<h2 id="三、元素修改">三、元素修改</h2>
+<h3 id="（一）、修改元素内容">（一）、修改元素内容</h3>
+
+    <div class="demobox">
+      <div class="demobox-result">
+<div class="demo5">div&#x5185;&#x7684;&#x5185;&#x5BB9;</div>
+<button class="demo5-btn">&#x70B9;&#x51FB;&#x4FEE;&#x6539;div&#x5185;&#x5BB9;</button>
+<script>(function(){
+let div = document.querySelector('.demo5');
+let el = document.querySelector('.demo5-btn');  
+el.onclick = function(){
+  div.innerText = '修改后的内容';
+}
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x4E8B;&#x4EF6;&#x4FEE;&#x6539;&#x5143;&#x7D20;&#x5185;&#x5BB9;</div><div class="demobox-intro"><p>&#x4FEE;&#x6539;&#x5143;&#x7D20;&#x5185;&#x5BB9;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo5&quot;</span>&gt;</span>div&#x5185;&#x7684;&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo5-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x4FEE;&#x6539;div&#x5185;&#x5BB9;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo5&apos;</span>);</span><br><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo5-btn&apos;</span>);  </span><br><span class="line">el.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  div.innerText = <span class="string">&apos;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;&apos;</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<blockquote>
+<p>innerText 与 innerHTML 的区别：innerHTML 可以识别 html 标签符合 W3C 标准。而 innerText 是单纯的文本。</p>
+</blockquote>
+<h3 id="（二）、修改元素属性">（二）、修改元素属性</h3>
+
+    <div class="demobox">
+      <div class="demobox-result">
+<input class="demo6" type="text" value="&#x73B0;&#x5728;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x5185;&#x5BB9;">
+<button class="demo6-btn">&#x70B9;&#x51FB;&#x8BA9;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;&#x4E0D;&#x53EF;&#x89C1;</button>
+<script>(function(){
+let text = document.querySelector('.demo6');
+let el = document.querySelector('.demo6-btn');  
+el.onclick = function(){
+  el.innerHTML= (el.innerHTML == "点击让输入框内容可见"?"点击让输入框内容不可见":"点击让输入框内容可见");
+  text.type = (text.type == "password" ? "text":"password");
+}
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x4FEE;&#x6539;&#x5143;&#x7D20;&#x5C5E;&#x6027;</div><div class="demobox-intro"><p>&#x70B9;&#x51FB;&#x4FEE;&#x6539;&#x5143;&#x7D20;&#x5C5E;&#x6027;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;demo6&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x73B0;&#x5728;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x5185;&#x5BB9;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo6-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x8BA9;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;&#x4E0D;&#x53EF;&#x89C1;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo6&apos;</span>);</span><br><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo6-btn&apos;</span>);  </span><br><span class="line">el.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  el.innerHTML= (el.innerHTML == <span class="string">&quot;&#x70B9;&#x51FB;&#x8BA9;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;&#x53EF;&#x89C1;&quot;</span>?<span class="string">&quot;&#x70B9;&#x51FB;&#x8BA9;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;&#x4E0D;&#x53EF;&#x89C1;&quot;</span>:<span class="string">&quot;&#x70B9;&#x51FB;&#x8BA9;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;&#x53EF;&#x89C1;&quot;</span>);</span><br><span class="line">  text.type = (text.type == <span class="string">&quot;password&quot;</span> ? <span class="string">&quot;text&quot;</span>:<span class="string">&quot;password&quot;</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<h3 id="（三）、使用className修改样式">（三）、使用className修改样式</h3>
+
+    <div class="demobox">
+      <div class="demobox-result">
+<div id="demo6">&#x4FEE;&#x6539;&#x6837;&#x5F0F;&#x524D;</div>
+<button class="demo7-btn">&#x70B9;&#x51FB;&#x6DFB;&#x52A0;&#x7ED9;div&#x6DFB;&#x52A0;class</button>
+<script>(function(){
+let text = document.querySelector('#demo6');
+let el = document.querySelector('.demo6-btn');  
+el.onclick = function(){
+  this.innerHTML = '已添加';
+  text.className = 'needstyle';
+  text.innerHTML='修改样式后';
+}
+})();</script><style>
+.needstyle{
+  color: red;
+}
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">className&#x4FEE;&#x6539;&#x6837;&#x5F0F;</div><div class="demobox-intro"><p>&#x70B9;&#x51FB;&#x4FEE;&#x6539;className</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo6&quot;</span>&gt;</span>&#x4FEE;&#x6539;&#x6837;&#x5F0F;&#x524D;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;demo7-btn&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x6DFB;&#x52A0;&#x7ED9;div&#x6DFB;&#x52A0;class<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="built_in">document</span>.querySelector(<span class="string">&apos;#demo6&apos;</span>);</span><br><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo6-btn&apos;</span>);  </span><br><span class="line">el.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  <span class="keyword">this</span>.innerHTML = <span class="string">&apos;&#x5DF2;&#x6DFB;&#x52A0;&apos;</span>;</span><br><span class="line">  text.className = <span class="string">&apos;needstyle&apos;</span>;</span><br><span class="line">  text.innerHTML=<span class="string">&apos;&#x4FEE;&#x6539;&#x6837;&#x5F0F;&#x540E;&apos;</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.needstyle</span>{</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
+<h3 id="（四）、获取自定义属性">（四）、获取自定义属性</h3>
+<blockquote>
+<p>属性可通过<code>getAttribute()</code>获取。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;div id = <span class="string">&quot;test&quot;</span> index = <span class="string">&#x27;1&#x27;</span>&gt;&lt;div&gt;</span><br><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">div.<span class="title function_">getAttribute</span>(<span class="string">&#x27;id&#x27;</span>);</span><br><span class="line">div.<span class="title function_">getAttribute</span>(<span class="string">&#x27;index&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<!-- source-text -->
 ]]></content>
       <categories>
         <category>web前端-js</category>
@@ -1760,91 +1890,6 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </tags>
   </entry>
   <entry>
-    <title>hexo教程进阶-Github Pages</title>
-    <url>/advanced-hexo-tutorial-github-pages/</url>
-    <content><![CDATA[<p>上次在<a href="https://itechfans.com/hexo-bo-ke-da-jian/">博客搭建</a>介绍了hexo的基本安装,再来介绍一下hexo如何部署到<a href="https://pages.github.com/">Github Pages</a>。</p>
-<ol>
-<li class="lvl-3">
-<p>首先要在<a href="https://github.com">Github</a>上创建一个新的仓库，并且仓库名称是[Github用户名].github.io（公开仓库）。</p>
-</li>
-<li class="lvl-3">
-<p>安装hexo插件 <a href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></p>
-<span id="more"></span>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li class="lvl-3">
-<p>到hexo目录下的_config.yml文件夹内找到deploy项并修改为</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库的url</span>   <span class="comment"># https://github.com/&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 一般为master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span> <span class="comment"># default is true</span></span><br></pre></td></tr></table></figure>
-<p>配置一下git全局的name和email</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global user.name <span class="string">&quot;your_account_name&quot;</span></span><br><span class="line">git config –global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p>不过这样设置<code>hexo d</code>时经常要输密码，可以改为ssh提交方式，不过要一些前置步骤。</p>
-<ol>
-<li class="lvl-6">
-<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>将email改成github的邮箱。</p>
-</li>
-<li class="lvl-6">
-<p>在<code>~/.ssh</code>目录下找到id_rsa.pub，打开<code>nano id_rsa.pub</code>复制全部内容。</p>
-</li>
-<li class="lvl-6">
-<p>点击进入https://github.com/settings/keys</p>
-</li>
-<li class="lvl-6">
-<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220625234931976.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="github SSH keys"></p>
-<p>点击后将内容粘贴进去。</p>
-<p>此时deploy可改为：</p>
-</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>保存后退出，执行<code>hexo d</code>，执行完成后可以在仓库内查看到静态网站文件。</p>
-<ol start="4">
-<li class="lvl-3">
-<p>进入仓库settings</p>
-<p><img data-src="https://qiniu.itechfans.com/blogImage/202206260003385.png?imageView2/0/q/75%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5a6L5L2T/fontsize/500/fill/IzgwODA4MA==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="GithubPages setting"></p>
-</li>
-</ol>
-<p>填写已申请好的域名，最好能勾选一下强制https  <code>Enforce HTTPS</code>,若是没有申请域名，可以直接访问https://&lt;name&gt;.github.io进入网站。</p>
-<ol start="5">
-<li class="lvl-3">
-<p>填写好域名后，将域名ALIAS解析到<code>&lt;name&gt;.github.io</code>。</p>
-</li>
-<li class="lvl-3">
-<p>然后就可以通过自己的域名访问网站了。</p>
-</li>
-</ol>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>教程</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为hexo文章添加关键字</title>
     <url>/adding-keywords-to-hexo-articles/</url>
     <content><![CDATA[<p>我使用的是next主题，要修改的文件是/hexo/themes/next/layout/_partials/head/head-unique.njk</p>
@@ -1855,28 +1900,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>然后 hexo clean &amp;&amp; hexo g -d 重新部署一下</p>
 <p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220630112248314.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="image-20220630112248314"></p>
 <p>就可以看见关键词了</p>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-]]></content>
+<!-- source-text -->]]></content>
       <categories>
         <category>教程</category>
       </categories>

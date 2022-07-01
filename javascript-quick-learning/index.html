@@ -179,7 +179,7 @@ spa: true
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -682,28 +682,7 @@ spa: true
 <p>更多内置方法详见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/zh-CN/">MDN</a></p>
 <h4 id="Array数组的一些方法">  Array数组的一些方法</h4>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">3</span>);    <span class="comment">//创建含有三个空元素的数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">2</span>,<span class="number">3</span>); <span class="comment">//等价于var arr1 = [2,3];</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr <span class="keyword">instanceof</span> <span class="title class_">Array</span>;      <span class="comment">//第一种方式判断arr是否为数组</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr);        <span class="comment">//第二种方式判断arr是否是数组，优先于instanceof</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">1</span>);               <span class="comment">//追加新元素在最后</span></span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">2</span>);            <span class="comment">//在数组最前面追加元素</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">pop</span>();                 <span class="comment">//删除并返回最后一个元素</span></span><br><span class="line">arr.<span class="title function_">shift</span>();               <span class="comment">//删除并返回最前面一个函数</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">reverse</span>();             <span class="comment">//反转数组</span></span><br><span class="line">arr.<span class="title function_">sort</span>();                <span class="comment">//对数组排序</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">indexOf</span>(<span class="number">1</span>);            <span class="comment">//查找给定元素的第一个索引</span></span><br><span class="line">arr.<span class="title function_">lastIndexOf</span>(<span class="number">1</span>);        <span class="comment">//查找给的元素的最后一个索引</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">toString</span>();            <span class="comment">//数组转化为字符串-&gt; 4,5,6,7,8,9</span></span><br><span class="line">arr.<span class="title function_">join</span>(分隔符);           <span class="comment">//不加分隔符与toString()相同，arr.join(&#x27;-&#x27;); 输出 4-5-6-7-8-9;</span></span><br><span class="line">-------------------------------------------;</span><br><span class="line">arr.<span class="title function_">concat</span>(arr1,arr2);     <span class="comment">//连接两个或多个数组,返回新数组</span></span><br><span class="line">arr.<span class="title function_">slice</span>(begin,end);      <span class="comment">//截取数组从begin到end，返回新数组(从0开始);</span></span><br><span class="line">arr.<span class="title function_">splice</span>(begin,num);     <span class="comment">//删除从begin开始的num个数，返回新数组，影响原数组</span></span><br><span class="line">arr.<span class="title function_">splice</span>(begin,num,item1...) <span class="comment">//在begin位置删除num个数并插入item</span></span><br><span class="line"><span class="comment">//eg. arr.splice(2,1,1,2,3); 输出 4,5,1,2,3,7,8,9;</span></span><br></pre></td></tr></table></figure>
-<span class='source'><blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote></span>
-<script type="text/javascript">
-(function() {
-  Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-  }
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-  }
-  var domain = document.domain;
-  var white_list = ['itechfans.com', 'mblog.tech'];
-  if (white_list.indexOf(domain) >= 0) {
-    var elements = document.getElementsByClassName('source');
-    elements.remove();
-  }
-})()
-</script>
-
+<!-- source-text -->
     </div>
 
     
@@ -747,8 +726,8 @@ spa: true
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/adding-keywords-to-hexo-articles/" rel="next" title="为hexo文章添加关键字">
-                  为hexo文章添加关键字 <i class="fa fa-chevron-right"></i>
+                <a href="/web-application-of-javascript/" rel="next" title="javascript的web应用">
+                  javascript的web应用 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -792,14 +771,14 @@ spa: true
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">29k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">26 分钟</span>
   </span>
 </div>
 <span id="sitetime"></span>

@@ -1,4 +1,5 @@
 https://itechfans.com/adding-keywords-to-hexo-articles/
+https://itechfans.com/web-application-of-javascript/
 https://itechfans.com/javascript-quick-learning/
 https://itechfans.com/es6-es11-note-1/
 https://itechfans.com/less-learning-notes/

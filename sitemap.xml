@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://itechfans.com/</loc>
+    <loc>https://itechfans.com/javascript-is-used-in-the-web/</loc>
     
     <lastmod>2022-07-02</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/</loc>
+    <loc>https://itechfans.com/flex-learning-notes/</loc>
     
     <lastmod>2022-06-29</lastmod>
     
@@ -149,7 +149,14 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/tags/Less/</loc>
+    <loc>https://itechfans.com/tags/flex/</loc>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -170,14 +177,21 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://itechfans.com/tags/hexo/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://itechfans.com/tags/SpringBoot/</loc>
+    <loc>https://itechfans.com/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -185,6 +199,20 @@
   
   <url>
     <loc>https://itechfans.com/tags/%E5%90%8E%E7%AB%AF/</loc>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/Less/</loc>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/tags/SpringBoot/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -212,34 +240,6 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/tags/flex/</loc>
-    <lastmod>2022-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://itechfans.com/tags/hexo/</loc>
-    <lastmod>2022-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://itechfans.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2022-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://itechfans.com/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://itechfans.com/tags/%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -256,13 +256,6 @@
 
   
   <url>
-    <loc>https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-js/</loc>
-    <lastmod>2022-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-css/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -270,14 +263,21 @@
   </url>
   
   <url>
-    <loc>https://itechfans.com/categories/web%E5%90%8E%E7%AB%AF-springboot/</loc>
+    <loc>https://itechfans.com/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://itechfans.com/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://itechfans.com/categories/web%E5%89%8D%E7%AB%AF-js/</loc>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itechfans.com/categories/web%E5%90%8E%E7%AB%AF-springboot/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

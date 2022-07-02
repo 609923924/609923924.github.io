@@ -241,10 +241,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>Less</tag>
+        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>笔记</tag>
+        <tag>Less</tag>
       </tags>
   </entry>
   <entry>
@@ -302,8 +302,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>SpringBoot</tag>
         <tag>后端</tag>
+        <tag>SpringBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -443,8 +443,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>html</tag>
         <tag>笔记</tag>
+        <tag>html</tag>
         <tag>es6</tag>
         <tag>es11</tag>
         <tag>javascript</tag>
@@ -452,7 +452,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
   </entry>
   <entry>
     <title>flex学习笔记</title>
-    <url>//</url>
+    <url>/flex-learning-notes/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>Flex布局</h1>
 <h2 id="Flex由来-2">Flex由来</h2>
@@ -1063,10 +1063,10 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
+        <tag>flex</tag>
+        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>笔记</tag>
-        <tag>flex</tag>
       </tags>
   </entry>
   <entry>
@@ -1225,8 +1225,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1289,8 +1289,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1671,14 +1671,14 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>html</tag>
         <tag>笔记</tag>
+        <tag>html</tag>
         <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
     <title>javascript在web方面使用</title>
-    <url>//</url>
+    <url>/javascript-is-used-in-the-web/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>javascript在web方面使用</h1>
 <span id="more"></span>
@@ -1903,8 +1903,8 @@ el.onclick = function(){
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>html</tag>
         <tag>笔记</tag>
+        <tag>html</tag>
         <tag>javascript</tag>
       </tags>
   </entry>

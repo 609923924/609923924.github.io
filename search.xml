@@ -1677,7 +1677,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </tags>
   </entry>
   <entry>
-    <title>javascript在web方面使用</title>
+    <title>javascript在web方面的使用</title>
     <url>/javascript-for-web-use/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>javascript在web方面使用</h1>

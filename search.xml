@@ -1998,9 +1998,66 @@ btn.onclick = function(){
 </ol>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#btn&#x27;</span>);</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="literal">null</span>; <span class="comment">//传统方法删除事件</span></span><br><span class="line">-----------------------------------------;</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;);</span><br><span class="line">btn.<span class="title function_">removeEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="六、事件对象">六、事件对象</h2>
+<h3 id="（一）、事件对象概述">（一）、事件对象概述</h3>
 <p><code>btn.onclick = function(event)&#123;&#125;</code>其中event为事件对象。</p>
 <p>事件对象是事件的一系列相关数据的集合。</p>
-<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220702220715529.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="image-20220702220715529"></p>
+<p><img data-src="https://qiniu.itechfans.com/blogImage/image-20220702220715529.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="事件对象"></p>
+<blockquote>
+<p>te.target与this的区别：e.target返回的是触发事件的对象，this返回的的是绑定事件的对象。</p>
+</blockquote>
+<h3 id="（二）、阻止默认行为">（二）、阻止默认行为</h3>
+
+    <div class="demobox">
+      <div class="demobox-result">
+<a href="https://baidu.com" id="demo9">&#x8DF3;&#x8F6C;&#x81F3;&#x767E;&#x5EA6;</a>
+<script>(function(){
+let a = document.querySelector('#demo9');
+a.addEventListener('click',function(e){
+  e.preventDefault();
+})
+})();</script><style></style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</div><div class="demobox-intro"><p>&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://baidu.com&quot;</span> <span class="attr">id</span>=<span class="string">&quot;demo9&quot;</span>&gt;</span>&#x8DF3;&#x8F6C;&#x81F3;&#x767E;&#x5EA6;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="built_in">document</span>.querySelector(<span class="string">&apos;#demo9&apos;</span>);</span><br><span class="line">a.addEventListener(<span class="string">&apos;click&apos;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">  e.preventDefault();</span><br><span class="line">})</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+  
+<h3 id="（三）、阻止冒泡事件">（三）、阻止冒泡事件</h3>
+
+    <div class="demobox">
+      <div class="demobox-result">
+<div class="demo10">
+  <div class="demo10-1">
+    <div class="demo10-2">
+      &#x70B9;&#x51FB;&#x51FA;&#x73B0;&#x4E8B;&#x4EF6;
+    </div>
+  </div>
+</div>
+<input class="demo10-check" type="checkbox">&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x5192;&#x6CE1;
+<script>(function(){
+let d1 = document.querySelector('.demo10');
+d1.addEventListener('click',function(e){
+  alert('demo10');
+})
+let d2 = document.querySelector('.demo10-1');
+d2.addEventListener('click',function(e){
+  alert('demo10-1');
+})
+let d3 = document.querySelector('.demo10-2');
+let demo10check = document.querySelector('.demo10-check');
+d3.addEventListener('click',function(e){
+  alert('demo10-2');
+  if(demo10check.checked){
+    e.stopPropagation();
+  }
+})
+})();</script><style>
+div[class^='demo10']{
+  width: 170px;
+  height: 70px;
+  background-color: red;
+}
+</style></div>
+    <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x963B;&#x6B62;&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;</div><div class="demobox-intro"><p>&#x963B;&#x6B62;&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;</p>
+</div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo10&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo10-1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo10-2&quot;</span>&gt;</span></span><br><span class="line">      &#x70B9;&#x51FB;&#x51FA;&#x73B0;&#x4E8B;&#x4EF6;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;demo10-check&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x5192;&#x6CE1;</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> d1 = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo10&apos;</span>);</span><br><span class="line">d1.addEventListener(<span class="string">&apos;click&apos;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">  alert(<span class="string">&apos;demo10&apos;</span>);</span><br><span class="line">})</span><br><span class="line"><span class="keyword">let</span> d2 = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo10-1&apos;</span>);</span><br><span class="line">d2.addEventListener(<span class="string">&apos;click&apos;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">  alert(<span class="string">&apos;demo10-1&apos;</span>);</span><br><span class="line">})</span><br><span class="line"><span class="keyword">let</span> d3 = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo10-2&apos;</span>);</span><br><span class="line"><span class="keyword">let</span> demo10check = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.demo10-check&apos;</span>);</span><br><span class="line">d3.addEventListener(<span class="string">&apos;click&apos;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">  alert(<span class="string">&apos;demo10-2&apos;</span>);</span><br><span class="line">  <span class="keyword">if</span>(demo10check.checked){</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">  }</span><br><span class="line">})</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[class^=<span class="string">&apos;demo10&apos;</span>]</span>{</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">170px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
+  
 <!-- source-text -->
 ]]></content>
       <categories>

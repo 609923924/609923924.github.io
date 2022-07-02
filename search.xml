@@ -5,20 +5,20 @@
     <url>/jquery-learning-notes-1/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>jQuery基本使用</h1>
-<h2 id="jQuery顶级对象">jQuery顶级对象$</h2>
+<h2 id="jQuery顶级对象-2">jQuery顶级对象$</h2>
 <p>$是JQuery的别称</p>
 <span id="more"></span>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">&#125;) <span class="comment">//效果相同</span></span><br></pre></td></tr></table></figure>
-<h2 id="jQuery对象获取">jQuery对象获取</h2>
+<h2 id="jQuery对象获取-2">jQuery对象获取</h2>
 <p>本质为JQuery对DOM对象包装后的对象（伪数组）</p>
 <p>且JQuery对象只能使用JQuery方法，不能使用原生DOM方法</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="DOM对象转换为JQuery对象">DOM对象转换为JQuery对象</h3>
+<h3 id="DOM对象转换为JQuery对象-2">DOM对象转换为JQuery对象</h3>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dom = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">$(dom); </span><br></pre></td></tr></table></figure>
-<h3 id="jQuery对象转换DOM对象">jQuery对象转换DOM对象</h3>
+<h3 id="jQuery对象转换DOM对象-2">jQuery对象转换DOM对象</h3>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> dom = jq[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> dom = jq.<span class="title function_">get</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
 <h1>jQuery常用API</h1>
-<h2 id="jQuery基础选择器">jQuery基础选择器</h2>
+<h2 id="jQuery基础选择器-2">jQuery基础选择器</h2>
 <p><code>$(&quot;选择器&quot;)</code></p>
 <table>
 <thead>
@@ -63,7 +63,7 @@
 </table>
 <h2 id="隐藏与显示对象">隐藏与显示对象</h2>
 <p><code>.show()</code>显示；<code>.hide()</code>隐藏。</p>
-<h2 id="jQuery隐式迭代">jQuery隐式迭代</h2>
+<h2 id="jQuery隐式迭代-2">jQuery隐式迭代</h2>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="string">&#x27;div&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;background&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>会将所有div都变为蓝色</p>
 
@@ -84,7 +84,7 @@
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</div><div class="demobox-intro"><p>jQuery&#x9690;&#x5F0F;&#x8FED;&#x4EE3;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line">$(<span class="string">&apos;.demo&apos;</span>).css(<span class="string">&apos;background-image&apos;</span>,<span class="string">&apos;linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)&apos;</span>);</span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h2 id="jQuery筛选选择器">jQuery筛选选择器</h2>
+<h2 id="jQuery筛选选择器-2">jQuery筛选选择器</h2>
 <table>
 <thead>
 <tr>
@@ -241,10 +241,10 @@
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>Less</tag>
+        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>笔记</tag>
+        <tag>Less</tag>
       </tags>
   </entry>
   <entry>
@@ -302,8 +302,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>SpringBoot</tag>
         <tag>后端</tag>
+        <tag>SpringBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -443,8 +443,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>html</tag>
         <tag>笔记</tag>
+        <tag>html</tag>
         <tag>es6</tag>
         <tag>es11</tag>
         <tag>javascript</tag>
@@ -455,15 +455,15 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <url>/flex-study-notes/</url>
     <content><![CDATA[<link rel="stylesheet" href="/css/demobox.css" />
 <h1>Flex布局</h1>
-<h2 id="Flex由来">Flex由来</h2>
+<h2 id="Flex由来-2">Flex由来</h2>
 <blockquote>
 <p>flex布局是W3C在2009年提出的新的简便、完整、响应式的布局，目前已得到所有浏览器的支持。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="Flex是什么">Flex是什么</h2>
+<h2 id="Flex是什么-2">Flex是什么</h2>
 <p>Flex是弹性布局的缩写，全称是Flexible(弹性的)Box。</p>
-<h2 id="Flex布局与传统布局的区别">Flex布局与传统布局的区别</h2>
-<h3 id="传统布局">传统布局</h3>
+<h2 id="Flex布局与传统布局的区别-2">Flex布局与传统布局的区别</h2>
+<h3 id="传统布局-2">传统布局</h3>
 <p>优点：</p>
 <ol>
 <li class="lvl-3">
@@ -479,7 +479,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>基于盒子模型，依赖 display属性 、position属性 、float属性；布局繁琐。</p>
 </li>
 </ol>
-<h3 id="Flex布局">Flex布局</h3>
+<h3 id="Flex布局-2">Flex布局</h3>
 <p>优点：</p>
 <ol>
 <li class="lvl-3">
@@ -492,7 +492,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>ie11及以下版本不支持。</p>
 </li>
 </ol>
-<h2 id="Flex布局简单应用">Flex布局简单应用</h2>
+<h2 id="Flex布局简单应用-2">Flex布局简单应用</h2>
 
     <div class="demobox">
       <div class="demobox-result">
@@ -517,7 +517,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">Flex&#x7B80;&#x5355;&#x5E94;&#x7528;</div><div class="demobox-intro"><p>Flex&#x5E03;&#x5C40;</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demobox&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo1</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demobox</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h2 id="Flex布局原理">Flex布局原理</h2>
+<h2 id="Flex布局原理-2">Flex布局原理</h2>
 <ul class="lvl-0">
 <li class="lvl-2">
 <p>当父元素设置为flex布局后，子元素中的float、clear与vertical-align将失效。</p>
@@ -529,7 +529,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p>通过给<strong>父元素</strong>添加flex属性，从而控制子元素位置与排列方式。</p>
 </li>
 </ul>
-<h2 id="Flex常见父属性">Flex常见父属性</h2>
+<h2 id="Flex常见父属性-2">Flex常见父属性</h2>
 <table>
 <thead>
 <tr>
@@ -573,7 +573,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 <p><img data-src="https://qiniu.itechfans.com/blogImage/202206271417925.png?imageMogr2/auto-orient/thumbnail/x200/interlace/1/blur/1x0/quality/49%7Cwatermark/2/text/aXRlY2hmYW5zLmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/280/fill/IzhFOEU4RQ==/dissolve/74/gravity/SouthEast/dx/10/dy/10" alt="坐标"></p>
 </li>
 </ul>
-<h3 id="span-id-flex-direction-flex-direction属性展示-span"><span id = "flex-direction">flex-direction属性展示</span></h3>
+<h3 id="span-id-flex-direction-flex-direction属性展示-span-2"><span id = "flex-direction">flex-direction属性展示</span></h3>
 <p>flex-direction设置主轴方向，影响后续的排列效果，默认以水平向右为主轴方向。</p>
 <table>
 <thead>
@@ -867,7 +867,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">justify-content:</div><div class="demobox-intro"><p>justify-content: space-between</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo14box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo14</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo14box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h3 id="span-id-flex-wrap-flex-wrap属性展示-span"><span id = "flex-wrap">flex-wrap属性展示</span></h3>
+<h3 id="span-id-flex-wrap-flex-wrap属性展示-span-2"><span id = "flex-wrap">flex-wrap属性展示</span></h3>
 <p>默认情况下，项目（子元素）都在一条线上（轴线）,flex-warp默认不换行，会直接缩小子元素宽度。</p>
 <p>换行是相对于当前主轴而言</p>
 <p>x为主轴时：</p>
@@ -940,7 +940,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
     <div class="demobox-meta"><span class="demobox-meta-collapse" onclick="jQuery(this).parents(&apos;.demobox&apos;).toggleClass(&apos;demobox-expand&apos;)"></span><div class="demobox-name">flex-wrap:</div><div class="demobox-intro"><p>flex-wrap: wrap</p>
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo11box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo11</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:  wrap;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo11box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
-<h3 id="span-id-align-items-align-items（单行）属性展示-span"><span id = "align-items">align-items（单行）属性展示</span></h3>
+<h3 id="span-id-align-items-align-items（单行）属性展示-span-2"><span id = "align-items">align-items（单行）属性展示</span></h3>
 <p>默认以x为主轴，y为侧轴，align-item用于设置单行侧轴的排列方式。</p>
 <table>
 <thead>
@@ -994,7 +994,7 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
 </div></div><div class="demobox-code-wrap"><div class="demobox-code demobox-html"><figure class="highlight html"><figcaption><span>html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo12box&quot;</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-script"><figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div><div class="demobox-code demobox-style"><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#demo12</span>{</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">}</span><br><span class="line"><span class="selector-id">#demo12box</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to top, #fbc2eb <span class="number">0%</span>, #a6c1ee <span class="number">100%</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></div></div>
   
 <p><em>通过这两个轴，可以将元素固定到任意位置。</em></p>
-<h3 id="span-id-align-content-align-content（多行）属性展示-span"><span id = "align-content">align-content（多行）属性展示</span></h3>
+<h3 id="span-id-align-content-align-content（多行）属性展示-span-2"><span id = "align-content">align-content（多行）属性展示</span></h3>
 <p>设置子项在侧轴上的排列方式，用于子项出现<strong>换行</strong>的情况（多行），单行下无效果。</p>
 <table>
 <thead>
@@ -1063,10 +1063,10 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
+        <tag>flex</tag>
+        <tag>笔记</tag>
         <tag>css</tag>
         <tag>html</tag>
-        <tag>笔记</tag>
-        <tag>flex</tag>
       </tags>
   </entry>
   <entry>
@@ -1225,8 +1225,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1289,8 +1289,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1671,8 +1671,8 @@ for(let i = 0 ; i<items.length ; i++){ //要使用let i = 0
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>html</tag>
         <tag>笔记</tag>
+        <tag>html</tag>
         <tag>javascript</tag>
       </tags>
   </entry>
@@ -2009,8 +2009,8 @@ btn.onclick = function(){
       <tags>
         <tag>学习</tag>
         <tag>前端</tag>
-        <tag>html</tag>
         <tag>笔记</tag>
+        <tag>html</tag>
         <tag>javascript</tag>
       </tags>
   </entry>

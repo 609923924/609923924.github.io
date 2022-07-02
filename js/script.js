@@ -1,1 +1,7 @@
-var svgContainer=document.getElementById("svgContainer"),animItem=bodymovin.loadAnimation({wrapper:svgContainer,animType:"svg",loop:!0,animationData:JSON.parse(animationData)});
+var svgContainer = document.getElementById('svgContainer');
+    var animItem = bodymovin.loadAnimation({
+        wrapper: svgContainer,
+        animType: 'svg',
+        loop: true,
+        animationData: JSON.parse(animationData)
+    });

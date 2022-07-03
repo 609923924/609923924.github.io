@@ -1942,7 +1942,7 @@ btn.onclick = function(){
 </ol>
 <h3 id="（六）、动态创建元素">（六）、动态创建元素</h3>
 <h4 id="1-document-write-创建元素">   1. document.write()创建元素</h4>
-<p>  <code>document.write('\&lt;div&gt;111\&lt;/div&gt;');</code></p>
+<p>  <code>document.write('&lt;div&gt;111&lt;/div&gt;');</code></p>
 <ul class="lvl-0">
 <li class="lvl-2">
 <p>document.write是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘。</p>
